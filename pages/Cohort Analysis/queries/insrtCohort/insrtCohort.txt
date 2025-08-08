@@ -1,0 +1,3 @@
+UPDATE public."gen1_ntwk_data"
+SET "cohort" = '{{tb_ntwk_data.selectedRow.cohort}}'
+WHERE "account_no" = '{{tb_ntwk_data.selectedRow.account_no}}';

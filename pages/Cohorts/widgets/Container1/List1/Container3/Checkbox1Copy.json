@@ -1,0 +1,57 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "RIGHT",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 12,
+  "defaultCheckedState": "{{ currentItem.flag_sema_onprem  }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultCheckedState"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultCheckedState"
+    },
+    {
+      "key": "labelTextSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "7334uklr1j",
+  "label": "SEMA OnPrem",
+  "labelPosition": "Left",
+  "labelTextSize": "0.600rem",
+  "leftColumn": 23,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 27,
+  "mobileRightColumn": 39,
+  "mobileTopRow": 4,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 11.96484375,
+  "parentId": "juhhv2kbql",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 26,
+  "topRow": 8,
+  "type": "CHECKBOX_WIDGET",
+  "version": 1,
+  "widgetId": "q980niki6i",
+  "widgetName": "Checkbox1Copy"
+}

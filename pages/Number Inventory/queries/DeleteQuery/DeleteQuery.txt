@@ -1,0 +1,2 @@
+DELETE FROM public."numbinv"
+  WHERE "id" = {{data_table.triggeredRow.id}};

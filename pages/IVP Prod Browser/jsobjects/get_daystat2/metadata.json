@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6833bd1e663f59025c630a90_2bd236b9-319f-412d-8824-161fd3fc0409",
+  "id": "IVP Prod Browser_get_daystat2",
+  "unpublishedCollection": {
+    "name": "get_daystat2",
+    "pageId": "IVP Prod Browser",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

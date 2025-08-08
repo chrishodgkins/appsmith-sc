@@ -1,0 +1,321 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 1,
+  "bottomRow": 164,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "children": [
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1600,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": true,
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isDisabled": false,
+      "isLoading": false,
+      "isVisible": true,
+      "key": "7n5nx3wjbc",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 150,
+      "minWidth": 450,
+      "mobileBottomRow": 150,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 317.25,
+      "mobileTopRow": 0,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "d4qjseq1ne",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 317.25,
+      "shouldScrollContents": false,
+      "tabId": "tab1",
+      "tabName": "Local Policy",
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "v1uwml6i7t",
+      "widgetName": "Canvas3"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1600,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": true,
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isDisabled": false,
+      "isLoading": false,
+      "isVisible": true,
+      "key": "7n5nx3wjbc",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 150,
+      "minWidth": 450,
+      "mobileBottomRow": 150,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 317.25,
+      "mobileTopRow": 0,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "d4qjseq1ne",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 317.25,
+      "shouldScrollContents": false,
+      "tabId": "tab2",
+      "tabName": "Realm Config",
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "1ixe9s2cbv",
+      "widgetName": "Canvas4"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1600,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "7n5nx3wjbc",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 700,
+      "minWidth": 450,
+      "mobileBottomRow": 701,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 687.375,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "d4qjseq1ne",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 687.375,
+      "tabId": "tabtax9ooaoj1",
+      "tabName": "Session Agent",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "pkxuhfeub6",
+      "widgetName": "Canvas5"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1600,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "7n5nx3wjbc",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 700,
+      "minWidth": 450,
+      "mobileBottomRow": 701,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 687.375,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "d4qjseq1ne",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 687.375,
+      "tabId": "tabactlaqn8u7",
+      "tabName": "Session Group",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "ec076a18jm",
+      "widgetName": "Canvas6"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1600,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "7n5nx3wjbc",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 700,
+      "minWidth": 450,
+      "mobileBottomRow": 701,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 687.375,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "d4qjseq1ne",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 687.375,
+      "tabId": "tab95p4g3lvxs",
+      "tabName": "SIP-Interface",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "ux6uuquj8m",
+      "widgetName": "Canvas7"
+    }
+  ],
+  "defaultTab": "Local Policy",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "stretch",
+  "isCanvas": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "cnv5vqac6x",
+  "leftColumn": 2,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 15,
+  "minWidth": 450,
+  "mobileBottomRow": 17,
+  "mobileLeftColumn": 25,
+  "mobileRightColumn": 49,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "originalBottomRow": 164,
+  "originalTopRow": 0,
+  "parentColumnSpace": 13.21875,
+  "parentId": "re4axqamqc",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldScrollContents": true,
+  "shouldShowTabs": true,
+  "tabsObj": {
+    "tab1": {
+      "id": "tab1",
+      "index": 0,
+      "isVisible": true,
+      "label": "Local Policy",
+      "positioning": "vertical",
+      "widgetId": "v1uwml6i7t"
+    },
+    "tab2": {
+      "id": "tab2",
+      "index": 1,
+      "isVisible": true,
+      "label": "Realm Config",
+      "positioning": "vertical",
+      "widgetId": "1ixe9s2cbv"
+    },
+    "tab95p4g3lvxs": {
+      "id": "tab95p4g3lvxs",
+      "index": 4,
+      "isVisible": true,
+      "label": "SIP-Interface",
+      "widgetId": "ux6uuquj8m"
+    },
+    "tabactlaqn8u7": {
+      "id": "tabactlaqn8u7",
+      "index": 3,
+      "isVisible": true,
+      "label": "Session Group",
+      "widgetId": "ec076a18jm"
+    },
+    "tabtax9ooaoj1": {
+      "id": "tabtax9ooaoj1",
+      "index": 2,
+      "isVisible": true,
+      "label": "Session Agent",
+      "widgetId": "pkxuhfeub6"
+    }
+  },
+  "topRow": 0,
+  "type": "TABS_WIDGET",
+  "version": 3,
+  "widgetId": "d4qjseq1ne",
+  "widgetName": "Tabs1"
+}

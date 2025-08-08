@@ -1,0 +1,4 @@
+SELECT *
+FROM public.local_policy
+WHERE account_no IS NOT NULL AND date_added > NOW() - INTERVAL '5 days'
+ORDER BY "Description" ASC, "id" ASC;

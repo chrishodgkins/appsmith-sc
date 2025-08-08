@@ -1,0 +1,113 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 127,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "w78pjw2ae1": {
+      "data": "",
+      "seriesName": "xxx"
+    }
+  },
+  "chartName": "Sales Report",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => (  buildWeeklyStat.getEChartOptions() ))(weeklyChart.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "fl6qn5dt4j",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 38,
+  "mobileLeftColumn": 13,
+  "mobileRightColumn": 37,
+  "mobileTopRow": 6,
+  "needsErrorInfo": true,
+  "onDataPointClick": "{{storeValue('statclick', weeklyChart.selectedDataPoint.rawEventData.seriesName.split(\" - \")[0]);}}",
+  "parentColumnSpace": 15.203125,
+  "parentId": "qrrmyohwly",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "setAdaptiveYMin": false,
+  "showDataPointLabel": false,
+  "topRow": 0,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "qxnwqvnpk8",
+  "widgetName": "weeklyChart",
+  "xAxisName": "Time of Day",
+  "yAxisName": "Calls"
+}

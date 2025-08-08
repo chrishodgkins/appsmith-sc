@@ -1,0 +1,31 @@
+(
+  SELECT * 
+  FROM public."gen1_ntwk_data"
+  WHERE 
+    (
+      cohort_name ILIKE '%' || '{{appsmith.store.filterView}}' || '%' OR
+      sub_cohorts ILIKE '%' || '{{appsmith.store.filterView}}' || '%'
+    )
+    AND cohort ILIKE '%' || '{{cohortSelectbyTag.selectedOptionValue}}' || '%'
+    AND customer ILIKE '%' || '{{customerFilter.selectedOptionValue}}' || '%'
+  ORDER BY "Total Revenue" DESC NULLS LAST
+)
+UNION ALL
+(
+  SELECT * 
+  FROM public."gen1_ntwk_data"
+  WHERE NOT EXISTS (
+    SELECT 1 
+    FROM public."gen1_ntwk_data"
+    WHERE 
+      (
+        cohort_name ILIKE '%' || '{{appsmith.store.filterView}}' || '%' OR
+        sub_cohorts ILIKE '%' || '{{appsmith.store.filterView}}' || '%'
+      )
+      AND cohort ILIKE '%' || '{{cohortSelectbyTag.selectedOptionValue}}' || '%'
+      AND customer ILIKE '%' || '{{customerFilter.selectedOptionValue}}' || '%'
+  )
+    AND cohort ILIKE '%' || '{{cohortSelectbyTag.selectedOptionValue}}' || '%'
+    AND customer ILIKE '%' || '{{customerFilter.selectedOptionValue}}' || '%'
+  ORDER BY "Total Revenue" DESC NULLS LAST
+);

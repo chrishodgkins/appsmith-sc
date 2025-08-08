@@ -1,0 +1,17 @@
+SELECT
+  a.*,
+  b.service_types
+FROM
+  public."gen1_ntwk_data" a
+LEFT JOIN (
+  SELECT
+    account_number,
+    STRING_AGG(DISTINCT service_type_narrative, ', ') AS service_types
+  FROM
+    public."billingdata"
+  GROUP BY
+    account_number
+) b ON a.account_no = b.account_number
+WHERE
+  a.cohort = '{{cohortSelect.selectedOptionValue}}'
+ORDER BY "Total Revenue" DESC;

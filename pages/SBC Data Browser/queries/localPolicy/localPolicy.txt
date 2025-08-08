@@ -1,0 +1,4 @@
+SELECT *
+FROM public.local_policy
+WHERE "Description" <> ''
+ORDER BY "Description" ASC, "id" ASC;

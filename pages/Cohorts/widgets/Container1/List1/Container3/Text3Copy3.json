@@ -1,0 +1,61 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 13,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    },
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.600rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "x8kigmg261",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 4,
+  "needsErrorInfo": false,
+  "overflow": "SCROLL",
+  "parentId": "juhhv2kbql",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 10,
+  "shouldTruncate": false,
+  "text": "Contract: <br>{{ currentItem.contract_status}}",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "textStyle": "BODY",
+  "topRow": 9,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "t1ryjdbvdq",
+  "widgetName": "Text3Copy3"
+}

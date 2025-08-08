@@ -1,0 +1,32 @@
+{
+  "gitSyncId": "6833bd1e663f59025c630a90_c3a716a0-e1dd-4275-964d-80c1579a94c4",
+  "unpublishedPage": {
+    "isHidden": true,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 3060,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "minHeight": 670,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 65,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 93,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Cohorts",
+    "slug": "cohorts"
+  }
+}

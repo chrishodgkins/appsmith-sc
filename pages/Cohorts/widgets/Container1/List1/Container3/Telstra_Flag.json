@@ -1,0 +1,57 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 8,
+  "defaultCheckedState": "{{ currentItem.telstra }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultCheckedState"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultCheckedState"
+    },
+    {
+      "key": "labelTextSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "7334uklr1j",
+  "label": "Telstra",
+  "labelPosition": "Left",
+  "labelTextSize": "0.600rem",
+  "leftColumn": 51,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 27,
+  "mobileRightColumn": 39,
+  "mobileTopRow": 4,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 11.96484375,
+  "parentId": "juhhv2kbql",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 53,
+  "topRow": 4,
+  "type": "CHECKBOX_WIDGET",
+  "version": 1,
+  "widgetId": "celpdb9h6h",
+  "widgetName": "Telstra_Flag"
+}

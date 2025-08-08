@@ -1,0 +1,2 @@
+SELECT lp_from_range FROM public."local_policy"
+WHERE {{currentRow["numbers"]}};

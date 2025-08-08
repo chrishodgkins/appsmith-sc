@@ -1,0 +1,6 @@
+SELECT * 
+FROM public."gen1_ntwk_data"
+WHERE cohort ILIKE '%' || '{{cohortSelectbyTag.selectedOptionValue}}' || '%'
+  AND customer ILIKE '%' || '{{customerFilter.selectedOptionValue}}' || '%'
+  AND cohort_name ILIKE '%' || COALESCE('{{appsmith.store.filterView}}', '') || '%'
+ORDER BY "Total Revenue" DESC NULLS LAST;

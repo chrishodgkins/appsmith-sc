@@ -1,0 +1,79 @@
+{
+  "appIsExample": false,
+  "appLayout": {
+    "type": "FLUID"
+  },
+  "applicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "theme",
+      "logoAssetId": "",
+      "logoConfiguration": "logoOnly",
+      "navStyle": "sidebar",
+      "orientation": "side",
+      "position": "static",
+      "showNavbar": false,
+      "showSignIn": false
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  },
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#C7F3E3",
+  "embedSetting": {
+    "height": "720px",
+    "showNavigationBar": true,
+    "width": "1024px"
+  },
+  "evaluationVersion": 2,
+  "icon": "flight",
+  "pages": [
+    {
+      "id": "Cohorts",
+      "isDefault": true
+    },
+    {
+      "id": "SBC Data Browser",
+      "isDefault": false
+    },
+    {
+      "id": "Cohort Analysis",
+      "isDefault": false
+    },
+    {
+      "id": "Customers",
+      "isDefault": false
+    },
+    {
+      "id": "Number Inventory",
+      "isDefault": false
+    },
+    {
+      "id": "IVP Prod Browser",
+      "isDefault": false
+    }
+  ],
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "unpublishedApplicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "theme",
+      "logoAssetId": "",
+      "logoConfiguration": "logoOnly",
+      "navStyle": "sidebar",
+      "orientation": "side",
+      "position": "static",
+      "showNavbar": false,
+      "showSignIn": false
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  }
+}

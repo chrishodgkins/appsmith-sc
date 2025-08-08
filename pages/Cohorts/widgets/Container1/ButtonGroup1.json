@@ -1,0 +1,577 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton1.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton2.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton3.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonjg3putd9it.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonhl84lu8gyr.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton9y822n71gu.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonbviox3ppxy.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.onClick"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton1.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton2.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton3.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonjg3putd9it.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonhl84lu8gyr.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton9y822n71gu.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonbviox3ppxy.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonezukgq7d0i.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemncy0hgycev.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemnjstkaou02.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemhwh2lz52vw.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemg1w2zt2go0.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem8p7pkc602d.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemx8mx4liw5l.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.menuItems.menuItem88irad97w6.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.menuItems.menuItemgy4vozp4kh.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemt1fewnx9gp.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.menuItems.menuItemaml98pryzh.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.menuItems.menuItemfesmjbi2el.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemw84jkh2bnk.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItem9r95idbrva.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem7okh9gsrrb.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton9y822n71gu.menuItems.menuItemzaazdzc1qh.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton9y822n71gu.menuItems.menuItemgw3h3caz81.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton9y822n71gu.menuItems.menuIteme45roin7r0.onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonjg3putd9it.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonhl84lu8gyr.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton9y822n71gu.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonbviox3ppxy.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemw84jkh2bnk.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemt1fewnx9gp.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemncy0hgycev.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemg1w2zt2go0.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemhwh2lz52vw.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem8p7pkc602d.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemx8mx4liw5l.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.menuItems.menuItemgy4vozp4kh.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.menuItems.menuItem88irad97w6.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.menuItems.menuItemaml98pryzh.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkn945zhlbb.menuItems.menuItemfesmjbi2el.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem6lz44gzpay.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem7okh9gsrrb.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton9y822n71gu.menuItems.menuItemzaazdzc1qh.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton9y822n71gu.menuItems.menuItemgw3h3caz81.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton9y822n71gu.menuItems.menuIteme45roin7r0.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton1": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "disabledWhenInvalid": false,
+      "iconAlign": "left",
+      "iconName": "",
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "1 - Voice",
+      "menuItems": {
+        "menuItemg1w2zt2go0": {
+          "id": "menuItemg1w2zt2go0",
+          "index": 4,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Partners",
+          "onClick": "{{resetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");\nstoreValue('filterView', '1 - Part').then(() => {\n  getCohortStringMatch.run();\n  removeValue('lastchangeddropdown');\n});}}",
+          "widgetId": "cc9920e0jp"
+        },
+        "menuItemhwh2lz52vw": {
+          "id": "menuItemhwh2lz52vw",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "SecureCo",
+          "onClick": "{{storeValue('filterView', '1 - Cust').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+          "widgetId": "dpm6oc6fwq"
+        },
+        "menuItemncy0hgycev": {
+          "id": "menuItemncy0hgycev",
+          "index": 3,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "GenE",
+          "onClick": "{{storeValue('filterView', '1 - GenE').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+          "widgetId": "x0bfe3c0bv"
+        },
+        "menuItemt1fewnx9gp": {
+          "backgroundColor": "#dcfce7",
+          "id": "menuItemt1fewnx9gp",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "All",
+          "onClick": "{{storeValue('filterView', '1 - Voice').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+          "widgetId": "u5nrtp7ebr"
+        },
+        "menuItemw84jkh2bnk": {
+          "id": "menuItemw84jkh2bnk",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Pilot",
+          "onClick": "{{storeValue('filterView', '1 - Pilot').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+          "widgetId": "hz8l6egzbg"
+        }
+      },
+      "onClick": "{{storeValue('filterView', '1 - Voice').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton2": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "disabledWhenInvalid": false,
+      "iconName": "",
+      "id": "groupButton2",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "2 - Hybrid",
+      "menuItems": {
+        "menuItem7okh9gsrrb": {
+          "id": "menuItem7okh9gsrrb",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Customers",
+          "onClick": "{{resetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");\nstoreValue('filterView', '2 - Cust').then(() => {\n  getCohortStringMatch.run();\n  removeValue('lastchangeddropdown');\n});}}",
+          "widgetId": "tlaso0txay"
+        },
+        "menuItem8p7pkc602d": {
+          "backgroundColor": "#dcfce7",
+          "id": "menuItem8p7pkc602d",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "All",
+          "onClick": "{{resetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");\nstoreValue('filterView', '2 - Hybrid').then(() => {\n  getCohortStringMatch.run();\n  removeValue('lastchangeddropdown');\n});}}",
+          "widgetId": "l15hlothsc"
+        },
+        "menuItemx8mx4liw5l": {
+          "id": "menuItemx8mx4liw5l",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Partners",
+          "onClick": "{{resetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");\nstoreValue('filterView', '2 - Part').then(() => {\n  getCohortStringMatch.run();\n  removeValue('lastchangeddropdown');\n});}}",
+          "widgetId": "omg2cwr24v"
+        }
+      },
+      "onClick": "{{storeValue('filterView', '2 - Hybrid').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton3": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "disabledWhenInvalid": false,
+      "iconName": "",
+      "id": "groupButton3",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "3 - Sema Pay",
+      "menuItems": {
+        "menuItem1": {
+          "backgroundColor": "#dcfce7",
+          "disabledWhenInvalid": false,
+          "iconColor": "#dcfce7",
+          "id": "menuItem1",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "All",
+          "onClick": "{{resetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");\nstoreValue('filterView', '3 - Sema Pay').then(() => {\n  getCohortStringMatch.run();\n  removeValue('lastchangeddropdown');\n});}}",
+          "widgetId": ""
+        },
+        "menuItem2": {
+          "backgroundColor": "#FFFFFF",
+          "disabledWhenInvalid": false,
+          "id": "menuItem2",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Hybrid Moved",
+          "onClick": "{{resetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");\nstoreValue('filterView', '3 - Hybrid').then(() => {\n  getCohortStringMatch.run();\n  removeValue('lastchangeddropdown');\n});}}",
+          "widgetId": ""
+        },
+        "menuItem3": {
+          "backgroundColor": "#f4f4f5",
+          "disabledWhenInvalid": false,
+          "iconAlign": "right",
+          "iconColor": "#3f3f46",
+          "id": "menuItem3",
+          "index": 3,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Partners",
+          "onClick": "{{resetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");\nstoreValue('filterView', '3 - Part').then(() => {\n  getCohortStringMatch.run();\n  removeValue('lastchangeddropdown');\n});}}",
+          "textColor": "#3f3f46",
+          "widgetId": ""
+        },
+        "menuItem6lz44gzpay": {
+          "id": "menuItem6lz44gzpay",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "SecureCo",
+          "onClick": "{{resetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");\nstoreValue('filterView', '3 - Cust').then(() => {\n  getCohortStringMatch.run();\n  removeValue('lastchangeddropdown');\n});}}",
+          "widgetId": "cw4idup8k4"
+        }
+      },
+      "onClick": "{{storeValue('filterView', '3 - Sema Pay').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton9y822n71gu": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "id": "groupButton9y822n71gu",
+      "index": 4,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "5 - PayGate",
+      "menuItems": {
+        "menuIteme45roin7r0": {
+          "id": "menuIteme45roin7r0",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "PayGate Only",
+          "onClick": "{{storeValue('filterView', '5 - PayOnly').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+          "widgetId": "2zrxcibnxu"
+        },
+        "menuItemgw3h3caz81": {
+          "id": "menuItemgw3h3caz81",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Voice and PayGate",
+          "onClick": "{{storeValue('filterView', '5 - Voice').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+          "widgetId": "jdgfpd42ax"
+        },
+        "menuItemzaazdzc1qh": {
+          "backgroundColor": "#86efac",
+          "id": "menuItemzaazdzc1qh",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "All",
+          "onClick": "{{resetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");\nstoreValue('filterView', '5 - PayGate').then(() => {\n  getCohortStringMatch.run();\n  removeValue('lastchangeddropdown');\n});}}",
+          "widgetId": "35vg43qwrp"
+        }
+      },
+      "onClick": "{{storeValue('filterView', '5 - PayGate').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "sego3042xh"
+    },
+    "groupButtonbviox3ppxy": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonbviox3ppxy",
+      "index": 7,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "8 - Resign",
+      "menuItems": {},
+      "onClick": "{{storeValue('filterView', '8 - Resign').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "aaecujysd5"
+    },
+    "groupButtonhl84lu8gyr": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonhl84lu8gyr",
+      "index": 6,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "7 - Retain",
+      "menuItems": {},
+      "onClick": "{{storeValue('filterView', '7 - Retain').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}/",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "tt0aba8gny"
+    },
+    "groupButtonjg3putd9it": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonjg3putd9it",
+      "index": 5,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "6 - Bill Only",
+      "menuItems": {},
+      "onClick": "{{storeValue('filterView', '6 - Bill Only').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}/",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "he1lh3gdz8"
+    },
+    "groupButtonkn945zhlbb": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "id": "groupButtonkn945zhlbb",
+      "index": 3,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "4 - Custom",
+      "menuItems": {
+        "menuItem88irad97w6": {
+          "id": "menuItem88irad97w6",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "NTT",
+          "onClick": "{{storeValue('filterView', '4 - NTT').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+          "widgetId": "ye42b3ar8o"
+        },
+        "menuItemaml98pryzh": {
+          "id": "menuItemaml98pryzh",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Hybrid",
+          "onClick": "{{storeValue('filterView', '4 - Hybrid').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}/",
+          "widgetId": "kn4blvdw79"
+        },
+        "menuItemfesmjbi2el": {
+          "id": "menuItemfesmjbi2el",
+          "index": 3,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "OnPrem",
+          "onClick": "{{storeValue('filterView', '4 - OnPrem').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}/",
+          "widgetId": "w3tlfzp9bc"
+        },
+        "menuItemgy4vozp4kh": {
+          "backgroundColor": "#dcfce7",
+          "id": "menuItemgy4vozp4kh",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "All",
+          "onClick": "{{storeValue('filterView', '4 - Custom').then(() => {\n  getCohortStringMatch.run();\n});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\");}}",
+          "widgetId": "tdr1sxw5jb"
+        }
+      },
+      "onClick": "{{storeValue('filterView', '5 - Custom').then(() => {});\nremoveValue('lastchangeddropdown');\nresetWidget(\"customerFilter\");\nresetWidget(\"cohortSelectbyTag\").then(() => {\n  getCohortStringMatch.run();\n  getCohortMatch.run();\n});}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "8yt6rgnkua"
+    }
+  },
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "51au70su43",
+  "leftColumn": 5,
+  "minWidth": 450,
+  "mobileBottomRow": 45,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 3,
+  "mobileTopRow": 41,
+  "needsErrorInfo": false,
+  "orientation": "horizontal",
+  "originalBottomRow": 42,
+  "originalTopRow": 12,
+  "parentColumnSpace": 25.4375,
+  "parentId": "xpvjcxxwvw",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 55,
+  "topRow": 0,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "yivips9f9z",
+  "widgetName": "ButtonGroup1"
+}

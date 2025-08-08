@@ -1,0 +1,2 @@
+SELECT * FROM public."gen1_ntwk_data"
+ORDER BY account_no;

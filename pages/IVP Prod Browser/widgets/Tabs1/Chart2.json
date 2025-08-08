@@ -1,0 +1,114 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 98,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "aezoii1ulz": {
+      "data": "{{ buildDayStat.getEChartOptions() }}",
+      "seriesName": "2023"
+    }
+  },
+  "chartName": "Sales Report",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "chartData.aezoii1ulz.data"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ofsgf1kj3d",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 32,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 0,
+  "needsErrorInfo": true,
+  "onDataPointClick": "{{storeValue('statclick', Chart2.selectedDataPoint.rawEventData.seriesName.split(\" - \")[0]);}}",
+  "parentColumnSpace": 15.203125,
+  "parentId": "yavljr5ymj",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "showDataPointLabel": false,
+  "topRow": 0,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "8wrwxdmnss",
+  "widgetName": "Chart2",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6833bd1e663f59025c630a90_b8aa80e0-683d-4d8b-b1a0-84567bf18114",
+  "id": "Cohorts_Default_Form_Values",
+  "unpublishedCollection": {
+    "name": "Default_Form_Values",
+    "pageId": "Cohorts",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

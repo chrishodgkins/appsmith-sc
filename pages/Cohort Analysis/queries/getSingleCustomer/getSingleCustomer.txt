@@ -1,0 +1,2 @@
+SELECT * FROM public."gen1_ntwk_data"
+WHERE account_no = '40000081';

@@ -1,0 +1,1 @@
+SELECT * FROM public."gen1_ntwk_data" LIMIT 10;

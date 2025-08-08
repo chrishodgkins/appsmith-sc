@@ -1,0 +1,39 @@
+{
+  "animateLoading": false,
+  "borderRadius": "1.5rem",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "#3b82f6",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "edit",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "u5wfg3mddn",
+  "leftColumn": 0,
+  "minWidth": 50,
+  "mobileBottomRow": 16,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 12,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(Modal2.name);}}",
+  "parentColumnSpace": 16.578369140625,
+  "parentId": "wehy1yp4wh",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 2,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "h9lg8cmdjm",
+  "widgetName": "IconButton4"
+}

@@ -1,0 +1,4 @@
+SELECT DISTINCT cohort
+FROM public.gen1_ntwk_data
+WHERE cohort IS NOT NULL
+ORDER BY cohort DESC;

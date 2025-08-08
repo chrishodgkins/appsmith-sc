@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6833bd1e663f59025c630a90_5e27688f-7eb1-4187-bafa-0f9d8ee4166b",
+  "id": "IVP Prod Browser_buildWeeklyStat",
+  "unpublishedCollection": {
+    "name": "buildWeeklyStat",
+    "pageId": "IVP Prod Browser",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

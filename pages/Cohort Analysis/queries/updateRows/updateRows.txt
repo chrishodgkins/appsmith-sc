@@ -1,0 +1,7 @@
+UPDATE public."gen1_ntwk_data" 
+SET 
+	"cohort" = '{{tb_ntwk_datav2.updatedRow.cohort}}',
+	cohort_name = '{{ tb_ntwk_datav2.updatedRow.cohort_name }}',
+	sub_cohorts = '{{ tb_ntwk_datav2.updatedRow.sub_cohorts }}',
+	contract_status = '{{tb_ntwk_datav2.updatedRow.contract_status}}'
+WHERE account_no = {{ tb_ntwk_datav2.updatedRow.account_no }};

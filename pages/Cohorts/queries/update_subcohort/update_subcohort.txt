@@ -1,0 +1,8 @@
+UPDATE public."gen1_ntwk_data" SET
+    sub_cohorts = '{{ subCohortInput.text }}',
+		cohort_name = '{{ cohortInput.text }}',
+		cohort = '{{ tagsInput.text }}',
+		"Site1" = '{{ site1Input.text }}',
+		"Site2" = '{{ site2Input.text }}',
+		ce_comments = '{{ ceComments.text }}'
+  WHERE account_no = '{{ Text8.text}}'; -- Specify a valid condition here. Removing the condition may update every row in the table!

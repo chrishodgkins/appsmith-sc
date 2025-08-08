@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 12,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "path",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ktldp5xd4w",
+  "leftColumn": 0,
+  "minWidth": 120,
+  "mobileBottomRow": 49,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 5,
+  "mobileTopRow": 45,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(Modal1.name);}}",
+  "parentColumnSpace": 25.03125,
+  "parentId": "xpvjcxxwvw",
+  "parentRowSpace": 10,
+  "placement": "START",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 7,
+  "text": "Cohort Key",
+  "topRow": 8,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "8kpinyz7k0",
+  "widgetName": "Button2"
+}

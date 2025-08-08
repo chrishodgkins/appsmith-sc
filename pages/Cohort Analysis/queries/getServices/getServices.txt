@@ -1,0 +1,2 @@
+SELECT service_type_narrative FROM public."billingdata" 
+WHERE account_number = {{ tb_ntwk_data.selectedRows}} LIMIT 10;

@@ -1,0 +1,10 @@
+INSERT INTO public."numbinv" (
+	"id",
+	"number",
+	"Account",
+	"Name")
+VALUES (
+	'{{insert_form.formData.id}}',
+	'{{insert_form.formData.number}}',
+	'{{insert_form.formData.Account}}',
+	'{{insert_form.formData.Name}}');

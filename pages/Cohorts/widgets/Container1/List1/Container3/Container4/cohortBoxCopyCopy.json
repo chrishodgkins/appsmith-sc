@@ -1,0 +1,61 @@
+{
+  "animateLoading": true,
+  "backgroundColor": "#f4f4f5",
+  "borderColor": "#71717a",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 9,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.600rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "lpb50vy1hb",
+  "leftColumn": 33,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 20,
+  "mobileRightColumn": 36,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "overflow": "SCROLL",
+  "parentColumnSpace": 29.6484375,
+  "parentId": "wehy1yp4wh",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldTruncate": false,
+  "text": "Comments:<br> {{ currentItem.ce_comments}}\n",
+  "textAlign": "LEFT",
+  "textColor": "#3b82f6",
+  "topRow": 0,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "ujuh47inik",
+  "widgetName": "cohortBoxCopyCopy"
+}

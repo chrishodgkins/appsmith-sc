@@ -1,0 +1,32 @@
+{
+  "gitSyncId": "6833bd1e663f59025c630a90_11e7c7ec-e369-4c41-83ff-efbe3af6f9a1",
+  "unpublishedPage": {
+    "isHidden": false,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 1410,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "minHeight": 670,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 65,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 93,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Customers",
+    "slug": "customers"
+  }
+}

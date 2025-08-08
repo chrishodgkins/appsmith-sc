@@ -1,0 +1,5 @@
+UPDATE public."numbinv" SET
+		"number" = '{{update_form.fieldState.number.isVisible ? update_form.formData.number : update_form.sourceData.number}}',
+		"Account" = '{{update_form.fieldState.Account.isVisible ? update_form.formData.Account : update_form.sourceData.Account}}',
+    "Name" = '{{update_form.fieldState.Name.isVisible ? update_form.formData.Name : update_form.sourceData.Name}}'
+WHERE "id" = {{data_table.selectedRow.id}};

@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "refresh",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "r4ukt5ukpw",
+  "leftColumn": 56,
+  "minWidth": 120,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 42,
+  "mobileRightColumn": 58,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "{{removeValue('filterView').then(() => {});\nresetWidget(\"cohortSelectbyTag\", true);\nresetWidget(\"customerFilter\", true);\nremoveValue('lastchangeddropdown');\ngetCohortStringMatch.run()}}",
+  "parentColumnSpace": 27.078125,
+  "parentId": "xpvjcxxwvw",
+  "parentRowSpace": 10,
+  "placement": "START",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "Reset Table",
+  "topRow": 0,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "mjbbujhoft",
+  "widgetName": "Button3"
+}
