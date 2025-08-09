@@ -1,10 +1,12 @@
 export default {
+  dailystats: [],
+
   runStatsQueries: async () => {
-    // 🍳 Set statready to "Stats Pending" and disable button
+    // Keep your compatibility-safe "status" in storeValue
     storeValue("dstatready", "Day Stats Pending");
 
     try {
-      const services = Get_Services.data.result || [];
+      const services = Get_Services.data?.result ?? [];
 
       const fetchStat = async (service) => {
         const rp = service.relatedParty?.[0]?.id;
@@ -35,12 +37,13 @@ export default {
       const processed = finalResults.map(r => ({
         relatedPartyId: r.service.relatedParty[0].id,
         serviceId: r.service.id,
-        ...r.stats
+        ...r.stats,
       }));
 
-      storeValue("dailystats", processed);
+      // In-memory mutation, because performance matters
+      this.dailystats = processed;
 
-      // 🥳 Stats done! Enable button and update message
+      // Store the updated status as before
       storeValue("dstatready", "Day Stats Ready");
 
       return processed;
@@ -48,7 +51,7 @@ export default {
       console.error("Fatal error in runStatsQueries:", e);
       showAlert("Error running stats queries", "error");
 
-      storeValue("dailystats", []);
+      this.dailystats = [];
       storeValue("dstatready", "Stats Failed");
 
       return [];

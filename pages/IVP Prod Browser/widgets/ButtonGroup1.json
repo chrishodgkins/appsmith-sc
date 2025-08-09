@@ -26,9 +26,6 @@
       "key": "groupButtons.groupButton1.label"
     },
     {
-      "key": "groupButtons.groupButton1.isDisabled"
-    },
-    {
       "key": "groupButtons.groupButton2.isDisabled"
     },
     {
@@ -42,6 +39,9 @@
     },
     {
       "key": "groupButtons.groupButtonad1m48qynv.isVisible"
+    },
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
     }
   ],
   "dynamicPropertyPathList": [

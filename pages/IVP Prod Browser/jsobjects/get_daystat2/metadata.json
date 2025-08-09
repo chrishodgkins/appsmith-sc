@@ -6,6 +6,11 @@
     "pageId": "IVP Prod Browser",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": []
+    "variables": [
+      {
+        "name": "dailystats",
+        "value": "[]"
+      }
+    ]
   }
 }
