@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,12 +11,16 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "0.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -25,28 +29,26 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 4,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 16,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 37,
+  "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
-  "originalTopRow": 0,
+  "originalBottomRow": 9,
+  "originalTopRow": 5,
   "overflow": "NONE",
-  "parentColumnSpace": 15.515625,
-  "parentId": "0",
-  "parentRowSpace": 10,
+  "parentId": "e20788n6cw",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 16,
+  "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "SecureCo Customer Dashboard",
-  "textAlign": "LEFT",
+  "text": "{{ Number( CountSemaHybrid.data.map( a => a.count)) }}",
+  "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 0,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "dqp4lebusm",
-  "widgetName": "Text1"
+  "widgetId": "aow36bg0mc",
+  "widgetName": "Text3Copy1"
 }

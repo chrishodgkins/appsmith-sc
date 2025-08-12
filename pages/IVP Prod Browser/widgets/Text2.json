@@ -43,7 +43,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 21,
   "shouldTruncate": false,
   "text": "Filter Instructions: \n- Dropdown: Filters Customer List\n- Customer List: Clicking filters Services and Numbers Below.\n- Click Stats data points filters as well.\n- IF no customer is selected, \"Customer Data\" is all customers.\n\nStats take 10 minutes to appear after page load.  Click buttons below to refresh.",
   "textAlign": "LEFT",

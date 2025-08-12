@@ -1,0 +1,2 @@
+SELECT COUNT(*)
+FROM public."gen1_ntwk_data";
