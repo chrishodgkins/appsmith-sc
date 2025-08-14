@@ -30,7 +30,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 62,
-  "source": "http://10.141.17.33:5678/webhook/070c5c0d-93c7-4ee2-bf57-2ad6dab8fbc7/chat",
+  "source": "http://10.141.17.33:5678/webhook/6a054a18-e09b-4d2e-a1e8-58deb49ab00d/chat",
   "topRow": 0,
   "type": "IFRAME_WIDGET",
   "version": 1,

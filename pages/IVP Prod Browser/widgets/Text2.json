@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 16,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -45,7 +45,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 21,
   "shouldTruncate": false,
-  "text": "Filter Instructions: \n- Dropdown: Filters Customer List\n- Customer List: Clicking filters Services and Numbers Below.\n- Click Stats data points filters as well.\n- IF no customer is selected, \"Customer Data\" is all customers.\n\nStats take 10 minutes to appear after page load.  Click buttons below to refresh.",
+  "text": "Filter Instructions: \n- Dropdown: Filters Customer List\n- Customer List: Clicking filters Services and Numbers Below.\n- Click Stats data points filters as well.\n- IF no customer is selected, \"Customer Data\" is all customers.\n\nStats take 10 minutes to appear after page load.  Click buttons below *one at a time* to refresh.",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 4,
