@@ -35,6 +35,7 @@
     "data_source",
     "id",
     "hostname",
+    "max_sessions",
     "ip_address",
     "port",
     "state",
@@ -79,7 +80,7 @@
     "last_modified_date",
     "date_added"
   ],
-  "columnUpdatedAt": 1749872194530,
+  "columnUpdatedAt": 1755488238553,
   "columnWidthMap": {},
   "compactMode": "SHORT",
   "customIsLoading": false,
@@ -240,6 +241,9 @@
     },
     {
       "key": "primaryColumns.date_added.computedValue"
+    },
+    {
+      "key": "primaryColumns.max_sessions.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -1017,6 +1021,40 @@
       "label": "manipulation_string",
       "notation": "standard",
       "originalId": "manipulation_string",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.775rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "max_sessions": {
+      "alias": "max_sessions",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"max_sessions\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "max_sessions",
+      "index": 46,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "max_sessions",
+      "notation": "standard",
+      "originalId": "max_sessions",
       "sticky": "",
       "textColor": "",
       "textSize": "0.775rem",
