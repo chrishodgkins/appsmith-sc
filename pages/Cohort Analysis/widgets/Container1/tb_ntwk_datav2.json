@@ -93,13 +93,14 @@
   "columnUpdatedAt": 1755822379188,
   "columnWidthMap": {
     "chargeTypes": 501,
+    "customer": 243,
     "db_numbers": 495,
     "lp_description": 820,
     "lp_from_range": 206,
     "lp_nexthop_list": 1826,
     "lp_nextrealm_list": 902,
     "lp_src_realm": 614,
-    "serviceTypes": 120
+    "serviceTypes": 227
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
