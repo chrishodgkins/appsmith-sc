@@ -1,24 +1,23 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_b44b74b7-c476-48e4-83a8-7b51641fef09",
+  "gitSyncId": "6833bd1e663f59025c630a90_793e944f-23ee-40f8-bd4b-4efc82669531",
   "unpublishedPage": {
-    "customSlug": "",
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 2010,
+          "bottomRow": 950,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 760,
+          "minHeight": 890,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 74,
+          "snapRows": 87,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 93,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "IVP Prod Browser",
-    "slug": "ivp-prod-browser"
+    "name": "CTS Capacity",
+    "slug": "cts-capacity"
   }
 }

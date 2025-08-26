@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6833bd1e663f59025c630a90_833d5f7d-69db-426c-9a20-96f3358f14e7",
+  "id": "CTS Capacity_buildWeeklyStat",
+  "unpublishedCollection": {
+    "name": "buildWeeklyStat",
+    "pageId": "CTS Capacity",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

@@ -56,7 +56,11 @@
       "isDefault": false
     },
     {
-      "id": "Page1",
+      "id": "dashboard- proto",
+      "isDefault": false
+    },
+    {
+      "id": "CTS Capacity",
       "isDefault": false
     }
   ],
