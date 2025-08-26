@@ -43,64 +43,47 @@ export default {
   },
 
   getEChartOptions: () => {
-    // which service to show (by ID). fallback: selected row, or "all"
     const selectedId = appsmith.store.ctsStatclick || configuredCTS.selectedRow?.id || "ALL";
-
-    // source: what runStatsQueries stored (one entry per service)
     const rows = Array.isArray(appsmith.store.ctsweeklystats) ? appsmith.store.ctsweeklystats : [];
+    const targets = selectedId === "ALL" ? rows : rows.filter(r => r.serviceId === selectedId);
 
-    // pick either one service or all
-    const targets = selectedId === "ALL"
-      ? rows
-      : rows.filter(r => r.serviceId === selectedId);
+    // base order + rotate so today is last (rightmost)
+    const baseOrder = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+    const jsToName = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];     // Date.getDay(): 0=Sun…6=Sat
+    const todayName = jsToName[new Date().getDay()];                   // e.g., "Wed"
+    const tIdx = baseOrder.indexOf(todayName);
+    const dayOrder = baseOrder.slice((tIdx + 1) % 7).concat(baseOrder.slice(0, (tIdx + 1) % 7));
+    // Example: if today is Wed -> ["Thu","Fri","Sat","Sun","Mon","Tue","Wed"]
 
-    // weekday order
-    const dayOrder = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
-
-    // helper to coerce [{x, y}] into a y-array aligned to dayOrder
     const toYArray = (pts = []) => {
       const map = Object.fromEntries((pts || []).map(p => [String(p.x), Number(p.y) || 0]));
       return dayOrder.map(d => map[d] ?? 0);
     };
 
-    // build series: each service contributes up to 3 lines: Inbound, Outbound, Total
     const series = [];
     const legend = [];
 
     for (const r of targets) {
-      const tpd = r?.timePeriodData || r?.stats?.timePeriodData; // support either placement
+      const tpd = r?.timePeriodData || r?.stats?.timePeriodData;
       const inbound = tpd?.inboundSeriesData;
       const outbound = tpd?.outboundSeriesData;
       const total = tpd?.totalSeriesData;
-
       const base = r.serviceName || r.serviceId || "Service";
 
       if (Array.isArray(inbound) && inbound.length) {
-        legend.push(`${base} (Inbound)`);
-        series.push({
-          name: `${base} (Inbound)`,
-          type: "line",
-          emphasis: { focus: "series" },
-          data: toYArray(inbound)
-        });
+        const name = `${base} (Inbound)`;
+        legend.push(name);
+        series.push({ name, type: "line", emphasis: { focus: "series" }, data: toYArray(inbound) });
       }
       if (Array.isArray(outbound) && outbound.length) {
-        legend.push(`${base} (Outbound)`);
-        series.push({
-          name: `${base} (Outbound)`,
-          type: "line",
-          emphasis: { focus: "series" },
-          data: toYArray(outbound)
-        });
+        const name = `${base} (Outbound)`;
+        legend.push(name);
+        series.push({ name, type: "line", emphasis: { focus: "series" }, data: toYArray(outbound) });
       }
       if (Array.isArray(total) && total.length) {
-        legend.push(`${base} (Total)`);
-        series.push({
-          name: `${base} (Total)`,
-          type: "line",
-          emphasis: { focus: "series" },
-          data: toYArray(total)
-        });
+        const name = `${base} (Total)`;
+        legend.push(name);
+        series.push({ name, type: "line", emphasis: { focus: "series" }, data: toYArray(total) });
       }
     }
 
@@ -116,7 +99,7 @@ export default {
     return {
       tooltip: { trigger: "axis" },
       legend: { data: legend },
-      xAxis: { type: "category", data: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"] },
+      xAxis: { type: "category", data: dayOrder },
       yAxis: { type: "value", name: "Concurrent Calls" },
       series
     };
