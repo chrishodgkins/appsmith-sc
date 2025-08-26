@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_0ce07b88-c429-4186-bf6e-04e5a9607868",
+  "gitSyncId": "6833bd1e663f59025c630a90_a412b24f-1f39-4296-b92f-560412beacdb",
   "id": "CTS Capacity_Api1",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
@@ -12,12 +12,7 @@
       "formData": {
         "apiContentType": "none"
       },
-      "headers": [
-        {
-          "key": "x-customer-id",
-          "value": "AC1003"
-        }
-      ],
+      "headers": [],
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
@@ -33,7 +28,7 @@
           "value": "AC1003"
         }
       ],
-      "timeoutInMillisecond": 100000
+      "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
     "datasource": {

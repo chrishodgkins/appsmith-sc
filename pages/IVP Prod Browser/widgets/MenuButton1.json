@@ -91,6 +91,14 @@
       "label": "Gen1 Number Inventory",
       "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
       "widgetId": "shodq7rccl"
+    },
+    "menuItemn5x500f21n": {
+      "id": "menuItemn5x500f21n",
+      "index": 5,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Menu Item",
+      "widgetId": "rewaw50xve"
     }
   },
   "menuItemsSource": "STATIC",

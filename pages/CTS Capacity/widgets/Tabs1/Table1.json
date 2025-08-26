@@ -358,7 +358,7 @@
     },
     "description": {
       "alias": "description",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",

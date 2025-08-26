@@ -53,7 +53,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
-  "defaultSelectedRowIndex": 0,
+  "defaultSelectedRowIndex": "none",
   "defaultSelectedRowIndices": [
     0
   ],
@@ -131,6 +131,7 @@
   "mobileLeftColumn": 0,
   "mobileRightColumn": 34,
   "mobileTopRow": 1,
+  "multiRowSelection": false,
   "needsErrorInfo": false,
   "parentId": "cdx7j8aicv",
   "parentRowSpace": 10,

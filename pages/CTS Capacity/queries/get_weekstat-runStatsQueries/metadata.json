@@ -25,7 +25,7 @@
     "fullyQualifiedName": "get_weekstat.runStatsQueries",
     "name": "runStatsQueries",
     "pageId": "CTS Capacity",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }
