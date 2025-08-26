@@ -47,14 +47,20 @@ export default {
     const rows = Array.isArray(appsmith.store.ctsweeklystats) ? appsmith.store.ctsweeklystats : [];
     const targets = selectedId === "ALL" ? rows : rows.filter(r => r.serviceId === selectedId);
 
-    // base order + rotate so today is last (rightmost)
+    // Base week order
     const baseOrder = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
-    const jsToName = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];     // Date.getDay(): 0=Sun…6=Sat
-    const todayName = jsToName[new Date().getDay()];                   // e.g., "Wed"
-    const tIdx = baseOrder.indexOf(todayName);
-    const dayOrder = baseOrder.slice((tIdx + 1) % 7).concat(baseOrder.slice(0, (tIdx + 1) % 7));
-    // Example: if today is Wed -> ["Thu","Fri","Sat","Sun","Mon","Tue","Wed"]
+    const jsToName = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]; // Date.getDay(): 0=Sun…6=Sat
 
+    // Yesterday's day name
+    const yesterdayIdx = (new Date().getDay() + 6) % 7; // yesterday = today - 1 (mod 7)
+    const yesterdayName = jsToName[yesterdayIdx];       // e.g., "Tue" if today is Wed
+
+    // Rotate week so yesterday is rightmost
+    const yIdx = baseOrder.indexOf(yesterdayName);
+    const dayOrder = baseOrder.slice((yIdx + 1) % 7).concat(baseOrder.slice(0, (yIdx + 1) % 7));
+    // Example: if yesterday = Tue -> ["Wed","Thu","Fri","Sat","Sun","Mon","Tue"]
+
+    // Map series data to this rotated day order
     const toYArray = (pts = []) => {
       const map = Object.fromEntries((pts || []).map(p => [String(p.x), Number(p.y) || 0]));
       return dayOrder.map(d => map[d] ?? 0);
