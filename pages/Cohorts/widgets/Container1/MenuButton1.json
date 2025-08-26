@@ -44,6 +44,9 @@
     },
     {
       "key": "menuItems.menuItemc7ojr2ytl1.onClick"
+    },
+    {
+      "key": "menuItems.menuItemakyygtqxxg.onClick"
     }
   ],
   "iconAlign": "left",
@@ -83,6 +86,15 @@
       "label": "Gen1 Number Inventory",
       "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
       "widgetId": "5w1watgvzs"
+    },
+    "menuItemakyygtqxxg": {
+      "id": "menuItemakyygtqxxg",
+      "index": 5,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "CTS Trunks",
+      "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
+      "widgetId": "43v94qikmc"
     },
     "menuItemc7ojr2ytl1": {
       "id": "menuItemc7ojr2ytl1",

@@ -3,6 +3,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
   "boxShadow": "none",
+  "configureMenuItems": {
+    "config": {
+      "id": "config",
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Menu Item"
+    },
+    "id": "config",
+    "label": "Configure menu items"
+  },
   "dynamicBindingPathList": [
     {
       "key": "menuColor"
@@ -27,16 +37,16 @@
       "key": "menuItems.menuItem1.onClick"
     },
     {
-      "key": "menuItems.menuItems03f0hyusq.onClick"
+      "key": "menuItems.menuItemtlsa5dw05s.onClick"
     },
     {
-      "key": "menuItems.menuItemnkjwgcm4b3.onClick"
+      "key": "menuItems.menuItem80u1sktkaj.onClick"
     },
     {
-      "key": "menuItems.menuItem095z894xm4.onClick"
+      "key": "menuItems.menuItemc7ojr2ytl1.onClick"
     },
     {
-      "key": "menuItems.menuItemw1hlsni2ds.onClick"
+      "key": "menuItems.menuItemakyygtqxxg.onClick"
     }
   ],
   "iconAlign": "left",
@@ -50,15 +60,6 @@
   "leftColumn": 0,
   "menuColor": "{{appsmith.theme.colors.primaryColor}}",
   "menuItems": {
-    "menuItem095z894xm4": {
-      "id": "menuItem095z894xm4",
-      "index": 4,
-      "isDisabled": false,
-      "isVisible": true,
-      "label": "Browse IVP Data",
-      "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
-      "widgetId": "eq2v3szx01"
-    },
     "menuItem1": {
       "id": "menuItem1",
       "index": 1,
@@ -70,39 +71,48 @@
     },
     "menuItem3": {
       "id": "menuItem3",
-      "index": 2,
+      "index": 3,
       "isDisabled": false,
       "isVisible": true,
       "label": "SBC Data Browser",
       "onClick": "{{navigateTo('SBC Data Browser', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
-    "menuItemnkjwgcm4b3": {
-      "id": "menuItemnkjwgcm4b3",
-      "index": 3,
+    "menuItem80u1sktkaj": {
+      "id": "menuItem80u1sktkaj",
+      "index": 4,
       "isDisabled": false,
       "isVisible": true,
       "label": "Gen1 Number Inventory",
       "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
-      "widgetId": "oje4wecqj0"
+      "widgetId": "5w1watgvzs"
     },
-    "menuItems03f0hyusq": {
-      "id": "menuItems03f0hyusq",
+    "menuItemakyygtqxxg": {
+      "id": "menuItemakyygtqxxg",
       "index": 0,
       "isDisabled": false,
       "isVisible": true,
       "label": "Cohorts",
       "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
-      "widgetId": "tcsr275a6f"
+      "widgetId": "43v94qikmc"
     },
-    "menuItemw1hlsni2ds": {
-      "id": "menuItemw1hlsni2ds",
+    "menuItemc7ojr2ytl1": {
+      "id": "menuItemc7ojr2ytl1",
       "index": 5,
       "isDisabled": false,
       "isVisible": true,
-      "label": "CTS Trunks",
-      "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
-      "widgetId": "8lbzb31iby"
+      "label": "IVP Data Browser",
+      "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
+      "widgetId": "vi8571brrx"
+    },
+    "menuItemtlsa5dw05s": {
+      "id": "menuItemtlsa5dw05s",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Gen1 Customers",
+      "onClick": "{{navigateTo('Customers', {}, 'SAME_WINDOW');}}",
+      "widgetId": "frbzn05tu4"
     }
   },
   "menuItemsSource": "STATIC",
@@ -113,14 +123,15 @@
   "mobileTopRow": 0,
   "needsErrorInfo": false,
   "parentColumnSpace": 2.166015625,
-  "parentId": "cm4ndygrf4",
+  "parentId": "0",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "renderMode": "CANVAS",
   "rightColumn": 2,
+  "sourceData": [],
   "topRow": 0,
   "type": "MENU_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "eochc5kjpk",
+  "widgetId": "thxu6dyoav",
   "widgetName": "MenuButton1"
 }

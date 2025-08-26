@@ -34,6 +34,9 @@
     },
     {
       "key": "menuItems.menuItemftgdqi375j.onClick"
+    },
+    {
+      "key": "menuItems.menuItem26ctzf7zck.onClick"
     }
   ],
   "iconAlign": "left",
@@ -55,6 +58,15 @@
       "label": "Gen1 Customers",
       "onClick": "{{navigateTo('Customers', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
+    },
+    "menuItem26ctzf7zck": {
+      "id": "menuItem26ctzf7zck",
+      "index": 5,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "CTS Trunks",
+      "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
+      "widgetId": "vfkkuhofbk"
     },
     "menuItem3": {
       "id": "menuItem3",

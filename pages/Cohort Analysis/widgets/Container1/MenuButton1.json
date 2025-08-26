@@ -11,6 +11,7 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "menuItems.menuItem1.onClick"
@@ -26,6 +27,9 @@
     },
     {
       "key": "menuItems.menuItemy8788uz9l6.onClick"
+    },
+    {
+      "key": "menuItems.menuItemrat8xe4u89.onClick"
     }
   ],
   "iconAlign": "left",
@@ -74,6 +78,15 @@
       "label": "Gen1 Number Inventory",
       "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
       "widgetId": "8uw1eimvgq"
+    },
+    "menuItemrat8xe4u89": {
+      "id": "menuItemrat8xe4u89",
+      "index": 5,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "CTS Trunks",
+      "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
+      "widgetId": "xxxlfcxcuq"
     },
     "menuItemy8788uz9l6": {
       "id": "menuItemy8788uz9l6",
