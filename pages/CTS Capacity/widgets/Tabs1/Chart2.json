@@ -26,7 +26,7 @@
   },
   "chartName": "Sales Report",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const search = String(eomDevices.searchText || \"\").toLowerCase();\n\n  const base = Array.isArray(getEOMStats.data) ? getEOMStats.data : [];\n\n  // 1) contains match on name\n  const bySearch = base.filter(d =>\n    !search || String(d?.name || \"\").toLowerCase().includes(search)\n  );\n\n  // 2) drop rows where both are zero/empty\n  const nonZero = bySearch.filter(d => {\n    const inVal = Number(d?.Ingress ?? 0);\n    const egVal = Number(d?.Egress ?? 0);\n    return (inVal + egVal) > 0;\n  });\n\n  // Z → A sort\n  const sorted = [...nonZero].sort((a, b) => b.name.localeCompare(a.name));\n\n  return {\n    tooltip: { trigger: \"axis\", axisPointer: { type: \"shadow\" } },\n    legend: { data: [\"Ingress\", \"Egress\"] },\n    xAxis: { type: \"value\", name: \"Count\" },\n    yAxis: { type: \"category\", data: sorted.map(d => d.name) },\n    series: [\n      {\n        name: \"Ingress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.Ingress || 0))\n      },\n      {\n        name: \"Egress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.Egress || 0))\n      }\n    ]\n  };\n})()\n))(Chart2.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const search = String(eomDevices.searchText || \"\").toLowerCase();\n  const base = Array.isArray(getEOMStats.data) ? getEOMStats.data : [];\n\n  // contains match on name\n  const bySearch = base.filter(d =>\n    !search || String(d?.name || \"\").toLowerCase().includes(search)\n  );\n\n  // ignore peak_*; drop rows where recent_ingress + recent_egress == 0 (or missing)\n  const nonZero = bySearch.filter(d => {\n    const inVal = Number(d?.recent_ingress ?? 0);\n    const egVal = Number(d?.recent_egress ?? 0);\n    return (inVal + egVal) > 0;\n  });\n\n  // sort Z → A by name (flip to a.name.localeCompare(b.name) for A→Z)\n  const sorted = [...nonZero].sort((a, b) => b.name.localeCompare(a.name));\n\n  return {\n    tooltip: { trigger: \"axis\", axisPointer: { type: \"shadow\" } },\n    legend: { data: [\"Ingress\", \"Egress\"] },\n    xAxis: { type: \"value\", name: \"Count\" },\n    yAxis: { type: \"category\", data: sorted.map(d => d.name) },\n    series: [\n      {\n        name: \"Ingress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.recent_ingress || 0))\n      },\n      {\n        name: \"Egress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.recent_egress || 0))\n      }\n    ]\n  };\n})()\n))(Chart2.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -98,15 +98,15 @@
   "isVisible": true,
   "key": "1n49e3nct7",
   "labelOrientation": "auto",
-  "leftColumn": 23,
+  "leftColumn": 27,
   "minWidth": 450,
   "mobileBottomRow": 33,
   "mobileLeftColumn": 23,
   "mobileRightColumn": 47,
   "mobileTopRow": 1,
   "needsErrorInfo": true,
-  "originalBottomRow": 274,
-  "originalTopRow": 50,
+  "originalBottomRow": 212,
+  "originalTopRow": 4,
   "parentColumnSpace": 32.03125,
   "parentId": "pwfp1puf60",
   "parentRowSpace": 10,

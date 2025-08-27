@@ -941,7 +941,7 @@
   "rightColumn": 27,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{Api1.data.groups}}",
+  "tableData": "{{getGroups.data.groups}}",
   "textSize": "0.875rem",
   "topRow": 0,
   "totalRecordsCount": 0,

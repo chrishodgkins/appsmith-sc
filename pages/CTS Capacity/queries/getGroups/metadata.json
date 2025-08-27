@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6833bd1e663f59025c630a90_a412b24f-1f39-4296-b92f-560412beacdb",
-  "id": "CTS Capacity_Api1",
+  "id": "CTS Capacity_getGroups",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -38,7 +38,7 @@
       "pluginId": "restapi-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Api1",
+    "name": "getGroups",
     "pageId": "CTS Capacity",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
