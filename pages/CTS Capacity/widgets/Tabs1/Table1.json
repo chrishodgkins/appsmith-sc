@@ -66,6 +66,7 @@
     "services": 464,
     "state": 96
   },
+  "compactMode": "SHORT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,

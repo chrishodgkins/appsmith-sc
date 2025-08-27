@@ -50,6 +50,7 @@
     "name": 290,
     "profile": 414
   },
+  "compactMode": "SHORT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,

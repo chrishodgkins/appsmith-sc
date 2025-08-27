@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 285,
+  "bottomRow": 212,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "16eafw6g4x": {
@@ -26,7 +26,7 @@
   },
   "chartName": "Sales Report",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const search = String(eomDevices.searchText || \"\").toLowerCase();\n\n  // Filter to rows where `name` starts with the search text\n  const filtered = (getEOMStats.data || []).filter(d =>\n    !search || String(d.name).toLowerCase().startsWith(search)\n  );\n\n  // Sort Z → A\n  const sorted = [...filtered].sort((a, b) => b.name.localeCompare(a.name));\n\n  return {\n    tooltip: { trigger: \"axis\", axisPointer: { type: \"shadow\" } },\n    legend: { data: [\"Ingress\", \"Egress\"] },\n    xAxis: { type: \"value\", name: \"Count\" },\n    yAxis: { type: \"category\", data: sorted.map(d => d.name) },\n    series: [\n      {\n        name: \"Ingress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.Ingress || 0))\n      },\n      {\n        name: \"Egress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.Egress || 0))\n      }\n    ]\n  };\n})()\n))(Chart2.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const search = String(eomDevices.searchText || \"\").toLowerCase();\n\n  const base = Array.isArray(getEOMStats.data) ? getEOMStats.data : [];\n\n  // 1) contains match on name\n  const bySearch = base.filter(d =>\n    !search || String(d?.name || \"\").toLowerCase().includes(search)\n  );\n\n  // 2) drop rows where both are zero/empty\n  const nonZero = bySearch.filter(d => {\n    const inVal = Number(d?.Ingress ?? 0);\n    const egVal = Number(d?.Egress ?? 0);\n    return (inVal + egVal) > 0;\n  });\n\n  // Z → A sort\n  const sorted = [...nonZero].sort((a, b) => b.name.localeCompare(a.name));\n\n  return {\n    tooltip: { trigger: \"axis\", axisPointer: { type: \"shadow\" } },\n    legend: { data: [\"Ingress\", \"Egress\"] },\n    xAxis: { type: \"value\", name: \"Count\" },\n    yAxis: { type: \"category\", data: sorted.map(d => d.name) },\n    series: [\n      {\n        name: \"Ingress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.Ingress || 0))\n      },\n      {\n        name: \"Egress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.Egress || 0))\n      }\n    ]\n  };\n})()\n))(Chart2.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {

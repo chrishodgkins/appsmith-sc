@@ -40,7 +40,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 51,
   "shouldTruncate": false,
-  "text": "Most Recent Call Counter",
+  "text": "Most Recent Non-Zero Call Counter",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 0,

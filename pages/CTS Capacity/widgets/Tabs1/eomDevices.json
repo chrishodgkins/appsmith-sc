@@ -40,6 +40,7 @@
   "columnWidthMap": {
     "name": 362
   },
+  "compactMode": "SHORT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -83,8 +84,8 @@
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
-  "isVisibleDownload": true,
-  "isVisibleFilters": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "r3e4yv9cbz",
