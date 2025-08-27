@@ -38,15 +38,13 @@
   ],
   "columnUpdatedAt": 1756258331097,
   "columnWidthMap": {
-    "name": 408
+    "name": 362
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
-  "defaultSelectedRowIndex": 0,
-  "defaultSelectedRowIndices": [
-    0
-  ],
+  "defaultSelectedRowIndex": "0",
+  "defaultSelectedRowIndices": "",
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
@@ -86,7 +84,7 @@
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": true,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "r3e4yv9cbz",
@@ -97,6 +95,7 @@
   "mobileLeftColumn": 0,
   "mobileRightColumn": 34,
   "mobileTopRow": 151,
+  "multiRowSelection": false,
   "needsErrorInfo": false,
   "originalBottomRow": 179,
   "originalTopRow": 151,
@@ -109,7 +108,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Egress\"]))}}",
+      "computedValue": "{{eomDevices.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Egress\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -143,7 +142,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Ingress\"]))}}",
+      "computedValue": "{{eomDevices.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Ingress\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -177,7 +176,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
+      "computedValue": "{{eomDevices.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -208,7 +207,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 22,
+  "rightColumn": 21,
   "searchKey": "",
   "tableData": "{{getEOMStats.data}}",
   "textSize": "0.875rem",
@@ -218,5 +217,5 @@
   "version": 2,
   "verticalAlignment": "CENTER",
   "widgetId": "uqg4fkfteh",
-  "widgetName": "Table2"
+  "widgetName": "eomDevices"
 }

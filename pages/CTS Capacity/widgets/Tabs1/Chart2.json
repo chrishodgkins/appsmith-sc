@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 274,
+  "bottomRow": 285,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "16eafw6g4x": {
@@ -26,7 +26,7 @@
   },
   "chartName": "Sales Report",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  // Create a sorted copy of the API data by name (Z-A)\n  const sorted = [...getEOMStats.data].sort((a, b) =>\n    b.name.localeCompare(a.name)\n  );\n\n  return {\n    tooltip: { trigger: \"axis\", axisPointer: { type: \"shadow\" } },\n    legend: { data: [\"Ingress Sessions\", \"Egress Sessions\"] },\n    xAxis: { type: \"value\", name: \"Count\" },\n    yAxis: { type: \"category\", data: sorted.map(d => d.name) },\n    series: [\n      {\n        name: \"Ingress Sessions\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.Ingress))\n      },\n      {\n        name: \"Egress Sessions\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.Egress))\n      }\n    ]\n  };\n})()\n))(Chart2.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const search = String(eomDevices.searchText || \"\").toLowerCase();\n\n  // Filter to rows where `name` starts with the search text\n  const filtered = (getEOMStats.data || []).filter(d =>\n    !search || String(d.name).toLowerCase().startsWith(search)\n  );\n\n  // Sort Z → A\n  const sorted = [...filtered].sort((a, b) => b.name.localeCompare(a.name));\n\n  return {\n    tooltip: { trigger: \"axis\", axisPointer: { type: \"shadow\" } },\n    legend: { data: [\"Ingress\", \"Egress\"] },\n    xAxis: { type: \"value\", name: \"Count\" },\n    yAxis: { type: \"category\", data: sorted.map(d => d.name) },\n    series: [\n      {\n        name: \"Ingress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.Ingress || 0))\n      },\n      {\n        name: \"Egress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.Egress || 0))\n      }\n    ]\n  };\n})()\n))(Chart2.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -105,6 +105,8 @@
   "mobileRightColumn": 47,
   "mobileTopRow": 1,
   "needsErrorInfo": true,
+  "originalBottomRow": 274,
+  "originalTopRow": 50,
   "parentColumnSpace": 32.03125,
   "parentId": "pwfp1puf60",
   "parentRowSpace": 10,
@@ -112,7 +114,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 5,
+  "topRow": 4,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "yk9rwco7zo",
