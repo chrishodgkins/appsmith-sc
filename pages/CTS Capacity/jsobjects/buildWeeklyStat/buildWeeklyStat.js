@@ -169,7 +169,7 @@ export default {
       tooltip: { trigger: "axis" },
       legend: { data: legend, type: "scroll" },
       xAxis: { type: "category", data: xLabels, name: "Week" },
-      yAxis: { type: "value", name: "Concurrent Calls" },
+      yAxis: { type: "value", name: "Peak Concurrent Calls" },
       series
     };
   }

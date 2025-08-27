@@ -5,12 +5,12 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 150,
+  "bottomRow": 284,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 1420,
+      "bottomRow": 2760,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -53,9 +53,54 @@
       "version": 1,
       "widgetId": "cdx7j8aicv",
       "widgetName": "Canvas1"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 2760,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "zoov1rp4i8",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 1460,
+      "minWidth": 450,
+      "mobileBottomRow": 1461,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 1154,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "k5mh63s1jo",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 1154,
+      "tabId": "tab37l0txac6n",
+      "tabName": "EOM Gen1 Stats",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "pwfp1puf60",
+      "widgetName": "Canvas2"
     }
   ],
-  "defaultTab": "Tab 1",
+  "defaultTab": "IVP Trunks",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -83,7 +128,7 @@
   "mobileRightColumn": 27,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "originalBottomRow": 150,
+  "originalBottomRow": 265,
   "originalTopRow": 4,
   "parentColumnSpace": 18.03125,
   "parentId": "0",
@@ -101,6 +146,13 @@
       "label": "IVP Trunks",
       "positioning": "vertical",
       "widgetId": "cdx7j8aicv"
+    },
+    "tab37l0txac6n": {
+      "id": "tab37l0txac6n",
+      "index": 1,
+      "isVisible": true,
+      "label": "EOM Gen1 Stats",
+      "widgetId": "pwfp1puf60"
     }
   },
   "topRow": 4,
