@@ -82,7 +82,7 @@
       "index": 4,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Browse IVP Data",
+      "label": "IVP Customer Browser",
       "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
       "widgetId": "8fnv2vx8as"
     },

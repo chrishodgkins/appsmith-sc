@@ -101,7 +101,7 @@
       "index": 4,
       "isDisabled": false,
       "isVisible": true,
-      "label": "IVP Data Browser",
+      "label": "IVP Customer Browser",
       "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
       "widgetId": "vi8571brrx"
     },
