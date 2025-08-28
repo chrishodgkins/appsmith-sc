@@ -327,7 +327,7 @@
   "searchKey": "",
   "tableData": "{{getEOMStats.data}}",
   "textSize": "0.875rem",
-  "topRow": 4,
+  "topRow": 5,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
