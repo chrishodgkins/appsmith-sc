@@ -92,7 +92,7 @@
       "index": 5,
       "isDisabled": false,
       "isVisible": true,
-      "label": "CTS Trunks",
+      "label": "Trunk Capacity",
       "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
       "widgetId": "43v94qikmc"
     },
