@@ -62,6 +62,10 @@
     {
       "id": "CTS Capacity",
       "isDefault": false
+    },
+    {
+      "id": "IVP Stats History",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

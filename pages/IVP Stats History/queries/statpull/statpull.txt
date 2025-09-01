@@ -1,0 +1,2 @@
+SELECT * FROM public."call_volume_timeperiod_daily"
+WHERE inbound_0 IS NOT NULL;
