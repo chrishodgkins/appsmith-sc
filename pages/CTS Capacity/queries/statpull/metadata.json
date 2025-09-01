@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_271c5cb8-2f3f-43fa-a605-f19efd947a22",
-  "id": "IVP Stats History_statpull",
+  "gitSyncId": "6833bd1e663f59025c630a90_6924f27e-4c26-4469-b23d-c8926c4df815",
+  "id": "CTS Capacity_statpull",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -24,8 +24,8 @@
     },
     "dynamicBindingPathList": [],
     "name": "statpull",
-    "pageId": "IVP Stats History",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "pageId": "CTS Capacity",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
