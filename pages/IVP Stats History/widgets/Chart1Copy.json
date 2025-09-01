@@ -3,8 +3,8 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 87,
-  "bottomRowBeforeCollapse": 86,
+  "bottomRow": 178,
+  "bottomRowBeforeCollapse": 102,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "o82yvmu058": {
@@ -18,7 +18,7 @@
   },
   "chartName": "Sales Report",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const rows = statpull.data || [];\n  const sel = Select1?.selectedOptionValue;\n\n  // filter by selected service_id (or show all if empty/ALL)\n  const filtered = rows.filter(r => !sel || sel === 'ALL' || r.service_id === sel);\n\n  // unique, sorted dates for x-axis\n  const dates = [...new Set(filtered.map(r => r.collection_date))].sort();\n\n  // group by service_id; keep a nice label\n  const bySvc = {};\n  for (const r of filtered) {\n    if (!bySvc[r.service_id]) {\n      bySvc[r.service_id] = {\n        label: `${r.external_id} — ${r.description}`,\n        byDate: {}\n      };\n    }\n    const sum24 = (pfx) =>\n      Array.from({ length: 24 }, (_, i) => Number(r[`${pfx}_${i}`] ?? 0))\n        .reduce((a, b) => a + b, 0);\n\n    bySvc[r.service_id].byDate[r.collection_date] = {\n      inbound: sum24('inbound'),\n      outbound: sum24('outbound'),\n    };\n  }\n\n  // build series per service (two lines each)\n  const series = [];\n  for (const [svcId, obj] of Object.entries(bySvc)) {\n    const inbound = dates.map(d => obj.byDate[d]?.inbound ?? 0);\n    const outbound = dates.map(d => obj.byDate[d]?.outbound ?? 0);\n\n    series.push({\n      name: `${obj.label} — inbound`,\n      type: 'line',\n      smooth: true,\n      data: inbound,\n    });\n    series.push({\n      name: `${obj.label} — outbound`,\n      type: 'line',\n      smooth: true,\n      data: outbound,\n    });\n  }\n\n  return {\n    tooltip: { trigger: 'axis' },\n    legend: { type: 'scroll' },\n    xAxis: { type: 'category', data: dates },\n    yAxis: { type: 'value', name: 'Calls/day' },\n    series,\n  };\n})()\n))(Chart1.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const rows = statpull.data || [];\n\n  // normalize date picker value; default to latest date in data\n  const pick = DatePicker1?.selectedDate;\n  const pickDay = pick ? new Date(pick).toISOString().slice(0,10)\n                       : (rows.map(r => r.collection_date).sort().pop());\n\n  const sel = Select1?.selectedOptionValue; // service_id or 'ALL'\n\n  // filter to one day + optional service\n  const dayRows = rows.filter(r =>\n    r.collection_date === pickDay &&\n    (!sel || sel === 'ALL' || r.service_id === sel)\n  );\n\n  // hour labels 12AM..11PM\n  const hourLabels = Array.from({length:24}, (_,h) => {\n    const hr = h % 12 === 0 ? 12 : h % 12;\n    const ampm = h < 12 ? 'AM' : 'PM';\n    return `${hr}${ampm}`;\n  });\n\n  // build series: per service two lines (inbound/outbound)\n  const series = [];\n  for (const r of dayRows) {\n    const label = `${r.external_id} — ${r.description}`;\n\n    const inbound = Array.from({length:24}, (_,h) => Number(r[`inbound_${h}`] ?? 0));\n    const outbound = Array.from({length:24}, (_,h) => Number(r[`outbound_${h}`] ?? 0));\n\n    series.push({\n      name: `${label} — inbound`,\n      type: 'line',\n      smooth: true,\n      data: inbound,\n    });\n    series.push({\n      name: `${label} — outbound`,\n      type: 'line',\n      smooth: true,\n      data: outbound,\n    });\n  }\n\n  return {\n    title: { text: `Hourly Calls (${pickDay || 'no date'})` },\n    tooltip: { trigger: 'axis' },\n    legend: { type: 'scroll' },\n    grid: { left: 50, right: 20, top: 50, bottom: 40 },\n    xAxis: { type: 'category', data: hourLabels },\n    yAxis: { type: 'value', name: 'Calls per hour' },\n    series,\n  };\n})()\n))(Chart1Copy.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -95,7 +95,7 @@
   "flexVerticalAlignment": "start",
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "isLoading": false,
-  "isVisible": "{{Checkbox1.isChecked === false}}",
+  "isVisible": "{{ Checkbox1.isChecked === true }}",
   "key": "wqq8lp792z",
   "labelOrientation": "auto",
   "leftColumn": 0,
@@ -105,8 +105,8 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 13,
   "needsErrorInfo": true,
-  "originalBottomRow": 86,
-  "originalTopRow": 11,
+  "originalBottomRow": 177,
+  "originalTopRow": 89,
   "parentColumnSpace": 18.03125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -114,12 +114,12 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 12,
-  "topRowBeforeCollapse": 11,
+  "topRow": 90,
+  "topRowBeforeCollapse": 14,
   "type": "CHART_WIDGET",
   "version": 1,
-  "widgetId": "unj35s42jd",
-  "widgetName": "Chart1",
+  "widgetId": "kcp6aa83w0",
+  "widgetName": "Chart1Copy",
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }
