@@ -145,7 +145,7 @@
       "widgetName": "Canvas3"
     }
   ],
-  "defaultTab": "IVP Trunks",
+  "defaultTab": "IVP SecureCo CTS Trunks",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -173,7 +173,7 @@
   "mobileRightColumn": 27,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "originalBottomRow": 191,
+  "originalBottomRow": 187,
   "originalTopRow": 4,
   "parentColumnSpace": 18.03125,
   "parentId": "0",
