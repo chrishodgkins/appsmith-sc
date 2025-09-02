@@ -3,7 +3,7 @@
   "alignWidget": "RIGHT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 6,
   "defaultCheckedState": false,
   "dynamicBindingPathList": [
     {
@@ -22,7 +22,7 @@
   "key": "5dzw03mg36",
   "label": "Filter by Date?",
   "labelPosition": "Left",
-  "leftColumn": 46,
+  "leftColumn": 44,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -38,8 +38,8 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 53,
-  "topRow": 3,
+  "rightColumn": 51,
+  "topRow": 2,
   "type": "CHECKBOX_WIDGET",
   "version": 1,
   "widgetId": "z3d6izsizf",
