@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
   "boxShadow": "none",
-  "defaultOptionValue": "{{\n            {\n              label: Select1.options[0].label,\n              value: Select1.options[0].value\n            }\n          }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( '{{}}'))(Select1.options, Select1.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "sourceData"
