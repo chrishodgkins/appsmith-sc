@@ -47,7 +47,7 @@
       "rightColumn": 432.75,
       "shouldScrollContents": false,
       "tabId": "tab1",
-      "tabName": "IVP Carriage",
+      "tabName": "IVP_Carriage",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -145,7 +145,7 @@
       "widgetName": "Canvas3"
     }
   ],
-  "defaultTab": "IVP Carriage",
+  "defaultTab": "IVP_Carriage",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -188,7 +188,7 @@
       "id": "tab1",
       "index": 0,
       "isVisible": true,
-      "label": "IVP Carriage",
+      "label": "IVP_Carriage",
       "positioning": "vertical",
       "widgetId": "cdx7j8aicv"
     },
