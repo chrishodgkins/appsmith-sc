@@ -55,7 +55,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 42,
   "serverSideFiltering": false,
-  "sourceData": "{{\n(() => {\n  const seen = new Set();\n  return (statpull.data || []).reduce((acc, obj) => {\n    const label = obj.external_id + \" -- \" + obj.description + \"-\" + obj.service_id;\n    const value = obj.service_id;\n    const key = label + \"|\" + value;\n    if (!seen.has(key)) {\n      seen.add(key);\n      acc.push({ label, value });\n    }\n    return acc;\n  }, []);\n})()\n}}",
+  "sourceData": "{{\n(() => {\n  const seen = new Set();\n  return (statpull.data || []).reduce((acc, obj) => {\n    const label = obj.external_id + \" -- \" + obj.description;\n    const value = obj.service_id;\n    const key = label + \"|\" + value;\n    if (!seen.has(key)) {\n      seen.add(key);\n      acc.push({ label, value });\n    }\n    return acc;\n  }, []);\n})()\n}}",
   "topRow": 0,
   "type": "SELECT_WIDGET",
   "version": 1,
