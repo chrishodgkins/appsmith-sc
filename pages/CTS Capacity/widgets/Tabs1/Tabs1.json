@@ -47,7 +47,7 @@
       "rightColumn": 432.75,
       "shouldScrollContents": false,
       "tabId": "tab1",
-      "tabName": "IVP SecureCo CTS Trunks",
+      "tabName": "IVP Carriage",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -137,7 +137,7 @@
       "responsiveBehavior": "fill",
       "rightColumn": 1154,
       "tabId": "tabj7njgdy7eg",
-      "tabName": "IVP Stat History",
+      "tabName": "IVP Call Stats History",
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -145,7 +145,7 @@
       "widgetName": "Canvas3"
     }
   ],
-  "defaultTab": "IVP SecureCo CTS Trunks",
+  "defaultTab": "IVP Carriage",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -188,7 +188,7 @@
       "id": "tab1",
       "index": 0,
       "isVisible": true,
-      "label": "IVP SecureCo CTS Trunks",
+      "label": "IVP Carriage",
       "positioning": "vertical",
       "widgetId": "cdx7j8aicv"
     },
@@ -203,7 +203,7 @@
       "id": "tabj7njgdy7eg",
       "index": 2,
       "isVisible": true,
-      "label": "IVP Stat History",
+      "label": "IVP Call Stats History",
       "widgetId": "ex9m4xi9sg"
     }
   },

@@ -1,2 +1,3 @@
 SELECT * FROM public."call_volume_timeperiod_daily"
-WHERE inbound_0 IS NOT NULL;
+WHERE inbound_0 IS NOT NULL
+ORDER BY external_id;

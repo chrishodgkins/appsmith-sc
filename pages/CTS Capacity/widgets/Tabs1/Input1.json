@@ -1,63 +1,54 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
+  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
   "boxShadow": "none",
-  "closeOnSelection": true,
-  "dateFormat": "DD-MM-YYYY",
-  "datePickerType": "DATE_PICKER",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [
-    {
-      "key": "isDisabled"
-    }
-  ],
   "dynamicTriggerPathList": [],
-  "firstDayOfWeek": 0,
-  "isDisabled": "{{ Checkbox1.isChecked === false }}",
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "pora3wlhj3",
-  "label": "Traffic Day",
+  "key": "nfj0vlq2bp",
+  "label": "Search Stat Labels",
   "labelAlignment": "left",
   "labelPosition": "Top",
+  "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 53,
-  "maxDate": "2121-12-31T18:29:00.000Z",
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
-  "minDate": "1920-12-31T18:30:00.000Z",
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 8,
-  "mobileLeftColumn": 32,
-  "mobileRightColumn": 52,
-  "mobileTopRow": 1,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 18,
+  "mobileRightColumn": 38,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "parentColumnSpace": 18.03125,
+  "parentColumnSpace": 17.71875,
   "parentId": "ex9m4xi9sg",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
+  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
-  "shortcuts": false,
-  "timePrecision": "None",
+  "rightColumn": 32,
+  "showStepArrows": false,
   "topRow": 0,
-  "type": "DATE_PICKER_WIDGET2",
+  "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "o64iiev4l4",
-  "widgetName": "DatePicker1"
+  "widgetId": "ek0agjhmns",
+  "widgetName": "Input1"
 }
