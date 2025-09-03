@@ -3,8 +3,8 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 256,
-  "bottomRowBeforeCollapse": 256,
+  "bottomRow": 234,
+  "bottomRowBeforeCollapse": 242,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "o82yvmu058": {
@@ -18,7 +18,7 @@
   },
   "chartName": "Sales Report",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const rows = statpull.data || [];\n\n  // grab filter text from Input1, lowercased for case-insensitive matching\n  const txt = (Input1?.text || \"\").toLowerCase();\n\n  // chosen date (or latest if none picked)\n  const pick = DatePicker1?.selectedDate;\n  const pickDay = pick ? new Date(pick).toISOString().slice(0,10)\n                       : (rows.map(r => r.collection_date).sort().pop());\n\n  // filter by day and text match\n  const dayRows = rows.filter(r => {\n    if (r.collection_date !== pickDay) return false;\n    if (!txt) return true; // no filter = show all\n    const label = `${r.external_id} — ${r.description}`.toLowerCase();\n    return label.includes(txt);\n  });\n\n  // hour labels 12AM..11PM\n  const hourLabels = Array.from({length:24}, (_,h) => {\n    const hr = h % 12 === 0 ? 12 : h % 12;\n    const ampm = h < 12 ? 'AM' : 'PM';\n    return `${hr}${ampm}`;\n  });\n\n  // build series: per service two lines (inbound/outbound)\n  const series = [];\n  for (const r of dayRows) {\n    const label = `${r.external_id} -- ${r.description}`;\n\n    const inbound = Array.from({length:24}, (_,h) => Number(r[`inbound_${h}`] ?? 0));\n    const outbound = Array.from({length:24}, (_,h) => Number(r[`outbound_${h}`] ?? 0));\n\n    series.push({\n      name: `${label} — inbound`,\n      type: 'line',\n      stack: 'total',\n      areaStyle: {},\n      smooth: false,\n      data: inbound,\n    });\n    series.push({\n      name: `${label} — outbound`,\n      type: 'line',\n      stack: 'total',\n      areaStyle: {},\n      smooth: false,\n      data: outbound,\n    });\n  }\n\n  return {\n    title: { text: `Hourly Calls (${pickDay || 'no date'})` },\n    tooltip: { trigger: 'axis' },\n    legend: {\n    type: 'scroll',        // scroll if lots of services\n    orient: 'vertical',    // stack vertically\n    right: 2,             // distance from right edge\n    top: 'top',         // vertical centering\n    align: 'right',         // labels align right of swatches\n    selectedMode: 'multiple',\n    selector: [\n      {type: 'all', title: 'Show All' },\n      {type: 'inverse', title: 'Single View' }\n    ],\n    tooltip: { show: true } // shows tooltip when you hover legend items\n    },\n    tooltip: {\n    trigger: 'axis',\n    axisPointer: { type: 'line' }\n    },\n    emphasis: {\n    focus: 'series',   // highlight series + legend when hovering point/line\n    blurScope: 'coordinateSystem' // fade others in same chart\n    },   \n    grid: { left: 50, right: 20, top: 50, bottom: 40 },\n    xAxis: { type: 'category', data: hourLabels },\n    yAxis: { type: 'value', name: 'Calls per hour' },\n    series,\n  };\n})()\n))(hourStats.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const rows = statpull.data || [];\n\n  // Safe toggle detection: defaults to false if switch widget not present\n  const hoverItemOnly = (() => {\n    try { return !!SwitchHoverItemOnly.isSwitchedOn; } catch (_) { return false; }\n  })();\n\n  // grab filter text from Input1, lowercased for case-insensitive matching\n  const txt = (Input1?.text || \"\").toLowerCase();\n\n  // chosen date (or latest if none picked)\n  const pick = DatePicker1?.selectedDate;\n  const pickDay = pick \n    ? new Date(pick).toISOString().slice(0, 10)\n    : (rows.map(r => r.collection_date).sort().pop());\n\n  // filter by day and text match\n  const dayRows = rows.filter(r => {\n    if (r.collection_date !== pickDay) return false;\n    if (!txt) return true; // no filter = show all\n    const label = `${r.external_id} — ${r.description}`.toLowerCase();\n    return label.includes(txt);\n  });\n\n  // hour labels 12AM..11PM\n  const hourLabels = Array.from({ length: 24 }, (_, h) => {\n    const hr = h % 12 === 0 ? 12 : h % 12;\n    const ampm = h < 12 ? 'AM' : 'PM';\n    return `${hr}${ampm}`;\n  });\n\n  // build series: per service two lines (inbound/outbound)\n  const series = [];\n  for (const r of dayRows) {\n    const label = `${r.external_id} -- ${r.description}`;\n\n    const inbound = Array.from({ length: 24 }, (_, h) => Number(r[`inbound_${h}`] ?? 0));\n    const outbound = Array.from({ length: 24 }, (_, h) => Number(r[`outbound_${h}`] ?? 0));\n\n    series.push({\n      name: `${label} — inbound`,\n      type: 'line',\n      stack: 'total',\n      areaStyle: {},\n      smooth: false,\n      showSymbol: true,\n      showAllSymbol: true,\n      symbolSize: 6,\n      data: inbound,\n    });\n    series.push({\n      name: `${label} — outbound`,\n      type: 'line',\n      stack: 'total',\n      areaStyle: {},\n      smooth: false,\n      showSymbol: true,\n      showAllSymbol: true,\n      symbolSize: 6,\n      data: outbound,\n    });\n  }\n\n  return {\n    title: { text: `Hourly Calls (${pickDay || 'no date'})` },\n    tooltip: {\n      trigger: hoverItemOnly ? 'item' : 'axis', // switch-controlled behavior\n      axisPointer: { type: 'line' },\n      formatter: hoverItemOnly \n        ? undefined // default tooltip for 'item'\n        : function (params) {\n            // when in axis mode, display all series nicely formatted\n            const hour = params?.[0]?.axisValueLabel ?? '';\n            return `<b>${hour}</b><br/>` + params\n              .map(p => `${p.marker} ${p.seriesName}: ${p.value}`)\n              .join('<br/>');\n          }\n    },\n    legend: {\n      type: 'scroll',        // scroll if lots of services\n      orient: 'vertical',    // stack vertically\n      right: 2,               // distance from right edge\n      top: 'top',             // align top\n      align: 'right',         // labels align right of swatches\n      selectedMode: 'multiple',\n      selector: [\n        { type: 'all', title: 'Show All' },\n        { type: 'inverse', title: 'Single View' }\n      ],\n      tooltip: { show: true } // shows tooltip when hovering legend items\n    },\n    emphasis: {\n      focus: 'series',          // highlight series + legend on hover\n      blurScope: 'coordinateSystem' // fade others in same chart\n    },   \n    grid: { left: 50, right: 20, top: 50, bottom: 40 },\n    xAxis: { type: 'category', data: hourLabels },\n    yAxis: { type: 'value', name: 'Calls per hour' },\n    series,\n  };\n})()\n))(hourStats.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -105,7 +105,7 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 13,
   "needsErrorInfo": true,
-  "originalBottomRow": 256,
+  "originalBottomRow": 242,
   "originalTopRow": 140,
   "parentColumnSpace": 18.03125,
   "parentId": "ex9m4xi9sg",
@@ -114,7 +114,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 140,
+  "topRow": 132,
   "topRowBeforeCollapse": 140,
   "type": "CHART_WIDGET",
   "version": 1,
