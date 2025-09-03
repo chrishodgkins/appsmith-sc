@@ -2,7 +2,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
-  "boxShadow": "none",
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "TERTIARY",
   "dynamicBindingPathList": [
@@ -37,7 +37,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
   "rightColumn": 28,
-  "topRow": 2,
+  "topRow": 3,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
   "widgetId": "8wt6q1krhu",

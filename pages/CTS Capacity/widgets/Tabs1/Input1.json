@@ -19,7 +19,7 @@
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
-  "iconAlign": "left",
+  "iconAlign": "right",
   "inputType": "TEXT",
   "isDisabled": false,
   "isLoading": false,
