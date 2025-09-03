@@ -1,8 +1,8 @@
 {
   "gitSyncId": "6833bd1e663f59025c630a90_a63d7ded-c800-4391-a5d7-27d73cdc1e5a",
-  "id": "IVP Prod Browser_buildDayStat",
+  "id": "IVP Prod Browser_xx_buildDayStat",
   "unpublishedCollection": {
-    "name": "buildDayStat",
+    "name": "xx_buildDayStat",
     "pageId": "IVP Prod Browser",
     "pluginId": "js-plugin",
     "pluginType": "JS",

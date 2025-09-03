@@ -45,9 +45,10 @@
     "ivpid",
     "parentaccountnumber",
     "path",
-    "services"
+    "services",
+    "customColumn1"
   ],
-  "columnUpdatedAt": 1754365745100,
+  "columnUpdatedAt": 1756857077545,
   "columnWidthMap": {
     "carriages": 543,
     "customColumn3": 277,
@@ -125,6 +126,15 @@
     },
     {
       "key": "primaryColumns.svccarriages.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -138,6 +148,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onSearchTextChanged"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -330,6 +343,45 @@
       "originalId": "accounttype",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.700rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "TOP",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "Get Daily Calls",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonLabel": "Go to Stats",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "button",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn1",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Get Daily Calls",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{storeValue('stateid', currentRow.externalid).then(() => {\n  navigateTo('CTS Capacity', {\n    \"key\": \"IVP_Call_Stats\"\n  }, 'NEW_WINDOW');\n});}}",
+      "originalId": "customColumn1",
+      "sticky": "",
       "textSize": "0.700rem",
       "thousandSeparator": true,
       "validation": {},

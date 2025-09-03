@@ -1,6 +1,6 @@
 export default {
   prepareLineGraphData: () => {
-    const allStats = get_daystat2.runStatsQueries.data || [];
+    const allStats = xx_get_daystat2.runStatsQueries.data || [];
 
     const series = allStats
       .filter(stat =>
@@ -19,7 +19,7 @@ export default {
   },
 
   getEChartOptions: () => {
-    const allSeries = buildDayStat.prepareLineGraphData();
+    const allSeries = xx_buildDayStat.prepareLineGraphData();
     const selectedId = appsmith.store.statclick || TableReal.selectedRow?.externalid || "";
 
     const filtered = allSeries.filter(s => s.seriesTitle.startsWith(selectedId));

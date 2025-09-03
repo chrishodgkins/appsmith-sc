@@ -7,7 +7,7 @@
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "aezoii1ulz": {
-      "data": "{{ buildDayStat.getEChartOptions() }}",
+      "data": "{{ xx_buildDayStat.getEChartOptions() }}",
       "seriesName": "2023"
     }
   },

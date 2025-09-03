@@ -92,7 +92,7 @@
       "responsiveBehavior": "fill",
       "rightColumn": 1154,
       "tabId": "tab37l0txac6n",
-      "tabName": "EOM Gen1 Stats",
+      "tabName": "EOM_Gen1_Stats",
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -137,7 +137,7 @@
       "responsiveBehavior": "fill",
       "rightColumn": 1154,
       "tabId": "tabj7njgdy7eg",
-      "tabName": "IVP Call Stats History",
+      "tabName": "IVP_Call_Stats",
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -145,7 +145,7 @@
       "widgetName": "Canvas3"
     }
   ],
-  "defaultTab": "IVP_Carriage",
+  "defaultTab": "{{ appsmith.URL.queryParams.key || \"IVP_Carriage\" }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -155,6 +155,9 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "defaultTab"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -196,14 +199,14 @@
       "id": "tab37l0txac6n",
       "index": 1,
       "isVisible": true,
-      "label": "EOM Gen1 Stats",
+      "label": "EOM_Gen1_Stats",
       "widgetId": "pwfp1puf60"
     },
     "tabj7njgdy7eg": {
       "id": "tabj7njgdy7eg",
       "index": 2,
       "isVisible": true,
-      "label": "IVP Call Stats History",
+      "label": "IVP_Call_Stats",
       "widgetId": "ex9m4xi9sg"
     }
   },

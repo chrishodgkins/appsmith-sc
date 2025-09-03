@@ -234,51 +234,6 @@
       "version": 1,
       "widgetId": "yavljr5ymj",
       "widgetName": "Canvas5"
-    },
-    {
-      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 1680,
-      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-      "canExtend": false,
-      "containerStyle": "none",
-      "detachFromLayout": true,
-      "dynamicBindingPathList": [
-        {
-          "key": "borderRadius"
-        },
-        {
-          "key": "boxShadow"
-        }
-      ],
-      "dynamicHeight": "AUTO_HEIGHT",
-      "dynamicTriggerPathList": [],
-      "flexLayers": [],
-      "isLoading": false,
-      "isVisible": true,
-      "key": "1zkah1ds99",
-      "leftColumn": 0,
-      "maxDynamicHeight": 9000,
-      "minDynamicHeight": 4,
-      "minHeight": 1330,
-      "minWidth": 450,
-      "mobileBottomRow": 1331,
-      "mobileLeftColumn": 0,
-      "mobileRightColumn": 1402,
-      "mobileTopRow": 1,
-      "needsErrorInfo": false,
-      "parentColumnSpace": 1,
-      "parentId": "thv7qn9y6c",
-      "parentRowSpace": 1,
-      "renderMode": "CANVAS",
-      "responsiveBehavior": "fill",
-      "rightColumn": 1402,
-      "tabId": "tabxjpnanq8an",
-      "tabName": "Daily Call Stats",
-      "topRow": 1,
-      "type": "CANVAS_WIDGET",
-      "version": 1,
-      "widgetId": "nd53rb1a14",
-      "widgetName": "Canvas6"
     }
   ],
   "defaultTab": "Customer_Overview",
@@ -314,7 +269,7 @@
   "mobileTopRow": 8,
   "needsErrorInfo": false,
   "onTabSelected": "",
-  "originalBottomRow": 209,
+  "originalBottomRow": 174,
   "originalTopRow": 37,
   "parentColumnSpace": 21.90625,
   "parentId": "0",
@@ -366,13 +321,6 @@
       "isVisible": true,
       "label": "Customer_Overview",
       "widgetId": "cac496z28o"
-    },
-    "tabxjpnanq8an": {
-      "id": "tabxjpnanq8an",
-      "index": 5,
-      "isVisible": true,
-      "label": "Daily Call Stats",
-      "widgetId": "nd53rb1a14"
     }
   },
   "topRow": 37,

@@ -30,7 +30,7 @@
   "mobileRightColumn": 31,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "onClick": "{{resetWidget(\"Input1\", true);}}",
+  "onClick": "{{resetWidget(\"Input1\", true);\nremoveValue('stateid');}}",
   "parentColumnSpace": 20.765625,
   "parentId": "ex9m4xi9sg",
   "parentRowSpace": 10,
