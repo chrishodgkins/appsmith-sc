@@ -48,16 +48,16 @@
     "services",
     "customColumn1"
   ],
-  "columnUpdatedAt": 1756857077545,
+  "columnUpdatedAt": 1756879395419,
   "columnWidthMap": {
     "carriages": 543,
     "customColumn3": 277,
     "customColumn4": 195,
     "ivpcarriages": 260,
     "svcCarriage": 634,
-    "svcSIP": 213,
-    "svcVoiceGateway": 219,
-    "svccarriages": 232
+    "svcSIP": 281,
+    "svcVoiceGateway": 319,
+    "svccarriages": 273
   },
   "compactMode": "SHORT",
   "customIsLoading": false,
@@ -350,7 +350,7 @@
       "width": 150
     },
     "customColumn1": {
-      "alias": "Get Daily Calls",
+      "alias": "Call Stats",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -376,12 +376,12 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Get Daily Calls",
+      "label": "Call Stats",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{storeValue('stateid', currentRow.externalid).then(() => {\n  navigateTo('CTS Capacity', {\n    \"key\": \"IVP_Call_Stats\"\n  }, 'NEW_WINDOW');\n});}}",
       "originalId": "customColumn1",
-      "sticky": "",
+      "sticky": "right",
       "textSize": "0.700rem",
       "thousandSeparator": true,
       "validation": {},

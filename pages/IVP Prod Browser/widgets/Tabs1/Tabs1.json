@@ -124,51 +124,6 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 1840,
-      "minWidth": 450,
-      "mobileBottomRow": 1841,
-      "mobileLeftColumn": 0,
-      "mobileRightColumn": 1402,
-      "mobileTopRow": 1,
-      "needsErrorInfo": false,
-      "parentColumnSpace": 1,
-      "parentId": "thv7qn9y6c",
-      "parentRowSpace": 1,
-      "renderMode": "CANVAS",
-      "responsiveBehavior": "fill",
-      "rightColumn": 1402,
-      "tabId": "tabbw7v2mxf01",
-      "tabName": "Weekly Call Stats",
-      "topRow": 1,
-      "type": "CANVAS_WIDGET",
-      "version": 1,
-      "widgetId": "qrrmyohwly",
-      "widgetName": "Canvas3"
-    },
-    {
-      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 1680,
-      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-      "canExtend": false,
-      "containerStyle": "none",
-      "detachFromLayout": true,
-      "dynamicBindingPathList": [
-        {
-          "key": "borderRadius"
-        },
-        {
-          "key": "boxShadow"
-        }
-      ],
-      "dynamicHeight": "AUTO_HEIGHT",
-      "dynamicTriggerPathList": [],
-      "flexLayers": [],
-      "isLoading": false,
-      "isVisible": true,
-      "key": "wgf0a70b5o",
-      "leftColumn": 0,
-      "maxDynamicHeight": 9000,
-      "minDynamicHeight": 4,
       "minHeight": 150,
       "minWidth": 450,
       "mobileBottomRow": 151,
@@ -269,7 +224,7 @@
   "mobileTopRow": 8,
   "needsErrorInfo": false,
   "onTabSelected": "",
-  "originalBottomRow": 174,
+  "originalBottomRow": 209,
   "originalTopRow": 37,
   "parentColumnSpace": 21.90625,
   "parentId": "0",
@@ -297,14 +252,6 @@
       "label": "Customer Numbers",
       "positioning": "vertical",
       "widgetId": "urp6y5db21"
-    },
-    "tabbw7v2mxf01": {
-      "id": "tabbw7v2mxf01",
-      "index": 4,
-      "isDuplicateLabel": false,
-      "isVisible": true,
-      "label": "Weekly Call Stats",
-      "widgetId": "qrrmyohwly"
     },
     "tabqg157ptdcw": {
       "id": "tabqg157ptdcw",

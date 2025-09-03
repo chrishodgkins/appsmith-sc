@@ -4,5 +4,7 @@ UPDATE public."gen1_ntwk_data" SET
 		cohort = '{{ tagsInput.text }}',
 		"Site1" = '{{ site1Input.text }}',
 		"Site2" = '{{ site2Input.text }}',
-		ce_comments = '{{ ceComments.text }}'
+		ce_comments = '{{ ceComments.text }}',
+		servicedesklink = '{{ sdesklink.text }}',
+		jira_id = '{{ jiralink.text }}'
   WHERE account_no = '{{ Text8.text}}'; -- Specify a valid condition here. Removing the condition may update every row in the table!
