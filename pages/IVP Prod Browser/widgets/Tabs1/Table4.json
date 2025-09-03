@@ -48,7 +48,7 @@
     "services",
     "customColumn1"
   ],
-  "columnUpdatedAt": 1756879395419,
+  "columnUpdatedAt": 1756897136753,
   "columnWidthMap": {
     "carriages": 543,
     "customColumn3": 277,
@@ -135,6 +135,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isCellVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -143,6 +146,9 @@
     },
     {
       "key": "textSize"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isCellVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -369,7 +375,7 @@
       "id": "customColumn1",
       "index": 10,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = Table4.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.svcSIP.length > 2 )) :  currentRow.svcSIP.length > 2  })()}}",
       "isDerived": true,
       "isDisabled": false,
       "isDiscardVisible": true,
