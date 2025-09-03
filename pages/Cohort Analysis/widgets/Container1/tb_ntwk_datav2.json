@@ -88,9 +88,10 @@
     "jira_label",
     "sc_ipaddr",
     "cust_ipaddr",
-    "max_sessions"
+    "max_sessions",
+    "servicedesklink"
   ],
-  "columnUpdatedAt": 1755822379188,
+  "columnUpdatedAt": 1756883864542,
   "columnWidthMap": {
     "chargeTypes": 501,
     "customer": 243,
@@ -290,6 +291,9 @@
     },
     {
       "key": "primaryColumns.max_sessions.computedValue"
+    },
+    {
+      "key": "primaryColumns.servicedesklink.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -1923,6 +1927,40 @@
       "notation": "standard",
       "originalId": "serviceTypes",
       "sticky": "left",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "servicedesklink": {
+      "alias": "servicedesklink",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{tb_ntwk_datav2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"servicedesklink\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "servicedesklink",
+      "index": 56,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "servicedesklink",
+      "notation": "standard",
+      "originalId": "servicedesklink",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
