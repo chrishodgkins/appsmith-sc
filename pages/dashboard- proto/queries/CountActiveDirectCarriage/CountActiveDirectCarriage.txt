@@ -1,0 +1,3 @@
+SELECT *
+FROM public.ivpaccounts
+WHERE accountstatus = 'Active' AND svccarriages LIKE '%id%' AND path = 'SecureCo Pty Ltd/' AND "svcSIP" NOT LIKE '%id%';

@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_091b962b-3e87-4281-a0b7-32a0106cf16e",
-  "id": "dashboard- proto_Query1",
+  "gitSyncId": "6833bd1e663f59025c630a90_e57809c9-a913-4b86-b7ae-ef3aae4756b9",
+  "id": "dashboard- proto_CountActivePartnerServicesTEST",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.ivpaccounts LIMIT 10;",
+      "body": "SELECT * \nFROM public.ivpaccounts\nWHERE accounttype = 'Customer'AND path NOT LIKE 'SecureCo Pty Ltd/';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Query1",
+    "name": "CountActivePartnerServicesTEST",
     "pageId": "dashboard- proto",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

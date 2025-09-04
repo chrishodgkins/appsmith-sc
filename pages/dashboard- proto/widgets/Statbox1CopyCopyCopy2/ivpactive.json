@@ -42,7 +42,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "{{ (Get_Services.data.result || []).filter(s => s.state === \"Active\").length }}",
+  "text": "{{ \n  (Get_Services.data.result || [])\n    .filter(s => \n      s.state === \"Active\" && !(\n        Array.isArray(s.profile) && \n        s.profile.length > 0 && \n        s.profile.every(p => (p.label || \"\").includes(\"Carrier Service\"))\n      )\n    )\n    .length \n}}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 4,

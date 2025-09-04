@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 49,
+  "bottomRow": 50,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
@@ -72,8 +72,8 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "originalBottomRow": 49,
-  "originalTopRow": 38,
+  "originalBottomRow": 50,
+  "originalTopRow": 39,
   "parentColumnSpace": 15.515625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -82,7 +82,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 47,
   "shouldScrollContents": true,
-  "topRow": 38,
+  "topRow": 39,
   "type": "STATBOX_WIDGET",
   "widgetId": "kegbos60ux",
   "widgetName": "Statbox1CopyCopyCopy1CopyCopyCopy1Copy"
