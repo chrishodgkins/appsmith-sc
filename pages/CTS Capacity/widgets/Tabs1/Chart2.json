@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 212,
+  "bottomRow": 213,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "chartData": {
     "16eafw6g4x": {
@@ -26,7 +26,7 @@
   },
   "chartName": "Sales Report",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const search = String(eomDevices.searchText || \"\").toLowerCase();\n  const base = Array.isArray(getEOMStats.data) ? getEOMStats.data : [];\n\n  // contains match on name\n  const bySearch = base.filter(d =>\n    !search || String(d?.name || \"\").toLowerCase().includes(search)\n  );\n\n  // ignore peak_*; drop rows where recent_ingress + recent_egress == 0 (or missing)\n  const nonZero = bySearch.filter(d => {\n    const inVal = Number(d?.recent_ingress ?? 0);\n    const egVal = Number(d?.recent_egress ?? 0);\n    return (inVal + egVal) > 0;\n  });\n\n  // sort Z → A by name (flip to a.name.localeCompare(b.name) for A→Z)\n  const sorted = [...nonZero].sort((a, b) => b.name.localeCompare(a.name));\n\n  return {\n    tooltip: { trigger: \"axis\", axisPointer: { type: \"shadow\" } },\n    legend: { data: [\"Ingress\", \"Egress\"] },\n    xAxis: { type: \"value\", name: \"Count\" },\n    yAxis: { type: \"category\", data: sorted.map(d => d.name) },\n    series: [\n      {\n        name: \"Ingress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.recent_ingress || 0))\n      },\n      {\n        name: \"Egress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.recent_egress || 0))\n      }\n    ]\n  };\n})()\n))(Chart2.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const search = String(eomDevices.searchText || \"\").toLowerCase();\n  const base = Array.isArray(getEOMStats.data) ? getEOMStats.data : [];\n\n  // contains match on name\n  const bySearch = base.filter(d =>\n    !search || String(d?.name || \"\").toLowerCase().includes(search)\n  );\n\n  // ignore peak_*; drop rows where recent_ingress and recent_egress == 0 (or missing)\n  const nonZero = bySearch.filter(d => {\n    const inVal = Number(d?.recent_ingress ?? 0);\n    const egVal = Number(d?.recent_egress ?? 0);\n    return (inVal + egVal) > 0;\n  });\n\n  // sort Z → A by name (flip to a.name.localeCompare(b.name) for A→Z)\n  const sorted = [...nonZero].sort((a, b) => b.name.localeCompare(a.name));\n\n  return {\n    tooltip: { trigger: \"axis\", axisPointer: { type: \"shadow\" } },\n    legend: { data: [\"Ingress\", \"Egress\"] },\n    grid: {\n      left: 180,   // increase space for long yAxis labels\n      right: 20,\n      top: 30,\n      bottom: 30\n    },\n    xAxis: { type: \"value\", name: \"Count\" },\n    yAxis: {\n      type: \"category\",\n      data: sorted.map(d => d.name),\n      axisLabel: {\n        interval: 0,      // show all labels\n        width: 160,       // max width for each label\n        overflow: \"break\" // wrap text instead of clipping\n      }\n    },\n    series: [\n      {\n        name: \"Ingress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.recent_ingress || 0))\n      },\n      {\n        name: \"Egress\",\n        type: \"bar\",\n        stack: \"total\",\n        emphasis: { focus: \"series\" },\n        data: sorted.map(d => Number(d.recent_egress || 0))\n      }\n    ]\n  };\n})()\n))(Chart2.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -102,8 +102,8 @@
   "mobileRightColumn": 47,
   "mobileTopRow": 1,
   "needsErrorInfo": true,
-  "originalBottomRow": 213,
-  "originalTopRow": 5,
+  "originalBottomRow": 212,
+  "originalTopRow": 4,
   "parentColumnSpace": 32.03125,
   "parentId": "pwfp1puf60",
   "parentRowSpace": 10,
@@ -111,7 +111,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 4,
+  "topRow": 5,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "yk9rwco7zo",
