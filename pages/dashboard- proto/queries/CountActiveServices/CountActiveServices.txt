@@ -1,0 +1,2 @@
+SELECT COALESCE(SUM(regexp_count("svcSIP", '\mActive\M')), 0) AS total_active_count
+FROM public.ivpaccounts;

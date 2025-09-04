@@ -1,0 +1,2 @@
+SELECT COUNT(*) FROM public."ivpaccounts"
+WHERE accountstatus != 'Active' AND accounttype = 'Customer';

@@ -56,6 +56,12 @@
     },
     {
       "key": "groupButtons.groupButtonmi1t3bvt6z.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemeuurvfn2ta.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemkrs24hldfz.onClick"
     }
   ],
   "groupButtons": {
@@ -136,7 +142,7 @@
           "index": 1,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Gen1 Customer Data",
+          "label": "Gen1 Customers",
           "onClick": "{{navigateTo('Customers', {}, 'SAME_WINDOW');}}",
           "widgetId": "3rpa1aroxr"
         }
@@ -190,16 +196,35 @@
     },
     "groupButtonmi1t3bvt6z": {
       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-      "buttonType": "SIMPLE",
-      "iconName": "chart",
+      "buttonType": "MENU",
+      "iconName": "folder-open",
       "id": "groupButtonmi1t3bvt6z",
       "index": 3,
       "isDisabled": false,
       "isSeparator": false,
       "isVisible": true,
       "itemType": "BUTTON",
-      "label": "Call Stats",
-      "menuItems": {},
+      "label": "Other",
+      "menuItems": {
+        "menuItemeuurvfn2ta": {
+          "id": "menuItemeuurvfn2ta",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Call Stats",
+          "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
+          "widgetId": "dzvr8tnqug"
+        },
+        "menuItemkrs24hldfz": {
+          "id": "menuItemkrs24hldfz",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Dashboard (WIP)",
+          "onClick": "{{navigateTo('dashboard- proto', {}, 'SAME_WINDOW');}}",
+          "widgetId": "0qkvs3egfx"
+        }
+      },
       "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
       "placement": "CENTER",
       "variant": "filled",
@@ -229,6 +254,6 @@
   "topRow": 0,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "dagruzz4lc",
+  "widgetId": "1s4ed61viu",
   "widgetName": "ButtonGroup1Copy"
 }
