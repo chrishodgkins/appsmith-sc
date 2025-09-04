@@ -1,0 +1,124 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 111,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "jwzguf9ju5": {
+      "data": [
+        {
+          "x": "Product1",
+          "y": 20000
+        },
+        {
+          "x": "Product2",
+          "y": 22000
+        },
+        {
+          "x": "Product3",
+          "y": 32000
+        }
+      ],
+      "seriesName": "2023"
+    }
+  },
+  "chartName": "Sales Report",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const rows = statpull.data || [];\n\n  // today in Australia/Hobart\n  const todayHobart = (() => {\n    try { return new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Hobart' }); }\n    catch { return new Date().toISOString().slice(0, 10); }\n  })();\n\n  const dates = [...new Set(rows.map(r => r.collection_date))].sort();\n  const hasToday = dates.includes(todayHobart);\n  const usedDay  = hasToday ? todayHobart : (dates[dates.length - 1] || todayHobart);\n\n  // hour labels\n  const hourLabels = Array.from({ length: 24 }, (_, h) => {\n    const hr = h % 12 === 0 ? 12 : h % 12;\n    const ampm = h < 12 ? 'AM' : 'PM';\n    return `${hr}${ampm}`;\n  });\n\n  const dayRows = rows.filter(r => r.collection_date === usedDay);\n\n  const perSvc = dayRows.map(r => {\n    const label = `${r.external_id} -- ${r.description}`;\n    const inbound = Array.from({ length: 24 }, (_, h) => Number(r[`inbound_${h}`] ?? 0));\n    const outbound = Array.from({ length: 24 }, (_, h) => Number(r[`outbound_${h}`] ?? 0));\n    const total = inbound.reduce((a,b)=>a+b,0) + outbound.reduce((a,b)=>a+b,0);\n    return { id: r.service_id, label, inbound, outbound, total };\n  });\n\n  const sorted = [...perSvc].sort((a,b) => b.total - a.total);\n  const top3   = sorted.slice(0, 3);\n  const topIds = new Set(top3.map(s => s.id));\n\n  const otherInbound  = Array(24).fill(0);\n  const otherOutbound = Array(24).fill(0);\n  for (const svc of perSvc) {\n    if (topIds.has(svc.id)) continue;\n    for (let h = 0; h < 24; h++) {\n      otherInbound[h]  += svc.inbound[h];\n      otherOutbound[h] += svc.outbound[h];\n    }\n  }\n\n  const series = [];\n  for (const svc of top3) {\n    series.push({\n      name: `${svc.label} — inbound`,\n      type: 'line',\n      stack: 'total',\n      areaStyle: {},\n      smooth: false,\n      showSymbol: true,\n      showAllSymbol: true,\n      symbolSize: 7,\n      data: svc.inbound\n    });\n    series.push({\n      name: `${svc.label} — outbound`,\n      type: 'line',\n      stack: 'total',\n      areaStyle: {},\n      smooth: false,\n      showSymbol: true,\n      showAllSymbol: true,\n      symbolSize: 7,\n      data: svc.outbound\n    });\n  }\n  if (otherInbound.some(v => v) || otherOutbound.some(v => v)) {\n    series.push({\n      name: `Other_Inbound`,\n      type: 'line',\n      stack: 'total',\n      areaStyle: {},\n      smooth: false,\n      showSymbol: true,\n      showAllSymbol: true,\n      symbolSize: 7,\n      data: otherInbound\n    });\n    series.push({\n      name: `Other_Outbound`,\n      type: 'line',           // was bar; make it a line for consistency\n      stack: 'total',\n      areaStyle: {},\n      smooth: false,\n      showSymbol: true,\n      showAllSymbol: true,\n      symbolSize: 7,\n      data: otherOutbound\n    });\n  }\n\n  // sort legend items nicely\n  series.sort((a,b) => a.name.localeCompare(b.name));\n\n  // legend formatter to wrap within ~100px\n  const LEGEND_WIDTH = 100;\n\n  return {\n    title: {\n      text: `Hourly Calls — Top 3 + Other (${usedDay})`,\n      subtext: hasToday ? '' : `No rows for today (${todayHobart}); showing latest available`\n    },\n    tooltip: { trigger: 'axis', axisPointer: { type: 'line' } },\n    legend: {\n      type: 'scroll',\n      orient: 'vertical',\n      right: 8,\n      top: 'top',\n      align: 'left',\n      width: LEGEND_WIDTH,                 // constrain legend block to ~100px\n      formatter: (name) => `{wrap|${name}}`,\n      textStyle: {\n        rich: {\n          wrap: {\n            width: LEGEND_WIDTH,          // same width as legend\n            lineHeight: 16,\n            overflow: 'break'             // wrap onto multiple lines\n          }\n        }\n      },\n      // optional: reduce gaps to fit more\n      itemGap: 6,\n      itemWidth: 14,\n      itemHeight: 10\n    },\n    grid: { left: 60, right: 160, top: 60, bottom: 40 },\n    xAxis: { type: 'category', data: hourLabels },\n    yAxis: { type: 'value', name: 'Calls per hour' },\n    series\n  };\n})()\n))(Chart1.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "noqt66jcn2",
+  "labelOrientation": "auto",
+  "leftColumn": 24,
+  "minWidth": 450,
+  "mobileBottomRow": 90,
+  "mobileLeftColumn": 34,
+  "mobileRightColumn": 58,
+  "mobileTopRow": 58,
+  "needsErrorInfo": true,
+  "originalBottomRow": 111,
+  "originalTopRow": 62,
+  "parentColumnSpace": 18.03125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "showDataPointLabel": false,
+  "topRow": 62,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "8yowcdglzs",
+  "widgetName": "Chart1",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

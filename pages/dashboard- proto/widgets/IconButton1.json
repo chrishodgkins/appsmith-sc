@@ -32,6 +32,8 @@
   "mobileTopRow": 0,
   "needsErrorInfo": false,
   "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
+  "originalBottomRow": 10,
+  "originalTopRow": 6,
   "parentColumnSpace": 18.03125,
   "parentId": "0",
   "parentRowSpace": 10,
