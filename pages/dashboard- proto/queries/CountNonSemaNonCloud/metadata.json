@@ -1,11 +1,11 @@
 {
   "gitSyncId": "6833bd1e663f59025c630a90_dbdf61d4-ac90-4510-b961-62c3a72ce25b",
-  "id": "dashboard- proto_CountSemaHybridCopy",
+  "id": "dashboard- proto_CountNonSemaNonCloud",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"gen1_ntwk_data\";",
+      "body": "SELECT COUNT(*)\nFROM public.\"gen1_ntwk_data\"\nWHERE (flag_sema_cloud != 'true' OR flag_sema_cloud IS NULL) AND (flag_ivp != 'true' OR flag_ivp IS NULL OR flag_cloud_ivp != 'true' OR flag_cloud_ivp IS NULL) AND (flag_sema_onprem IS NULL OR flag_sema_onprem != 'true') AND (flag_siprec != 'true' OR flag_siprec IS NULL);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "CountSemaHybridCopy",
+    "name": "CountNonSemaNonCloud",
     "pageId": "dashboard- proto",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

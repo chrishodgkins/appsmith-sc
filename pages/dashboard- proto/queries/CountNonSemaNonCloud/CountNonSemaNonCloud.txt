@@ -1,0 +1,3 @@
+SELECT COUNT(*)
+FROM public."gen1_ntwk_data"
+WHERE (flag_sema_cloud != 'true' OR flag_sema_cloud IS NULL) AND (flag_ivp != 'true' OR flag_ivp IS NULL OR flag_cloud_ivp != 'true' OR flag_cloud_ivp IS NULL) AND (flag_sema_onprem IS NULL OR flag_sema_onprem != 'true') AND (flag_siprec != 'true' OR flag_siprec IS NULL);
