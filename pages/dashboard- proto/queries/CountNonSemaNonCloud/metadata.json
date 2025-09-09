@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*)\nFROM public.\"gen1_ntwk_data\"\nWHERE (flag_sema_cloud != 'true' OR flag_sema_cloud IS NULL) AND (flag_ivp != 'true' OR flag_ivp IS NULL OR flag_cloud_ivp != 'true' OR flag_cloud_ivp IS NULL) AND (flag_sema_onprem IS NULL OR flag_sema_onprem != 'true') AND (flag_siprec != 'true' OR flag_siprec IS NULL);",
+      "body": "SELECT COUNT(*)\nFROM public.gen1_ntwk_data \nWHERE lp_nextrealm_list NOT ILIKE '%sema%' AND lp_nextrealm_list NOT ILIKE '%ibmsyd%'",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
