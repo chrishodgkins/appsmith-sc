@@ -1,0 +1,3 @@
+SELECT COUNT(*)
+FROM public.gen1_ntwk_data 
+WHERE lp_nextrealm_list NOT ILIKE '%sema%' AND (lp_nextrealm_list ILIKE '%ibmsyd%' OR lp_nextrealm_list ILIKE '%azure%')
