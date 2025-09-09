@@ -32,11 +32,11 @@
   "icon": "call",
   "pages": [
     {
-      "id": "Cohorts",
+      "id": "SBC Data Browser",
       "isDefault": true
     },
     {
-      "id": "SBC Data Browser",
+      "id": "Cohorts",
       "isDefault": false
     },
     {

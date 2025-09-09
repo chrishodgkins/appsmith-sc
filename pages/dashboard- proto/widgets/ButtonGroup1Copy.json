@@ -1,0 +1,259 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton1.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton2.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton3.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemm3plfdu92k.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItem1q81eldml7.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem1qvjrr7bcw.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemyvyfyikwha.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem9wgg5d993z.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem2rmshp8fob.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItemjplctfbozd.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemvafxeesci9.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemeuurvfn2ta.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemkrs24hldfz.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton1": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "disabledWhenInvalid": false,
+      "iconAlign": "left",
+      "iconName": "star",
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Migration",
+      "menuItems": {
+        "menuItem1q81eldml7": {
+          "id": "menuItem1q81eldml7",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Analyisis",
+          "onClick": "{{navigateTo('Cohort Analysis', {}, 'SAME_WINDOW');}}",
+          "widgetId": "cv7tlyp7uo"
+        },
+        "menuItemm3plfdu92k": {
+          "id": "menuItemm3plfdu92k",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Migration Cohorts",
+          "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
+          "widgetId": "askpq8r38u"
+        }
+      },
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton2": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "disabledWhenInvalid": false,
+      "iconName": "phone",
+      "id": "groupButton2",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Gen1 Data",
+      "menuItems": {
+        "menuItem1qvjrr7bcw": {
+          "id": "menuItem1qvjrr7bcw",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "SBC Data",
+          "onClick": "{{navigateTo('SBC Data Browser', {}, 'SAME_WINDOW');}}",
+          "widgetId": "ascy8wuwro"
+        },
+        "menuItem9wgg5d993z": {
+          "id": "menuItem9wgg5d993z",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Gen1 Numbers",
+          "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
+          "widgetId": "jtku0ff6qr"
+        },
+        "menuItemvafxeesci9": {
+          "id": "menuItemvafxeesci9",
+          "index": 3,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Gen1 Call Stats",
+          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"EOM_Gen1_Stats\"\n}, 'SAME_WINDOW');}}",
+          "widgetId": "8i4oylrc29"
+        },
+        "menuItemyvyfyikwha": {
+          "id": "menuItemyvyfyikwha",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Gen1 Customers",
+          "onClick": "{{navigateTo('Customers', {}, 'SAME_WINDOW');}}",
+          "widgetId": "3rpa1aroxr"
+        }
+      },
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton3": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "disabledWhenInvalid": false,
+      "iconName": "cloud",
+      "id": "groupButton3",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "IVP Data",
+      "menuItems": {
+        "menuItem1": {
+          "backgroundColor": "#FFFFFF",
+          "disabledWhenInvalid": false,
+          "id": "menuItem1",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "IVP Customers",
+          "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
+          "widgetId": ""
+        },
+        "menuItem2rmshp8fob": {
+          "id": "menuItem2rmshp8fob",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "IVP Call Stats",
+          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"IVP_Call_Stats\"\n}, 'SAME_WINDOW');}}",
+          "widgetId": "plg3a3qk6v"
+        },
+        "menuItemjplctfbozd": {
+          "id": "menuItemjplctfbozd",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "IVP Carriage",
+          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"IVP_Carriage\"\n}, 'SAME_WINDOW');}}",
+          "widgetId": "zp0un19456"
+        }
+      },
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButtonmi1t3bvt6z": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "iconName": "folder-open",
+      "id": "groupButtonmi1t3bvt6z",
+      "index": 3,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Other",
+      "menuItems": {
+        "menuItemeuurvfn2ta": {
+          "id": "menuItemeuurvfn2ta",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Call Stats",
+          "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
+          "widgetId": "dzvr8tnqug"
+        },
+        "menuItemkrs24hldfz": {
+          "id": "menuItemkrs24hldfz",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Dashboard (WIP)",
+          "onClick": "{{navigateTo('dashboard- proto', {}, 'SAME_WINDOW');}}",
+          "widgetId": "0qkvs3egfx"
+        }
+      },
+      "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "359g49hpoo"
+    }
+  },
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "yz0oo7ltmx",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 32,
+  "mobileRightColumn": 56,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "orientation": "vertical",
+  "originalBottomRow": 183,
+  "originalTopRow": 167,
+  "parentColumnSpace": 21.078125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 5,
+  "topRow": 0,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "mar4vb5d71",
+  "widgetName": "ButtonGroup1Copy"
+}
