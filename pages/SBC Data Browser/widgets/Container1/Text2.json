@@ -11,12 +11,18 @@
     },
     {
       "key": "text"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "fontSize"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -24,7 +30,7 @@
   "fontSize": "0.575rem",
   "fontStyle": "ITALIC",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{  appsmith.user.email === \"christopher.hodgkins@secureco.co\" }}",
   "key": "k1h0huolzz",
   "leftColumn": 20,
   "maxDynamicHeight": 9000,
