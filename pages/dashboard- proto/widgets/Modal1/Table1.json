@@ -35,18 +35,20 @@
     "customer",
     "account_no",
     "lp_description",
+    "lp_active",
+    "lp_from_range",
     "lp_to_range",
     "lp_src_realm",
-    "lp_nexthop_list",
     "lp_nextrealm_list",
-    "lp_from_range",
-    "lp_active",
-    "chargeTypes",
-    "dest_byoc"
+    "lp_nexthop_list",
+    "chargeTypes"
   ],
-  "columnUpdatedAt": 1757480381373,
+  "columnUpdatedAt": 1757502188182,
   "columnWidthMap": {
-    "lp_nextrealm_list": 458
+    "lp_description": 309,
+    "lp_nexthop_list": 541,
+    "lp_nextrealm_list": 458,
+    "lp_src_realm": 365
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -98,9 +100,6 @@
     },
     {
       "key": "primaryColumns.customer.computedValue"
-    },
-    {
-      "key": "primaryColumns.dest_byoc.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -167,7 +166,7 @@
     },
     "chargeTypes": {
       "alias": "chargeTypes",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"chargeTypes\"]))}}",
@@ -227,37 +226,6 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "dest_byoc": {
-      "alias": "dest_byoc",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "columnType": "text",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"dest_byoc\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "dest_byoc",
-      "index": 10,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "dest_byoc",
-      "notation": "standard",
-      "originalId": "dest_byoc",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "lp_active": {
       "alias": "lp_active",
       "allowCellWrapping": false,
@@ -291,7 +259,7 @@
     },
     "lp_description": {
       "alias": "lp_description",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"lp_description\"]))}}",
@@ -322,7 +290,7 @@
     },
     "lp_from_range": {
       "alias": "lp_from_range",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"lp_from_range\"]))}}",
@@ -353,7 +321,7 @@
     },
     "lp_nexthop_list": {
       "alias": "lp_nexthop_list",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"lp_nexthop_list\"]))}}",
@@ -384,7 +352,7 @@
     },
     "lp_nextrealm_list": {
       "alias": "lp_nextrealm_list",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"lp_nextrealm_list\"]))}}",
@@ -415,7 +383,7 @@
     },
     "lp_src_realm": {
       "alias": "lp_src_realm",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"lp_src_realm\"]))}}",
@@ -446,7 +414,7 @@
     },
     "lp_to_range": {
       "alias": "lp_to_range",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"lp_to_range\"]))}}",
