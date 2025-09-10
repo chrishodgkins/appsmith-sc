@@ -41,9 +41,10 @@
     "lp_nextrealm_list",
     "lp_from_range",
     "lp_active",
-    "chargeTypes"
+    "chargeTypes",
+    "dest_byoc"
   ],
-  "columnUpdatedAt": 1757478624896,
+  "columnUpdatedAt": 1757480381373,
   "columnWidthMap": {
     "lp_nextrealm_list": 458
   },
@@ -97,6 +98,9 @@
     },
     {
       "key": "primaryColumns.customer.computedValue"
+    },
+    {
+      "key": "primaryColumns.dest_byoc.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -217,6 +221,37 @@
       "notation": "standard",
       "originalId": "customer",
       "sticky": "left",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "dest_byoc": {
+      "alias": "dest_byoc",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"dest_byoc\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "dest_byoc",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "dest_byoc",
+      "notation": "standard",
+      "originalId": "dest_byoc",
+      "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
