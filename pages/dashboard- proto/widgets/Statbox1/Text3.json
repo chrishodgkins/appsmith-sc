@@ -42,7 +42,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "{{ Number( CountSemaOnPrem.data.map( a => a.count)) }}",
+  "text": "{{ CountSemaOnPrem.data.length }}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 4,

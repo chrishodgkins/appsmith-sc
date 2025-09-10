@@ -42,7 +42,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "{{ Number( CountSemaHybrid.data.map( a => a.count)) }}",
+  "text": "{{ CountSemaHybrid.data.length }}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 4,
