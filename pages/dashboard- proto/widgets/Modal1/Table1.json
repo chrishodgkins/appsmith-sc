@@ -32,18 +32,18 @@
     }
   },
   "columnOrder": [
+    "customer",
+    "account_no",
     "lp_description",
-    "lp_from_range",
     "lp_to_range",
     "lp_src_realm",
     "lp_nexthop_list",
     "lp_nextrealm_list",
+    "lp_from_range",
     "lp_active",
-    "account_no",
-    "chargeTypes",
-    "customer"
+    "chargeTypes"
   ],
-  "columnUpdatedAt": 1757478299166,
+  "columnUpdatedAt": 1757478624896,
   "columnWidthMap": {
     "lp_nextrealm_list": 458
   },
@@ -154,7 +154,7 @@
       "label": "account_no",
       "notation": "standard",
       "originalId": "account_no",
-      "sticky": "",
+      "sticky": "left",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -216,7 +216,7 @@
       "label": "customer",
       "notation": "standard",
       "originalId": "customer",
-      "sticky": "",
+      "sticky": "left",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
