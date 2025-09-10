@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*)\nFROM public.\"gen1_ntwk_data\"\nWHERE flag_sema_cloud = 'true';",
+      "body": "SELECT COUNT(*)\nFROM public.\"gen1_ntwk_data\"\nWHERE lp_nextrealm_list ILIKE '%sema%';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

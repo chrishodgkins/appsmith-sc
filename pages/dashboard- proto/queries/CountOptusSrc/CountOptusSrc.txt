@@ -1,0 +1,3 @@
+SELECT COUNT(*)
+FROM public.gen1_ntwk_data 
+WHERE lp_src_realm ILIKE '%optus%' AND lp_src_realm NOT ILIKE '%byoc%' AND lp_src_realm NOT ILIKE '%iselect%' AND lp_src_realm NOT ILIKE '%bunnings%' AND lp_src_realm NOT ILIKE '%iag%'

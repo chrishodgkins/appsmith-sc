@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_2ddaf553-1eca-4d61-9768-e0e48ef0e06f",
-  "id": "dashboard- proto_CountSemaOnPrem",
+  "gitSyncId": "6833bd1e663f59025c630a90_5455d9a3-2b3e-49eb-923f-71934ea5ed01",
+  "id": "dashboard- proto_CountOptusSrc",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*)\nFROM public.\"gen1_ntwk_data\"\nWHERE lp_nextrealm_list ILIKE '%sema%' AND lp_nextrealm_list NOT ILIKE '%ibm%';",
+      "body": "SELECT COUNT(*)\nFROM public.gen1_ntwk_data \nWHERE lp_src_realm ILIKE '%optus%' AND lp_src_realm NOT ILIKE '%byoc%' AND lp_src_realm NOT ILIKE '%iselect%' AND lp_src_realm NOT ILIKE '%bunnings%' AND lp_src_realm NOT ILIKE '%iag%'",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "CountSemaOnPrem",
+    "name": "CountOptusSrc",
     "pageId": "dashboard- proto",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
