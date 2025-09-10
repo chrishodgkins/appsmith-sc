@@ -166,7 +166,7 @@
     },
     "chargeTypes": {
       "alias": "chargeTypes",
-      "allowCellWrapping": true,
+      "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"chargeTypes\"]))}}",
