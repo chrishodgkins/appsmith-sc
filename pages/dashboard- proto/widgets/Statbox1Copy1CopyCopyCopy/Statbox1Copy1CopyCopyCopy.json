@@ -4,12 +4,12 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 58,
+  "bottomRow": 67,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 110,
+      "bottomRow": 100,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "714wcox300",
+      "parentId": "wuc5b884mw",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "9dhn6z5ds7",
-      "widgetName": "Canvas1CopyCopyCopy1CopyCopy"
+      "widgetId": "n669rkzjoz",
+      "widgetName": "Canvas1Copy1CopyCopyCopy"
     }
   ],
   "dynamicBindingPathList": [
@@ -64,7 +64,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "1u2qk9enzk",
-  "leftColumn": 24,
+  "leftColumn": 6,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
   "mobileBottomRow": 22,
@@ -72,18 +72,18 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "originalBottomRow": 60,
-  "originalTopRow": 49,
+  "originalBottomRow": 67,
+  "originalTopRow": 57,
   "parentColumnSpace": 15.515625,
   "parentId": "0",
   "parentRowSpace": 10,
   "positioning": "fixed",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 31,
+  "rightColumn": 13,
   "shouldScrollContents": true,
-  "topRow": 47,
+  "topRow": 57,
   "type": "STATBOX_WIDGET",
-  "widgetId": "714wcox300",
-  "widgetName": "Statbox1CopyCopyCopy1CopyCopy"
+  "widgetId": "wuc5b884mw",
+  "widgetName": "Statbox1Copy1CopyCopyCopy"
 }

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 8,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,9 +11,13 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "0.875rem",
@@ -25,26 +29,26 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 4,
+  "mobileBottomRow": 8,
   "mobileLeftColumn": 1,
   "mobileRightColumn": 37,
-  "mobileTopRow": 0,
+  "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 5,
-  "originalTopRow": 0,
+  "originalBottomRow": 9,
+  "originalTopRow": 5,
   "overflow": "NONE",
-  "parentId": "fpuvnf8cxz",
+  "parentId": "n669rkzjoz",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "Active Customers",
+  "text": "{{ Number( CountBYOC.data.map( a => a.count)) }}",
   "textAlign": "CENTER",
-  "textColor": "#999999",
-  "topRow": 0,
+  "textColor": "#231F20",
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "xuh3epfv65",
-  "widgetName": "Text2CopyCopy"
+  "widgetId": "50ujx20di1",
+  "widgetName": "Text3Copy1CopyCopyCopy"
 }
