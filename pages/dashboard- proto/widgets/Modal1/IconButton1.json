@@ -31,7 +31,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal(Modal1.name);}}",
+  "onClick": "{{closeModal(Modal1.name).then(() => {\n  removeValue('temptable');\n});}}",
   "parentId": "khi6qefpsj",
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
