@@ -40,9 +40,10 @@
     "lp_nextrealm_list",
     "lp_active",
     "account_no",
-    "chargeTypes"
+    "chargeTypes",
+    "customer"
   ],
-  "columnUpdatedAt": 1757478102731,
+  "columnUpdatedAt": 1757478299166,
   "columnWidthMap": {
     "lp_nextrealm_list": 458
   },
@@ -93,6 +94,9 @@
     },
     {
       "key": "primaryColumns.chargeTypes.computedValue"
+    },
+    {
+      "key": "primaryColumns.customer.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -181,6 +185,37 @@
       "label": "chargeTypes",
       "notation": "standard",
       "originalId": "chargeTypes",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customer": {
+      "alias": "customer",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"customer\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customer",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "customer",
+      "notation": "standard",
+      "originalId": "customer",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,

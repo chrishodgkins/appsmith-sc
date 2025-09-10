@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT *\nFROM public.\"gen1_ntwk_data\"\nWHERE lp_nextrealm_list ILIKE '%sema%' AND lp_nextrealm_list NOT ILIKE '%ibm%';",
+      "body": "SELECT account_no,customer,lp_description,lp_from_range,lp_to_range,lp_src_realm,lp_nextrealm_list,lp_nexthop_list,lp_active,\"chargeTypes\"\nFROM public.\"gen1_ntwk_data\"\nWHERE lp_nextrealm_list ILIKE '%sema%' AND lp_nextrealm_list NOT ILIKE '%ibm%';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
