@@ -35,7 +35,7 @@
     "dynamicBindingPathList": [],
     "name": "webhookPullDate",
     "pageId": "SBC Data Browser",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true
   }
 }

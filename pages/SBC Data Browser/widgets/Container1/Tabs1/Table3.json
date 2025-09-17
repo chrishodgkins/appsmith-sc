@@ -39,6 +39,7 @@
     "ip_address",
     "port",
     "state",
+    "trunkgroup",
     "app_protocol",
     "app_type",
     "transport_method",
@@ -80,7 +81,7 @@
     "last_modified_date",
     "date_added"
   ],
-  "columnUpdatedAt": 1755488238553,
+  "columnUpdatedAt": 1758148497442,
   "columnWidthMap": {},
   "compactMode": "SHORT",
   "customIsLoading": false,
@@ -244,6 +245,9 @@
     },
     {
       "key": "primaryColumns.max_sessions.computedValue"
+    },
+    {
+      "key": "primaryColumns.trunkgroup.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -1837,6 +1841,40 @@
       "label": "transport_method",
       "notation": "standard",
       "originalId": "transport_method",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.775rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "trunkgroup": {
+      "alias": "trunkgroup",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"trunkgroup\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "trunkgroup",
+      "index": 47,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "trunkgroup",
+      "notation": "standard",
+      "originalId": "trunkgroup",
       "sticky": "",
       "textColor": "",
       "textSize": "0.775rem",
