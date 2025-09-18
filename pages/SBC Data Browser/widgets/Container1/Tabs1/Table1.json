@@ -597,7 +597,7 @@
   "serverSidePaginationEnabled": false,
   "tableData": "{{localPolicy.data}}",
   "textSize": "0.775rem",
-  "topRow": 4,
+  "topRow": 0,
   "totalRecordsCount": "0",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
