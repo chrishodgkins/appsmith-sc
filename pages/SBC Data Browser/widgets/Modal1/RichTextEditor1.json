@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 154,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultText": "{{\n  (() => {\n    const content = getconfig.data?.[0]?.config_blob || '';\n    const searchTerm = configSearch.text?.trim();\n    \n    // If no search term, show all content\n    if (!searchTerm) return content;\n    \n    // Find the target heading\n    const startIndex = content.indexOf(searchTerm);\n    if (startIndex === -1) return '';\n    \n    // Find the next heading after target\n    const afterTarget = content.slice(startIndex + searchTerm.length);\n    const nextHeadingMatch = afterTarget.match(/\\n#{1,6}\\s/);\n    \n    // Extract content between headings\n    const endIndex = nextHeadingMatch \n      ? startIndex + searchTerm.length + nextHeadingMatch.index\n      : content.length;\n    \n    return content.slice(startIndex, endIndex).trim();\n  })()\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "inputType": "markdown",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isToolbarHidden": true,
+  "isVisible": true,
+  "key": "6hj04izkhr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Config",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 26,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 6.9375,
+  "parentId": "g3curi836x",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "topRow": 7,
+  "type": "RICH_TEXT_EDITOR_WIDGET",
+  "version": 1,
+  "widgetId": "de35pxxbvm",
+  "widgetName": "RichTextEditor1"
+}
