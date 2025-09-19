@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 154,
+  "bottomRow": 350,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "defaultText": "{{\n  (() => {\n    const content = getconfig.data?.[0]?.config_blob || '';\n    const searchTerm = configSearch.text?.trim();\n    \n    // If no search term, show all content\n    if (!searchTerm) return content;\n    \n    // Find the target heading\n    const startIndex = content.indexOf(searchTerm);\n    if (startIndex === -1) return '';\n    \n    // Find the next heading after target\n    const afterTarget = content.slice(startIndex + searchTerm.length);\n    const nextHeadingMatch = afterTarget.match(/\\n#{1,6}\\s/);\n    \n    // Extract content between headings\n    const endIndex = nextHeadingMatch \n      ? startIndex + searchTerm.length + nextHeadingMatch.index\n      : content.length;\n    \n    return content.slice(startIndex, endIndex).trim();\n  })()\n}}",
   "dynamicBindingPathList": [
