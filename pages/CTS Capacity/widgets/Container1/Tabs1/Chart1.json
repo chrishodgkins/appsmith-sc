@@ -112,7 +112,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 0,
+  "topRow": 4,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "vayk9syxan",
