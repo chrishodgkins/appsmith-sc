@@ -187,6 +187,7 @@
     "tab1": {
       "id": "tab1",
       "index": 0,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "IVP_Carriage",
       "positioning": "vertical",
@@ -194,14 +195,16 @@
     },
     "tab37l0txac6n": {
       "id": "tab37l0txac6n",
-      "index": 1,
+      "index": 2,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "EOM_Gen1_Stats",
       "widgetId": "pwfp1puf60"
     },
     "tabj7njgdy7eg": {
       "id": "tabj7njgdy7eg",
-      "index": 2,
+      "index": 1,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "IVP_Call_Stats",
       "widgetId": "ex9m4xi9sg"
