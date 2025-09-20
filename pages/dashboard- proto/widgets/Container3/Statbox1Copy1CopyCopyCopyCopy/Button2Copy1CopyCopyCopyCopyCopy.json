@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 8,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "TERTIARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "cy7wvetjbe",
+  "leftColumn": 10,
+  "minWidth": 120,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 18,
+  "mobileRightColumn": 34,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "onClick": "{{storeValue('temptable', (CountNumberBlocks.data || []).filter(row => (row.db_numbers || \"\").split(\"|\").filter(n => n.trim() !== \"\").length >= 5)).then(() => {\n  showModal(Modal1.name);\n});}}",
+  "originalBottomRow": 17,
+  "originalTopRow": 13,
+  "parentColumnSpace": 1.992919921875,
+  "parentId": "13na6sck9g",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "{{ \n  (CountNumberBlocks.data || []).filter(row => \n    (row.db_numbers || \"\").split(\"|\").filter(n => n.trim() !== \"\").length >= 5\n  ).length \n}}",
+  "topRow": 4,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "1fncsbr9tg",
+  "widgetName": "Button2Copy1CopyCopyCopyCopyCopy"
+}
