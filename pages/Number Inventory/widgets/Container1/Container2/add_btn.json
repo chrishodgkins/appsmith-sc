@@ -1,0 +1,33 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 31,
+  "boxShadow": "none",
+  "buttonColor": "#d4d4d8",
+  "buttonVariant": "SECONDARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "add",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": false,
+  "labelTextSize": "0.875rem",
+  "leftColumn": 34,
+  "onClick": "{{showModal('Insert_Modal')}}",
+  "parentColumnSpace": 12.0703125,
+  "parentId": "1azws1ojfl",
+  "parentRowSpace": 10,
+  "rightColumn": 64,
+  "topRow": 27,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "nh3cu4lb1g",
+  "widgetName": "add_btn"
+}
