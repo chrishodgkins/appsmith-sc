@@ -224,6 +224,8 @@
   "mobileTopRow": 8,
   "needsErrorInfo": false,
   "onTabSelected": "",
+  "originalBottomRow": 120,
+  "originalTopRow": 31,
   "parentColumnSpace": 21.90625,
   "parentId": "47p9ji5wyg",
   "parentRowSpace": 10,

@@ -24,6 +24,9 @@
     },
     {
       "key": "groupButtons.groupButtonmi1t3bvt6z.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -72,7 +75,7 @@
       "iconAlign": "left",
       "iconName": "star",
       "id": "groupButton1",
-      "index": 0,
+      "index": 2,
       "isDisabled": false,
       "isVisible": true,
       "label": "Migration",
@@ -105,7 +108,7 @@
       "disabledWhenInvalid": false,
       "iconName": "phone",
       "id": "groupButton2",
-      "index": 1,
+      "index": 0,
       "isDisabled": false,
       "isVisible": true,
       "label": "Gen1 Data",
@@ -156,7 +159,7 @@
       "disabledWhenInvalid": false,
       "iconName": "cloud",
       "id": "groupButton3",
-      "index": 2,
+      "index": 1,
       "isDisabled": false,
       "isVisible": true,
       "label": "IVP Data",
