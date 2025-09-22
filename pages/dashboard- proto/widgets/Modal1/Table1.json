@@ -41,11 +41,11 @@
     "lp_src_realm",
     "lp_nextrealm_list",
     "lp_nexthop_list",
-    "chargeTypes",
-    "db_numbers"
+    "chargeTypes"
   ],
-  "columnUpdatedAt": 1757553403393,
+  "columnUpdatedAt": 1758580740573,
   "columnWidthMap": {
+    "customer": 283,
     "db_numbers": 864,
     "lp_description": 309,
     "lp_nexthop_list": 541,
@@ -102,9 +102,6 @@
     },
     {
       "key": "primaryColumns.customer.computedValue"
-    },
-    {
-      "key": "primaryColumns.db_numbers.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -225,40 +222,6 @@
       "notation": "standard",
       "originalId": "customer",
       "sticky": "left",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "db_numbers": {
-      "alias": "db_numbers",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"db_numbers\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "db_numbers",
-      "index": 10,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "db_numbers",
-      "notation": "standard",
-      "originalId": "db_numbers",
-      "sticky": "",
-      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},

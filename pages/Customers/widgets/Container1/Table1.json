@@ -5,7 +5,7 @@
   "borderColor": "#71717a",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 112,
+  "bottomRow": 132,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -49,7 +49,7 @@
     "Name": 181,
     "cohort": 106,
     "confluence_page": 206,
-    "numbers": 247
+    "numbers": 869
   },
   "compactMode": "SHORT",
   "customIsLoading": false,

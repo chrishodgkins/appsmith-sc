@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -25,7 +25,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "o9ws1u653t",
-  "leftColumn": 0,
+  "leftColumn": 3,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -40,12 +40,12 @@
   "parentId": "eo4wokq4lq",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 60,
+  "rightColumn": 63,
   "shouldTruncate": false,
   "text": "{{ \n  (Get_Services.data.result || [])\n    .filter(s => \n      s.state === \"Active\" && !(\n        Array.isArray(s.profile) && \n        s.profile.length > 0 && \n        s.profile.every(p => (p.label || \"\").includes(\"Carrier Service\"))\n      )\n    )\n    .length \n}}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 4,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
