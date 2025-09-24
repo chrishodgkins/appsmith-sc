@@ -6,5 +6,7 @@ UPDATE public."gen1_ntwk_data" SET
 		"Site2" = '{{ site2Input.text }}',
 		ce_comments = '{{ ceComments.text }}',
 		servicedesklink = '{{ sdesklink.text }}',
-		jira_id = '{{ jiralink.text }}'
+		jira_id = '{{ jiralink.text }}',
+		jira_id2 = '{{ jiralink2.text }}',
+		jira_id3 = '{{ jiralink3.text }}'
   WHERE account_no = '{{ Text8.text}}'; -- Specify a valid condition here. Removing the condition may update every row in the table!

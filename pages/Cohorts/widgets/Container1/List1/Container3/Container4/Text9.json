@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 15,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -44,9 +44,9 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 18,
+  "rightColumn": 17,
   "shouldTruncate": false,
-  "text": "Jira: \n{{ \"https://secureco.atlassian.net/browse/\" + currentItem.jira_id }}",
+  "text": "Jira: \n{{ \"https://secureco.atlassian.net/browse/\" + currentItem.jira_id}}\n{{currentItem.jira_id2 == null ? \"\" : \"https://secureco.atlassian.net/browse/\" + currentItem.jira_id2}}\n{{currentItem.jira_id3 == null ? \"\" : \"https://secureco.atlassian.net/browse/\" + currentItem.jira_id3}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 8,

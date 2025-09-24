@@ -44,6 +44,7 @@
   "parentColumnSpace": 17.71875,
   "parentId": "ex9m4xi9sg",
   "parentRowSpace": 10,
+  "placeholderText": "Comma Separated Search",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",

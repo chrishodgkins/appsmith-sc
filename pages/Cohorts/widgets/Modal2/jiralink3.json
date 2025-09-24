@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 33,
+  "bottomRow": 38,
   "boxShadow": "none",
-  "defaultText": "{{ List1.triggeredItem.servicedesklink }}",
+  "defaultText": "{{ List1.triggeredItem.jira_id3 }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -26,13 +26,13 @@
   "isRequired": false,
   "isVisible": true,
   "key": "qraa50zsm8",
-  "label": "Service Desk Link",
+  "label": "Jira Key Cohort 3",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 30,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -49,11 +49,11 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 61,
+  "rightColumn": 9,
   "showStepArrows": false,
-  "topRow": 26,
+  "topRow": 31,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "1un5w62xm4",
-  "widgetName": "sdesklink"
+  "widgetId": "ebvi7eh6ik",
+  "widgetName": "jiralink3"
 }

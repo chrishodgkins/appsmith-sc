@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * \nFROM public.\"Customer_DB\"\nORDER BY \"partner\" DESC;",
+      "body": "SELECT * \nFROM public.\"Customer_DB\"\nORDER BY \"Account\" ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

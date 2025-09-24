@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE public.\"gen1_ntwk_data\" SET\n    sub_cohorts = '{{ subCohortInput.text }}',\n\t\tcohort_name = '{{ cohortInput.text }}',\n\t\tcohort = '{{ tagsInput.text }}',\n\t\t\"Site1\" = '{{ site1Input.text }}',\n\t\t\"Site2\" = '{{ site2Input.text }}',\n\t\tce_comments = '{{ ceComments.text }}',\n\t\tservicedesklink = '{{ sdesklink.text }}',\n\t\tjira_id = '{{ jiralink.text }}'\n  WHERE account_no = '{{ Text8.text}}'; -- Specify a valid condition here. Removing the condition may update every row in the table!",
+      "body": "UPDATE public.\"gen1_ntwk_data\" SET\n    sub_cohorts = '{{ subCohortInput.text }}',\n\t\tcohort_name = '{{ cohortInput.text }}',\n\t\tcohort = '{{ tagsInput.text }}',\n\t\t\"Site1\" = '{{ site1Input.text }}',\n\t\t\"Site2\" = '{{ site2Input.text }}',\n\t\tce_comments = '{{ ceComments.text }}',\n\t\tservicedesklink = '{{ sdesklink.text }}',\n\t\tjira_id = '{{ jiralink.text }}',\n\t\tjira_id2 = '{{ jiralink2.text }}',\n\t\tjira_id3 = '{{ jiralink3.text }}'\n  WHERE account_no = '{{ Text8.text}}'; -- Specify a valid condition here. Removing the condition may update every row in the table!",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
