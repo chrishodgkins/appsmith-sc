@@ -1,0 +1,235 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 35,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton1.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton0wfzu26lhs.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton85tnf51nny.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonxl27gasxo5.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonkcju17a2bq.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonp2z5wxeap4.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonymvh10sn8h.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonm36e88022s.buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton0wfzu26lhs.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton0wfzu26lhs": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButton0wfzu26lhs",
+      "index": 1,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Vocus",
+      "menuItems": {},
+      "onClick": "{{storeValue('carrierKey', 'vocus');}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "790jm1c78s"
+    },
+    "groupButton1": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "disabledWhenInvalid": false,
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Symbio",
+      "menuItems": {
+        "menuItem0uxb4h8dqe": {
+          "id": "menuItem0uxb4h8dqe",
+          "index": 4,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Optus",
+          "widgetId": "zhh3jzk9wl"
+        },
+        "menuItem2l9j3sjadz": {
+          "id": "menuItem2l9j3sjadz",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Symbio",
+          "widgetId": "0xz9qr6fj5"
+        },
+        "menuItem76nevuckit": {
+          "id": "menuItem76nevuckit",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "AAPT",
+          "widgetId": "1x1urafjjv"
+        },
+        "menuItemayhmyr7j48": {
+          "id": "menuItemayhmyr7j48",
+          "index": 3,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Telstra",
+          "widgetId": "xw2a134qie"
+        },
+        "menuItemkaauu1i05b": {
+          "id": "menuItemkaauu1i05b",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Vocus",
+          "widgetId": "d7xifdv9bu"
+        }
+      },
+      "onClick": "{{storeValue('carrierKey', 'symbio');}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton85tnf51nny": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButton85tnf51nny",
+      "index": 2,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Optus",
+      "menuItems": {},
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "b8i7aykkr0"
+    },
+    "groupButtonkcju17a2bq": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonkcju17a2bq",
+      "index": 4,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "AAPT",
+      "menuItems": {},
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "l91xndslyq"
+    },
+    "groupButtonm36e88022s": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonm36e88022s",
+      "index": 7,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Telstra BYOC",
+      "menuItems": {},
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "ffe13npv7h"
+    },
+    "groupButtonp2z5wxeap4": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonp2z5wxeap4",
+      "index": 5,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Other CTS",
+      "menuItems": {},
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "6ikecxc1mg"
+    },
+    "groupButtonxl27gasxo5": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonxl27gasxo5",
+      "index": 3,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Telstra",
+      "menuItems": {},
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "mvt2tuogfo"
+    },
+    "groupButtonymvh10sn8h": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonymvh10sn8h",
+      "index": 6,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Optus BYOC",
+      "menuItems": {},
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "9hyrsbocwv"
+    }
+  },
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3v36sm3cnb",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 8,
+  "mobileRightColumn": 32,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "orientation": "vertical",
+  "parentColumnSpace": 6.69677734375,
+  "parentId": "jhdhj16yzd",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "topRow": 0,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "jra5896ivi",
+  "widgetName": "ButtonGroup1"
+}

@@ -62,6 +62,10 @@
     {
       "id": "CTS Capacity",
       "isDefault": false
+    },
+    {
+      "id": "Launch",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

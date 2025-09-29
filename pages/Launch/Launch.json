@@ -1,24 +1,23 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_85b82a10-6e89-4ddd-b2ed-e777a20a13f0",
+  "gitSyncId": "6833bd1e663f59025c630a90_6cdec44e-0ff6-4782-bb8e-7a1463f84aaf",
   "unpublishedPage": {
-    "customSlug": "",
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1310,
+          "bottomRow": 1160,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 670,
+          "minHeight": 1160,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 65,
+          "snapRows": 114,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 93,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "SBC Data Browser",
-    "slug": "sbc-data-browser"
+    "name": "Launch",
+    "slug": "launch"
   }
 }
