@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 17,
   "boxShadow": "none",
   "buttonVariant": "PRIMARY",
   "childStylesheet": {
@@ -27,6 +27,9 @@
     },
     {
       "key": "groupButtons.groupButtonmi1t3bvt6z.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonshb4puin4h.buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -64,7 +67,7 @@
       "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemeuurvfn2ta.onClick"
     },
     {
-      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemkrs24hldfz.onClick"
+      "key": "groupButtons.groupButtonshb4puin4h.onClick"
     }
   ],
   "groupButtons": {
@@ -75,7 +78,7 @@
       "iconAlign": "left",
       "iconName": "star",
       "id": "groupButton1",
-      "index": 2,
+      "index": 3,
       "isDisabled": false,
       "isVisible": true,
       "label": "Migration",
@@ -108,7 +111,7 @@
       "disabledWhenInvalid": false,
       "iconName": "phone",
       "id": "groupButton2",
-      "index": 0,
+      "index": 1,
       "isDisabled": false,
       "isVisible": true,
       "label": "Gen1 Data",
@@ -159,7 +162,7 @@
       "disabledWhenInvalid": false,
       "iconName": "cloud",
       "id": "groupButton3",
-      "index": 1,
+      "index": 2,
       "isDisabled": false,
       "isVisible": true,
       "label": "IVP Data",
@@ -202,7 +205,7 @@
       "buttonType": "MENU",
       "iconName": "folder-open",
       "id": "groupButtonmi1t3bvt6z",
-      "index": 3,
+      "index": 4,
       "isDisabled": false,
       "isSeparator": false,
       "isVisible": true,
@@ -217,28 +220,36 @@
           "label": "Call Stats",
           "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
           "widgetId": "dzvr8tnqug"
-        },
-        "menuItemkrs24hldfz": {
-          "id": "menuItemkrs24hldfz",
-          "index": 1,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Dashboard (WIP)",
-          "onClick": "{{navigateTo('dashboard- proto', {}, 'SAME_WINDOW');}}",
-          "widgetId": "0qkvs3egfx"
         }
       },
       "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
       "placement": "CENTER",
       "variant": "filled",
       "widgetId": "359g49hpoo"
+    },
+    "groupButtonshb4puin4h": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "home",
+      "id": "groupButtonshb4puin4h",
+      "index": 0,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Home",
+      "menuItems": {},
+      "onClick": "{{navigateTo('Dashboard', {}, 'SAME_WINDOW');}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "0hfbtic9mp"
     }
   },
   "isCanvas": false,
   "isLoading": false,
   "isVisible": true,
   "key": "yz0oo7ltmx",
-  "leftColumn": 0,
+  "leftColumn": 2,
   "minWidth": 450,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 32,
@@ -249,14 +260,14 @@
   "originalBottomRow": 183,
   "originalTopRow": 167,
   "parentColumnSpace": 21.078125,
-  "parentId": "vjugc90tol",
+  "parentId": "sk0xwvd42u",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 62,
   "topRow": 0,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "71l80cbwqa",
+  "widgetId": "9yb6tc8ys1",
   "widgetName": "ButtonGroup1CopyCopy"
 }

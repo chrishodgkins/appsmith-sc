@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 28,
+  "bottomRow": 34,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -57,7 +57,7 @@
   "text": "Last Updated: \n{{ new Date(webhookPullDate.data.lastupdate).toLocaleString('en-AU', { \n    dateStyle: 'short'\n}) }}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 24,
+  "topRow": 30,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 40,
   "boxShadow": "none",
   "defaultImage": "https://assets.appsmith.com/widgets/default.png",
   "dynamicBindingPathList": [
@@ -33,7 +33,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 24,
-  "topRow": 18,
+  "topRow": 26,
   "type": "IMAGE_WIDGET",
   "version": 1,
   "widgetId": "4whats61xx",

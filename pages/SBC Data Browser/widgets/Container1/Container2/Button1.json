@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 26,
   "boxShadow": "none",
   "buttonColor": "#3f3f46",
   "buttonVariant": "PRIMARY",
@@ -49,7 +49,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 61,
   "text": "DB Sync",
-  "topRow": 15,
+  "topRow": 22,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "8akkuszusu",
