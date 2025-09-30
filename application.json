@@ -32,8 +32,12 @@
   "icon": "call",
   "pages": [
     {
-      "id": "SBC Data Browser",
+      "id": "Dashboard",
       "isDefault": true
+    },
+    {
+      "id": "SBC Data Browser",
+      "isDefault": false
     },
     {
       "id": "Cohorts",
@@ -53,10 +57,6 @@
     },
     {
       "id": "IVP Prod Browser",
-      "isDefault": false
-    },
-    {
-      "id": "dashboard- proto",
       "isDefault": false
     },
     {
