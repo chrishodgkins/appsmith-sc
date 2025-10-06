@@ -1,0 +1,5 @@
+SELECT * FROM public."call_volume_timeperiod_daily"
+WHERE inbound_0 IS NOT NULL 
+  AND inserted_at::date = '2025-10-02' 
+  AND inbound_9 = 0
+ORDER BY external_id;

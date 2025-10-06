@@ -1,0 +1,63 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 215,
+  "bottomRowBeforeCollapse": 215,
+  "boxShadow": "none",
+  "defaultText": "{{\n  (() => {\n    // Get selected customer from dropdown\n    const selectedAccountNo = Select1.selectedOptionValue;\n    \n    // DEFAULT DIAGRAM - Nothing selected\n    if (!selectedAccountNo) {\n      return `flowchart TD\n    msg[\"Select a customer\nto view network diagram\"]\n    style msg fill:#f0f0f0,stroke:#999,stroke-width:2px,color:#666`;\n    }\n    \n    // Find customer data from query\n    const customer = gen1DiagramMap.data.find(c => c.account_no === selectedAccountNo);\n    \n    // Customer selected but not found in data\n    if (!customer) {\n      return `flowchart TD\n    msg[\"Account ${selectedAccountNo}\n\nNo Gen1 or IVP\nconnections found\"]\n    style msg fill:#fff3cd,stroke:#ffc107,stroke-width:2px,color:#856404`;\n    }\n    \n    // Parse data\n    const carriers = customer.carrier_connections || \"No Carriers\";\n    const usesSema = customer.uses_sema_payments === true;\n    const hasBackbone = customer.gen1_ivp_backbone === true;\n    const customerName = customer.customer;\n    const accountNo = customer.account_no;\n    \n    // Check if customer has ANY source realm (Gen1 usage)\n    const sourceRealm = customer.source_realm || \"\";\n    const hasGen1Realm = sourceRealm.trim() !== \"\";  // Changed: ANY realm means Gen1 connection\n    \n    // Determine if we show Gen1 customer NODE and CONNECTIONS TO customer\n    const showGen1Customer = hasGen1Realm || !hasBackbone;\n    \n    // Check if customer has ANY connections\n    if (!hasGen1Realm && !hasBackbone) {\n      return `flowchart TD\n    msg[\"${customerName}\n(${accountNo})\n\nNo Gen1 or IVP\nconnections found\"]\n    style msg fill:#fff3cd,stroke:#ffc107,stroke-width:2px,color:#856404`;\n    }\n    \n    // Find SYD1 and SYD2 specific data\n    const syd1Data = gen1DiagramMap.data.find(c => \n      c.account_no === selectedAccountNo && c.data_source.startsWith('SYD1')\n    );\n    const syd2Data = gen1DiagramMap.data.find(c => \n      c.account_no === selectedAccountNo && c.data_source.startsWith('SYD2')\n    );\n    \n    // Build session agent info for each data source\n    const buildSessionAgentInfo = (data) => {\n      if (!data) return \"N/A\";\n      \n      const realm = data.source_realm || \"N/A\";\n      const sessionAgentsRaw = data.customer_realm_session_agents || \"N/A\";\n      const sessionAgents = sessionAgentsRaw === \"N/A\" ? \"N/A\" : \n        sessionAgentsRaw.split(',').map(s => s.trim()).join('<br/>');\n      \n      const sipIpsRaw = data.sip_interface_ips || \"N/A\";\n      const sipIps = sipIpsRaw === \"N/A\" ? \"N/A\" : \n        sipIpsRaw.split(',').map(s => s.trim()).join('<br/>');\n      \n      return `Realm: ${realm}<br/>Agents:<br/>${sessionAgents}<br/>SIP IPs:<br/>${sipIps}`;\n    };\n    \n    const sessagen1 = buildSessionAgentInfo(syd1Data);\n    const sessagen2 = buildSessionAgentInfo(syd2Data);\n    \n    // Build Mermaid diagram\n    let mermaid = `%%{init: {'flowchart': {'curve': 'linear'}} }%%\nflowchart LR\n\n%% FLOWS\n`;\n\n    if (hasBackbone) {\n      mermaid += `ivp_spacer\nIVPAU1 --FQDNS1()\nProfiles1()\nIVPNumbers1()\n--> IVPCust\nIVPAU2 --FQDNS2()\nProfiles2()\nIVPNumbers2()\n--> IVPCust\n`;\n    }\n    \n    if (showGen1Customer) {\n      mermaid += `SYD1 --\"${sessagen1}\"\n--> Gen1Cust\nSYD2 --\"${sessagen2}\"\n--> Gen1Cust\n`;\n    }\n\n    mermaid += `carrier --> SYD1\ncarrier --> SYD2\n`;\n\n    mermaid += `\n%% LEFT\ncarrier[\"${carriers}\"]\n\n`;\n\n    if (hasBackbone) {\n      mermaid += `%% CENTER: IVP REGIONS (top)\nsubgraph ivpgrp[\"IVP Regions\"]\ndirection TB\nivp_spacer(( )):::invis\nIVPAU1[\"IVP - AU1\"]\nIVPAU2[\"IVP - AU2\"]\nivp_anchor(( )):::invis\nend\n\n`;\n    }\n    \n    mermaid += `%% CENTER: DATA-CENTRE SBCs (middle + Sema)\nsubgraph dcs[\"Data-Centre SBCs\"]\ndirection TB\n`;\n\n    if (usesSema) {\n      mermaid += `Sema[\"Sema\"]\\n`;\n    }\n    \n    mermaid += `SYD1[\"SYD1 Data-Centre SBC\"]\nSYD2[\"SYD2 Data-Centre SBC\"]\n`;\n\n    if (hasBackbone) {\n      mermaid += `dcs_anchor(( )):::invis\\n`;\n    }\n    \n    mermaid += `end\n\n`;\n\n    if (hasBackbone) {\n      mermaid += `%% backbone between groups\ndcs_anchor ---|\"Backbone Trunks\"| ivp_anchor\n\n`;\n    }\n    \n    mermaid += `%% RIGHT: CUSTOMERS\nsubgraph customers[\"Customers\"]\ndirection TB\n`;\n\n    if (hasBackbone) {\n      mermaid += `IVPCust[\"IVP Customers\"]\\n`;\n    }\n    \n    if (showGen1Customer) {\n      mermaid += `Gen1Cust[\"${customerName}<br/>(${accountNo})\"]\\n`;\n    }\n    \n    mermaid += `end\n\n%% STYLING\nclassDef cloud fill:#eef6ff,stroke:#0b5aa6,stroke-width:2px,color:#0b2b4c;\nclassDef dc    fill:#e8f0ff,stroke:#0b2b4c,stroke-width:2px,color:#0b2b4c;\nclassDef box   fill:#f7f7f9,stroke:#0b2b4c,stroke-width:1.5px,color:#0b2b4c;\nclassDef invis fill:transparent,stroke:transparent,color:transparent;\nclassDef smallText font-size:11px;\n\n`;\n\n    if (hasBackbone) {\n      mermaid += `class IVPAU1,IVPAU2 cloud;\\n`;\n    }\n    \n    if (usesSema) {\n      mermaid += `class SYD1,SYD2,Sema dc;\\n`;\n    } else {\n      mermaid += `class SYD1,SYD2 dc;\\n`;\n    }\n    \n    mermaid += `class carrier`;\n    if (hasBackbone) {\n      mermaid += `,IVPCust`;\n    }\n    if (showGen1Customer) {\n      mermaid += `,Gen1Cust`;\n    }\n    mermaid += ` box;\n\n`;\n\n    if (hasBackbone) {\n      mermaid += `style ivpgrp    fill:#ffffff,stroke:#ff6a3d,stroke-width:2px,color:#ff6a3d\\n`;\n    }\n    \n    mermaid += `style dcs       fill:#ffffff,stroke:#ff6a3d,stroke-width:2px,color:#ff6a3d\nstyle customers fill:#ffffff,stroke:#ff6a3d,stroke-width:2px,color:#ff6a3d\n`;\n\n    mermaid += `\n%% Reduce font size on all connecting line labels\n`;\n    \n    let linkCounter = 0;\n    if (hasBackbone) {\n      mermaid += `linkStyle ${linkCounter++} font-size:11px;\\n`;\n      mermaid += `linkStyle ${linkCounter++} font-size:11px;\\n`;\n    }\n    if (showGen1Customer) {\n      mermaid += `linkStyle ${linkCounter++} font-size:11px;\\n`;\n      mermaid += `linkStyle ${linkCounter++} font-size:11px;\\n`;\n    }\n    linkCounter += 2;\n    \n    if (hasBackbone) {\n      mermaid += `\n%% Make the backbone line thick and solid\nlinkStyle ${linkCounter} stroke:#009966,stroke-width:5px\\n`;\n    }\n    \n    return mermaid;\n  })()\n}}",
+  "displayName": "Input",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+  "inputType": "MULTI_LINE_TEXT",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": false,
+  "key": "6c4vyo9zar",
+  "label": "Script",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 5,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "originalBottomRow": 215,
+  "originalTopRow": 181,
+  "parentColumnSpace": 7.841552734375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "rightColumn": 58,
+  "searchTags": [
+    "form",
+    "text input",
+    "number",
+    "textarea"
+  ],
+  "topRow": 181,
+  "topRowBeforeCollapse": 181,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "y9s6m2kzno",
+  "widgetName": "MermaidScript2"
+}

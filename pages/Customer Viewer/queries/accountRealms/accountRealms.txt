@@ -1,0 +1,18 @@
+-- Distinct realms with counts + customer via JOIN
+SELECT 
+    COALESCE(l.account_no::text, 'NULL')             AS account_no,
+    COALESCE(MAX(g.customer), 'Unknown')             AS customer,
+    COALESCE(l.active, 'NULL')                       AS active,
+    TRIM(src_realm_val)                              AS src_realm,
+    COUNT(*)                                         AS count
+FROM local_policy AS l
+LEFT JOIN gen1_ntwk_data AS g
+  ON g.account_no::text = l.account_no::text
+-- break apart comma-separated realms into multiple rows
+CROSS JOIN LATERAL unnest(string_to_array(
+    REGEXP_REPLACE(REGEXP_REPLACE(l.src_realm, '[\[\]"]', '', 'g'), ',', ','),
+    ','
+)) AS t(src_realm_val)
+WHERE l.data_source LIKE 'SYD1A%'
+GROUP BY l.account_no, l.active, src_realm_val
+ORDER BY l.account_no, l.active, src_realm_val;
