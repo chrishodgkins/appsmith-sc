@@ -1,3 +1,2 @@
 SELECT * FROM public."gen1_ntwk_data"
-WHERE lp_src_realm ILIKE '%{{appsmith.store.carrierKey}}%'
 ORDER BY account_no;

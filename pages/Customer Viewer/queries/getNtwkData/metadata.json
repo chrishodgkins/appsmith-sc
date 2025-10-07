@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"gen1_ntwk_data\"\nWHERE lp_src_realm ILIKE '%{{appsmith.store.carrierKey}}%'\nORDER BY account_no;",
+      "body": "SELECT * FROM public.\"gen1_ntwk_data\"\nORDER BY account_no;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,14 +22,10 @@
       "name": "Secco_Gen1_pgdb",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "name": "getNtwkData",
     "pageId": "Customer Viewer",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }
