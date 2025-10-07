@@ -32,6 +32,7 @@
     }
   },
   "columnOrder": [
+    "data_source",
     "lp_from_range",
     "lp_to_range",
     "active",
@@ -39,10 +40,10 @@
     "hoplist",
     "dest_realms"
   ],
-  "columnUpdatedAt": 1759789670280,
+  "columnUpdatedAt": 1759801832351,
   "columnWidthMap": {
     "hoplist": 368,
-    "lp_from_range": 350,
+    "lp_from_range": 228.00000000000003,
     "lp_to_range": 377,
     "src_realm": 114
   },
@@ -82,6 +83,9 @@
     },
     {
       "key": "primaryColumns.dest_realms.computedValue"
+    },
+    {
+      "key": "primaryColumns.data_source.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -90,6 +94,12 @@
     },
     {
       "key": "textSize"
+    },
+    {
+      "key": "primaryColumns.lp_from_range.textSize"
+    },
+    {
+      "key": "primaryColumns.lp_to_range.textSize"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -146,6 +156,40 @@
       "originalId": "active",
       "sticky": "",
       "textSize": "0.675rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "TOP",
+      "width": 150
+    },
+    "data_source": {
+      "alias": "data_source",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{policyView.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"data_source\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "BOLD",
+      "horizontalAlignment": "LEFT",
+      "id": "data_source",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "data_source",
+      "notation": "standard",
+      "originalId": "data_source",
+      "sticky": "left",
+      "textColor": "",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "TOP",
@@ -311,7 +355,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "searchKey": "",
-  "tableData": "{{\n  gen1DiagramMap.data\n    .filter(row => row.account_no === Select1.selectedOptionValue)\n    .flatMap(row => {\n      if (!row.local_policy_summary) return [];\n      \n      const parseJsonArray = (str) => {\n        if (!str) return '';\n        try {\n          // Check if it looks like a JSON array\n          if (str.trim().startsWith('[')) {\n            const parsed = JSON.parse(str);\n            return Array.isArray(parsed) ? parsed.join(', ') : str;\n          }\n        } catch (e) {\n          // If parsing fails, return as-is\n        }\n        return str;\n      };\n      \n      return row.local_policy_summary.split(/\\|\\n/)\n        .filter(line => line.trim())\n        .map(line => {\n          const parts = line.split('<|>');\n          return {\n            lp_from_range: parts[0] || '',\n            lp_to_range: parts[1] || '',\n            active: parts[2] || '',\n            src_realm: parseJsonArray(parts[3]),\n            hoplist: parts[4] || '',\n            dest_realms: parseJsonArray(parts[5])\n          };\n        });\n    })\n}}",
+  "tableData": "{{\n  gen1DiagramMap.data\n    .filter(row => row.account_no === Select1.selectedOptionValue)\n    .flatMap(row => {\n      if (!row.local_policy_summary) return [];\n      \n      const parseJsonArray = (str) => {\n        if (!str) return '';\n        try {\n          if (str.trim().startsWith('[')) {\n            const parsed = JSON.parse(str);\n            return Array.isArray(parsed) ? parsed.join(', ') : str;\n          }\n        } catch (e) {}\n        return str;\n      };\n      \n      return row.local_policy_summary.split(/\\|\\n/)\n        .filter(line => line.trim())\n        .map(line => {\n          const parts = line.split('<|>');\n          return {\n            data_source: parts[0] || '',\n            lp_from_range: parts[1] || '',\n            lp_to_range: parts[2] || '',\n            active: parts[3] || '',\n            src_realm: parseJsonArray(parts[4]),\n            hoplist: parts[5] || '',\n            dest_realms: parseJsonArray(parts[6])\n          };\n        });\n    })\n}}",
   "textSize": "0.675rem",
   "topRow": 85,
   "totalRecordsCount": 0,

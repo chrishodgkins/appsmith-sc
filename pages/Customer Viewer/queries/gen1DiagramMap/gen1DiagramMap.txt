@@ -146,7 +146,8 @@ local_policy_details AS (
         data_source,
         STRING_AGG(
             CONCAT_WS('<|>',  -- Changed from ',' to '<|>'
-                COALESCE(lp_from_range, ''),
+                data_source,
+								COALESCE(lp_from_range, ''),
                 COALESCE(lp_to_range, ''),
                 COALESCE(active, ''),
                 COALESCE(src_realm, ''),
