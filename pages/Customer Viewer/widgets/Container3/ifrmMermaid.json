@@ -33,7 +33,7 @@
     "embed"
   ],
   "source": "",
-  "srcDoc": "<html>\n    <body style=\"background-color: white;\">\n        <script src=\"https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js\"></script>\n        <script>\n            mermaid.initialize({ startOnLoad: true });\n        </script>\n        <h4 style=\"text-align: center;\"><strong> {{Select1.selectedOptionLabel}}</strong></h4>\n        <div class=\"mermaid\" style=\"text-align: center;\">{{MermaidScript2.text}}</div>\n    </body>\n</html>",
+  "srcDoc": "<html>\n    <body style=\"background-color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box;\">\n        <script src=\"https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js\"></script>\n        <script>\n            mermaid.initialize({ startOnLoad: true });\n        </script>\n        <h4 style=\"text-align: center; margin: 0 0 20px 0;\"><strong> {{Select1.selectedOptionLabel}}</strong></h4>\n        <div class=\"mermaid\" style=\"text-align: center; width: 100%; height: 100%; flex-grow: 1;\">{{MermaidScript2.text}}</div>\n    </body>\n</html>",
   "topRow": 5,
   "type": "IFRAME_WIDGET",
   "version": 1,
