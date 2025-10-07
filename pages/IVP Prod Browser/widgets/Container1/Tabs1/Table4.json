@@ -142,9 +142,6 @@
   ],
   "dynamicPropertyPathList": [
     {
-      "key": "tableData"
-    },
-    {
       "key": "textSize"
     },
     {
