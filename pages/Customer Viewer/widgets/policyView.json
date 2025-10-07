@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 174,
+  "bottomRow": 135,
   "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -43,7 +43,7 @@
   "columnUpdatedAt": 1759801832351,
   "columnWidthMap": {
     "hoplist": 368,
-    "lp_from_range": 228.00000000000003,
+    "lp_from_range": 289,
     "lp_to_range": 377,
     "src_realm": 114
   },
@@ -112,7 +112,7 @@
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": false,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "tjkkzu77t2",
