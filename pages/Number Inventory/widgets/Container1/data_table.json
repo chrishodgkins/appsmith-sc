@@ -41,7 +41,7 @@
     "Name": 361
   },
   "defaultPageSize": 0,
-  "defaultSelectedRowIndex": "0",
+  "defaultSelectedRowIndex": "",
   "delimiter": ",",
   "derivedColumns": {
     "customColumn1": {
@@ -110,6 +110,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "onSort"
     }
   ],
   "dynamicTriggerPathList": [
@@ -133,7 +136,7 @@
   "isSortable": true,
   "isVisible": "true",
   "isVisibleDownload": true,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "zba5qel0au",
@@ -141,7 +144,7 @@
   "labelTextSize": "0.875rem",
   "leftColumn": 9,
   "onPageChange": "{{SelectQuery.run()}}",
-  "onSearchTextChanged": "{{SelectQuery.run()}}",
+  "onSearchTextChanged": "",
   "onSort": "{{SelectQuery.run()}}",
   "parentColumnSpace": 16.3125,
   "parentId": "59rw5mx0bq",
