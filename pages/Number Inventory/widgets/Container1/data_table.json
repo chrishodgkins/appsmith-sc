@@ -133,7 +133,7 @@
   "isSortable": true,
   "isVisible": "true",
   "isVisibleDownload": true,
-  "isVisibleFilters": true,
+  "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "zba5qel0au",
