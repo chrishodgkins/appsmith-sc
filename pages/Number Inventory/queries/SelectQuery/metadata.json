@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"numbinv\"\nWHERE \"number\" ilike '%{{data_table.searchText || \"\"}}%'\nORDER BY \"number\";",
+      "body": "SELECT * FROM public.\"numbinv\"\nORDER BY \"number\";",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,11 +22,7 @@
       "name": "Secco_Gen1_pgdb",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "name": "SelectQuery",
     "pageId": "Number Inventory",
     "runBehaviour": "ON_PAGE_LOAD",

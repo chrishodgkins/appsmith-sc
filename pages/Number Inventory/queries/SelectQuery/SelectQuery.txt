@@ -1,3 +1,2 @@
 SELECT * FROM public."numbinv"
-WHERE "number" ilike '%{{data_table.searchText || ""}}%'
 ORDER BY "number";
