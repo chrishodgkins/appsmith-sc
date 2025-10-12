@@ -1,0 +1,2 @@
+SELECT * FROM public."ivpaccounts"
+WHERE accounttype = 'Customer';

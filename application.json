@@ -66,6 +66,10 @@
     {
       "id": "Customer Viewer",
       "isDefault": false
+    },
+    {
+      "id": "Customer Viewer V2",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
