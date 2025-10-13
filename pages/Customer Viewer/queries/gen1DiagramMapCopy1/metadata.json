@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_a7e429db-ebb8-4589-bd2c-339ae795c597",
+  "gitSyncId": "6833bd1e663f59025c630a90_730ebab9-4b03-4046-b2a3-07dcd280b41c",
   "id": "Customer Viewer_gen1DiagramMapCopy1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "gen1DiagramMapCopy1",
     "pageId": "Customer Viewer",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

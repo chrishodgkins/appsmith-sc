@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_cdd0cccb-0983-426b-8dd5-2a10ce53f57c",
+  "gitSyncId": "6833bd1e663f59025c630a90_294b0dc6-5fc0-48b8-b630-0c5a70bcefa0",
   "id": "Customer Viewer_pullCustDB",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"Customer_DB\";",
+      "body": "SELECT * FROM public.\"Customer_DB\" ORDER BY \"Name\" ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

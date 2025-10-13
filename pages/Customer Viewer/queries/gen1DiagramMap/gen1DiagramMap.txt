@@ -39,8 +39,39 @@ customer_realm_data AS (
         c.flag_sema_onprem,
         c.flag_sema_cloud,
         c.lp_nextrealm_list,
-        c.vocus, c.symbio, c.aapt, c.optus, c.telstra
+        c.vocus, c.symbio, c.aapt, c.optus, c.telstra,
+        c.ivp_externalid
     FROM gen1_ntwk_data c
+),
+-- Join IVP account data
+ivp_account_data AS (
+    SELECT DISTINCT
+        crd.account_no,
+        ivp."accountname",
+        ivp."accountstatus",
+        ivp."path",
+        ivp."svcParty",
+        ivp."svcSIP",
+        ivp."svcVoiceGateway",
+        ivp."svccarriages",
+        ivp."externalid"
+    FROM customer_realm_data crd
+    LEFT JOIN ivpaccounts ivp ON crd.ivp_externalid = ivp."externalid"
+    WHERE crd.ivp_externalid IS NOT NULL
+),
+-- Extract IVP service details
+ivp_service_data AS (
+    SELECT 
+        "externalid",
+        MAX(CASE WHEN "service_name" = 'Region Name' THEN "service_value" END) as "Region Name",
+        STRING_AGG(CASE WHEN "service_name" = 'Service name' THEN "service_value" END, ', ' ORDER BY "service_value") as "IVPName",
+        STRING_AGG(CASE WHEN "service_name" = 'Routing domain' THEN "service_value" END, ', ' ORDER BY "service_value") as "Routing Domain",
+        STRING_AGG(CASE WHEN "service_name" = 'Inbound server/uri' THEN "service_value" END, ', ' ORDER BY "service_value") as "Inbound server/uri",
+        STRING_AGG(CASE WHEN "service_name" = 'Outbound server/uri' THEN "service_value" END, ', ' ORDER BY "service_value") as "Outbound server/uri",
+        STRING_AGG(CASE WHEN "service_name" = 'ACL' THEN "service_value" END, ', ' ORDER BY "service_value") as "ACL"
+    FROM ivpservices
+    WHERE "service_name" IN ('Service name', 'Region Name', 'Routing domain', 'Inbound server/uri', 'Outbound server/uri', 'ACL')
+    GROUP BY "externalid"
 ),
 customer_realms AS (
     SELECT DISTINCT
@@ -139,15 +170,15 @@ sip_interfaces AS (
     ) combined
     GROUP BY account_no, data_source
 ),
--- NEW CTE: Aggregate local_policy details per account
+-- Aggregate local_policy details per account
 local_policy_details AS (
     SELECT 
         account_no,
         data_source,
         STRING_AGG(
-            CONCAT_WS('<|>',  -- Changed from ',' to '<|>'
+            CONCAT_WS('<|>',
                 data_source,
-								COALESCE(lp_from_range, ''),
+                COALESCE(lp_from_range, ''),
                 COALESCE(lp_to_range, ''),
                 COALESCE(active, ''),
                 COALESCE(src_realm, ''),
@@ -184,9 +215,27 @@ SELECT DISTINCT
     aa.all_session_agents as customer_realm_session_agents,
     si.ip_addresses as sip_interface_ips,
     cr.traffic_via_ibm_azure as gen1_ivp_backbone,
-    lpd.policy_details as local_policy_summary
+    lpd.policy_details as local_policy_summary,
+    -- IVP account columns
+    ivp."externalid" as ivp_externalid,
+    ivp."accountname" as ivp_accountname,
+    ivp."accountstatus" as ivp_accountstatus,
+    ivp."path" as ivp_path,
+    ivp."svcParty" as ivp_svcParty,
+    ivp."svcSIP" as ivp_svcSIP,
+    ivp."svcVoiceGateway" as ivp_svcVoiceGateway,
+    ivp."svccarriages" as ivp_svccarriages,
+    -- IVP service columns
+    ivps."IVPName",
+    ivps."Region Name",
+    ivps."Routing Domain",
+    ivps."Inbound server/uri",
+    ivps."Outbound server/uri",
+    ivps."ACL"
 FROM customer_realms cr
 LEFT JOIN aggregated_agents aa ON cr.account_no = aa.account_no AND cr.data_source = aa.data_source
 LEFT JOIN sip_interfaces si ON cr.account_no = si.account_no AND cr.data_source = si.data_source
 LEFT JOIN local_policy_details lpd ON cr.account_no = lpd.account_no AND cr.data_source = lpd.data_source
+LEFT JOIN ivp_account_data ivp ON cr.account_no = ivp.account_no
+LEFT JOIN ivp_service_data ivps ON ivp."externalid" = ivps."externalid"
 ORDER BY cr.customer, cr.data_source;

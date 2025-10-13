@@ -1,1 +1,0 @@
-SELECT * FROM public."Customer_DB" ORDER BY "Name" ASC;
