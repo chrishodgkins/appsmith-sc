@@ -70,6 +70,10 @@
     {
       "id": "Customer Viewer V2",
       "isDefault": false
+    },
+    {
+      "id": "IVPAdmin",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

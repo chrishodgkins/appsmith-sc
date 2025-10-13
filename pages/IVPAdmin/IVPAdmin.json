@@ -1,13 +1,12 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_b44b74b7-c476-48e4-83a8-7b51641fef09",
+  "gitSyncId": "6833bd1e663f59025c630a90_6cbdfe72-215a-4599-a887-2362ea5c8158",
   "unpublishedPage": {
-    "customSlug": "",
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1460,
+          "bottomRow": 1000,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "IVP Prod Browser",
-    "slug": "ivp-prod-browser"
+    "name": "IVPAdmin",
+    "slug": "ivpadmin"
   }
 }

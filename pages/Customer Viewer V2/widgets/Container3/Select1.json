@@ -52,7 +52,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 23,
+  "rightColumn": 24,
   "serverSideFiltering": false,
   "sourceData": "{{pullCustDB.data}}",
   "topRow": 0,

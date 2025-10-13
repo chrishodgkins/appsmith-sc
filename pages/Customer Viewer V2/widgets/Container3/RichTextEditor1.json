@@ -1,10 +1,10 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 77,
+  "bottomRow": 79,
   "bottomRowBeforeCollapse": 69,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultText": "<div style=\"font-size: 14px;\">\nAccount -- {{\n  Select1.selectedOptionValue\n}}\n\n\n<br><br>\nSites -- <br>{{  getNtwkData.data.find(row => row.account_no === Select1.selectedOptionValue).Site1}}<br>\n{{  getNtwkData.data.find(row => row.account_no === Select1.selectedOptionValue).Site2}}\n\n\n<br><br>\nService Types --  {{\n  [...new Set(\n    pullBillingData.data\n      .filter(row => row.account_number === Select1.selectedOptionValue)\n      .map(row => row.service_type_narrative)\n  )].join(', ')\n}}\n<br><br>\nBilled Numbers -- {{  \n  pullCustDB.data\n    .find(row => row.Account === Select1.selectedOptionValue)\n    .numbers\n    .replaceAll('|', ' - ')\n}}\n\n<br><br>\nConfluence -- {{  pullCustDB.data.find(row => row.Account === Select1.selectedOptionValue).confluence_page}}\n\n<br><br>\nIVP Service ID -- {{ pullCustDB.data.find(row => row.Account === Select1.selectedOptionValue).ivp_externalid  }}\n</div>",
+  "defaultText": "<div style=\"font-size: 12px;\">\n<strong>Admin</strong>\n<br>\nConfluence -- {{  pullCustDB.data.find(row => row.Account === Select1.selectedOptionValue).confluence_page}}\n<br><br>\nService Types --  {{\n  [...new Set(\n    pullBillingData.data\n      .filter(row => row.account_number === Select1.selectedOptionValue)\n      .map(row => row.service_type_narrative)\n  )].join(', ')\n}}\n<br><br>\nBilled Numbers -- {{  \n  pullCustDB.data\n    .find(row => row.Account === Select1.selectedOptionValue)\n    .numbers\n    .replaceAll('|', ' - ')\n}}\n<br><br>\n<strong>GEN1</strong>\n<br>\nSites -- <br>{{  getNtwkData.data.find(row => row.account_no === Select1.selectedOptionValue).Site1}}<br>\n{{  getNtwkData.data.find(row => row.account_no === Select1.selectedOptionValue).Site2}}\n\n<br><br>\n<strong>IVP</strong>\n\n<br>\nIVP Service ID -- {{ pullCustDB.data.find(row => row.Account === Select1.selectedOptionValue).ivp_externalid  }}\n<br><br>\n\nACL List (All Services) -- <br>{{ manipTable.tableData.find(row => row.ivp_externalid === updateExID.text).ACL }}\n<br><br>\nDefault CLIs -- {{ getIVPServices.data.filter(row => row.externalid === updateExID.text).map(row => row[\"Default Outbound CLI\"]).join(', ') }}\n<br>\nMedia Bypass -- {{ getIVPServices.data.find(row => row.externalid === updateExID.text)[\"Enable Media Bypass\"]}}\n<br>\nChannels -- {{ getIVPServices.data.filter(row => row.externalid === updateExID.text).map(row => `${row[\"name\"]} (${row[\"Number of channels\"]})`).join(', ') }}\n</div>",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -55,7 +55,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 23,
+  "rightColumn": 24,
   "topRow": 11,
   "topRowBeforeCollapse": 4,
   "type": "RICH_TEXT_EDITOR_WIDGET",
