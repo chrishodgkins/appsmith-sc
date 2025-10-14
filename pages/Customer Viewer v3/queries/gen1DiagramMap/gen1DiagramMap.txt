@@ -1,13 +1,24 @@
+-- ============================================================================
+-- FUNCTION 1: IDENTIFY DATA SOURCES (SYD1/SYD2) FOR EACH ACCOUNT
+-- ============================================================================
+-- Extract unique combinations of account numbers and their associated
+-- data sources (SYD1 or SYD2) from local_policy table
+-- ============================================================================
 WITH data_source_lookup AS (
-    -- Get data_source for each account from local_policy
     SELECT DISTINCT
         "account_no",
         "data_source"
     FROM local_policy
     WHERE ("data_source" LIKE 'SYD1%' OR "data_source" LIKE 'SYD2%')
 ),
+
+-- ============================================================================
+-- FUNCTION 2: EXTRACT CUSTOMER REALMS FROM LOCAL POLICY
+-- ============================================================================
+-- Parse all cust-* realm names from src_realm field, excluding secureco realms
+-- These represent customer-specific routing realms in Gen1 platform
+-- ============================================================================
 customer_realm_extract AS (
-    -- Extract ALL cust-* realms directly from local_policy, excluding secureco
     SELECT DISTINCT
         lp."account_no",
         lp."data_source",
@@ -17,7 +28,13 @@ customer_realm_extract AS (
         AND lp."src_realm" IS NOT NULL
         AND lp."src_realm" NOT LIKE '%secureco%'
 ),
--- Extract cloud-aws realm usage per data_source (check src_realm, dest_realms, and hoplist)
+
+-- ============================================================================
+-- FUNCTION 3: IDENTIFY CLOUD-AWS REALM USAGE
+-- ============================================================================
+-- Check if customer routes through cloud-aws realm by searching
+-- src_realm, dest_realms, and hoplist fields
+-- ============================================================================
 cloud_aws_realms AS (
     SELECT DISTINCT
         lp."account_no",
@@ -29,8 +46,14 @@ cloud_aws_realms AS (
              OR lp."dest_realms" LIKE '%cloud-aws%'
              OR lp."hoplist" LIKE '%cloud-aws%')
 ),
+
+-- ============================================================================
+-- FUNCTION 4: RETRIEVE GEN1 NETWORK METADATA
+-- ============================================================================
+-- Pull customer configuration data from gen1_ntwk_data including
+-- realm info, carrier flags, and IVP external ID for later joins
+-- ============================================================================
 customer_realm_data AS (
-    -- Get other customer data from gen1_ntwk_data
     SELECT DISTINCT
         c."customer",
         c."account_no",
@@ -39,11 +62,21 @@ customer_realm_data AS (
         c."flag_sema_onprem",
         c."flag_sema_cloud",
         c."lp_nextrealm_list",
-        c."vocus", c."symbio", c."aapt", c."optus", c."telstra",
+        c."vocus", 
+        c."symbio", 
+        c."aapt", 
+        c."optus", 
+        c."telstra",
         c."ivp_externalid"
     FROM gen1_ntwk_data c
 ),
--- Join IVP account data
+
+-- ============================================================================
+-- FUNCTION 5: JOIN IVP ACCOUNT INFORMATION
+-- ============================================================================
+-- Link IVP account details (status, services, carriages) using external ID
+-- from Gen1 customer data
+-- ============================================================================
 ivp_account_data AS (
     SELECT DISTINCT
         crd."account_no",
@@ -59,7 +92,13 @@ ivp_account_data AS (
     LEFT JOIN ivpaccounts ivp ON crd."ivp_externalid" = ivp."externalid"
     WHERE crd."ivp_externalid" IS NOT NULL
 ),
--- Extract IVP service details
+
+-- ============================================================================
+-- FUNCTION 6: AGGREGATE IVP SERVICE DETAILS
+-- ============================================================================
+-- Extract and concatenate IVP service configuration details including
+-- region names, routing domains, inbound/outbound URIs, and ACLs
+-- ============================================================================
 ivp_service_data AS (
     SELECT 
         "externalid",
@@ -73,6 +112,13 @@ ivp_service_data AS (
     WHERE "service_name" IN ('Service name', 'Region Name', 'Routing domain', 'Inbound server/uri', 'Outbound server/uri', 'ACL')
     GROUP BY "externalid"
 ),
+
+-- ============================================================================
+-- FUNCTION 7: AGGREGATE CUSTOMER REALM AND CARRIER DATA
+-- ============================================================================
+-- Combine all customer realms, detect cloud-aws usage, identify carrier
+-- connections, check for Sema payments and IBM/Azure traffic routing
+-- ============================================================================
 customer_realms AS (
     SELECT DISTINCT
         crd."customer",
@@ -98,7 +144,13 @@ customer_realms AS (
     LEFT JOIN customer_realm_extract cre ON crd."account_no" = cre."account_no" AND dsl."data_source" = cre."data_source"
     GROUP BY crd."customer", crd."account_no", dsl."data_source"
 ),
--- Extract ALL PureCloud domains from local policy hoplist for each customer
+
+-- ============================================================================
+-- FUNCTION 8: EXTRACT PURECLOUD DOMAINS FROM ROUTING
+-- ============================================================================
+-- Parse Genesys PureCloud domain names from local policy hoplist field
+-- for customers using PureCloud BYOC integration
+-- ============================================================================
 purecloud_domains AS (
     SELECT DISTINCT
         lp."account_no",
@@ -108,7 +160,13 @@ purecloud_domains AS (
     WHERE lp."hoplist" LIKE '%.mypurecloud.com.au%'
         AND (lp."data_source" LIKE 'SYD1%' OR lp."data_source" LIKE 'SYD2%')
 ),
--- Get customer terminating realm session agents for ALL realms
+
+-- ============================================================================
+-- FUNCTION 9: FIND SESSION AGENTS FOR CUSTOMER REALMS
+-- ============================================================================
+-- Match customer realms to their session agent hostnames from session_agent
+-- table using realm_id and data_source
+-- ============================================================================
 customer_session_agents AS (
     SELECT DISTINCT
         cre."account_no",
@@ -119,7 +177,13 @@ customer_session_agents AS (
         ON cre.individual_realm = sa."realm_id"
         AND cre."data_source" = sa."data_source"
 ),
--- Combine all session agents
+
+-- ============================================================================
+-- FUNCTION 10: COMBINE SESSION AGENTS AND PURECLOUD DOMAINS
+-- ============================================================================
+-- Union session agents with PureCloud domains to create complete list
+-- of SIP endpoints
+-- ============================================================================
 all_session_agents AS (
     SELECT "account_no", "data_source", session_agent_hostname as agent
     FROM customer_session_agents
@@ -127,6 +191,13 @@ all_session_agents AS (
     SELECT "account_no", "data_source", purecloud_domain as agent
     FROM purecloud_domains
 ),
+
+-- ============================================================================
+-- FUNCTION 11: AGGREGATE ALL SESSION AGENTS
+-- ============================================================================
+-- Concatenate all session agents and PureCloud domains into single
+-- comma-separated string per account and data source
+-- ============================================================================
 aggregated_agents AS (
     SELECT
         "account_no",
@@ -135,7 +206,12 @@ aggregated_agents AS (
     FROM all_session_agents
     GROUP BY "account_no", "data_source"
 ),
--- Get SIP interfaces from customer realms
+
+-- ============================================================================
+-- FUNCTION 12: EXTRACT SIP INTERFACE IPs FROM CUSTOMER REALMS
+-- ============================================================================
+-- Get SIP interface IP addresses for all customer-specific realms
+-- ============================================================================
 customer_sip_interfaces AS (
     SELECT DISTINCT
         cre."account_no",
@@ -146,7 +222,12 @@ customer_sip_interfaces AS (
         ON cre.individual_realm = si."realm_id"
         AND cre."data_source" = si."data_source"
 ),
--- Get SIP interfaces for cloud-aws realm
+
+-- ============================================================================
+-- FUNCTION 13: EXTRACT SIP INTERFACE IPs FROM CLOUD-AWS REALM
+-- ============================================================================
+-- Get SIP interface IP addresses for cloud-aws realm if customer uses it
+-- ============================================================================
 cloud_aws_sip_interfaces AS (
     SELECT DISTINCT
         car."account_no",
@@ -157,7 +238,13 @@ cloud_aws_sip_interfaces AS (
         ON car.realm_name = si."realm_id"
         AND car."data_source" = si."data_source"
 ),
--- Combine all SIP interfaces (customer and cloud only, NO carrier interfaces)
+
+-- ============================================================================
+-- FUNCTION 14: COMBINE ALL SIP INTERFACE IPs
+-- ============================================================================
+-- Merge customer realm and cloud-aws SIP interfaces, excluding carrier
+-- interfaces, and aggregate into comma-separated list
+-- ============================================================================
 sip_interfaces AS (
     SELECT
         "account_no",
@@ -170,7 +257,13 @@ sip_interfaces AS (
     ) combined
     GROUP BY "account_no", "data_source"
 ),
--- Aggregate local_policy details per account
+
+-- ============================================================================
+-- FUNCTION 15: AGGREGATE LOCAL POLICY ROUTING RULES
+-- ============================================================================
+-- Concatenate all local policy entries per account into pipe-delimited
+-- summary for detailed routing analysis
+-- ============================================================================
 local_policy_details AS (
     SELECT 
         "account_no",
@@ -192,7 +285,12 @@ local_policy_details AS (
     WHERE ("data_source" LIKE 'SYD1%' OR "data_source" LIKE 'SYD2%')
     GROUP BY "account_no", "data_source"
 ),
--- Customers with NO Gen1 configuration
+
+-- ============================================================================
+-- FUNCTION 16: IDENTIFY IVP-ONLY CUSTOMERS (NO GEN1)
+-- ============================================================================
+-- Find customers that have IVP services but no Gen1 local_policy entries
+-- ============================================================================
 customers_without_gen1 AS (
     SELECT DISTINCT
         c."customer",
@@ -204,83 +302,98 @@ customers_without_gen1 AS (
         AND (lp."data_source" LIKE 'SYD1%' OR lp."data_source" LIKE 'SYD2%')
     WHERE lp."account_no" IS NULL
 )
-SELECT DISTINCT
-    cr."customer",
-    cr."account_no",
-    cr."data_source",
-    -- Build source_realm list with ALL cust-* realms plus cloud-aws if applicable
-    CASE
-        WHEN cr.customer_realm IS NOT NULL AND cr.has_cloud_aws THEN cr.customer_realm || ',cloud-aws'
-        WHEN cr.customer_realm IS NOT NULL THEN cr.customer_realm
-        WHEN cr.has_cloud_aws THEN 'cloud-aws'
-        ELSE NULL
-    END as "source_realm",
-    CONCAT_WS(', ',
-        CASE WHEN cr.vocus THEN 'Vocus' END,
-        CASE WHEN cr.symbio THEN 'Symbio' END,
-        CASE WHEN cr.aapt THEN 'AAPT' END,
-        CASE WHEN cr.optus THEN 'Optus' END,
-        CASE WHEN cr.telstra THEN 'Telstra' END
-    ) as "carrier_connections",
-    cr.uses_sema_payments,
-    NULL as "genesys_purecloud_domains",
-    aa.all_session_agents as "customer_realm_session_agents",
-    si.ip_addresses as "sip_interface_ips",
-    cr.traffic_via_ibm_azure as "gen1_ivp_backbone",
-    lpd.policy_details as "local_policy_summary",
-    -- IVP account columns
-    ivp."externalid" as "ivp_externalid",
-    ivp."accountname" as "ivp_accountname",
-    ivp."accountstatus" as "ivp_accountstatus",
-    ivp."path" as "ivp_path",
-    ivp."svcParty" as "ivp_svcParty",
-    ivp."svcSIP" as "ivp_svcSIP",
-    ivp."svcVoiceGateway" as "ivp_svcVoiceGateway",
-    ivp."svccarriages" as "ivp_svccarriages",
-    -- IVP service columns
-    ivps."IVPName",
-    ivps."Region Name",
-    ivps."Routing Domain",
-    ivps."Inbound server/uri",
-    ivps."Outbound server/uri",
-    ivps."ACL"
-FROM customer_realms cr
-LEFT JOIN aggregated_agents aa ON cr."account_no" = aa."account_no" AND cr."data_source" = aa."data_source"
-LEFT JOIN sip_interfaces si ON cr."account_no" = si."account_no" AND cr."data_source" = si."data_source"
-LEFT JOIN local_policy_details lpd ON cr."account_no" = lpd."account_no" AND cr."data_source" = lpd."data_source"
-LEFT JOIN ivp_account_data ivp ON cr."account_no" = ivp."account_no"
-LEFT JOIN ivp_service_data ivps ON ivp."externalid" = ivps."externalid"
 
-UNION ALL
+-- ============================================================================
+-- FUNCTION 17: PRIORITIZE SYD1 OVER SYD2 IN OUTPUT
+-- ============================================================================
+-- Wrap UNION query in subquery to enable ORDER BY with expressions
+-- SYD1 records appear first (priority 1), then SYD2 (priority 2)
+-- This ensures JavaScript .find() selects SYD1 data when both exist
+-- ============================================================================
+SELECT * FROM (
+    SELECT DISTINCT
+        cr."customer",
+        cr."account_no",
+        cr."data_source",
+        -- Build source_realm list with ALL cust-* realms plus cloud-aws if applicable
+        CASE
+            WHEN cr.customer_realm IS NOT NULL AND cr.has_cloud_aws THEN cr.customer_realm || ',cloud-aws'
+            WHEN cr.customer_realm IS NOT NULL THEN cr.customer_realm
+            WHEN cr.has_cloud_aws THEN 'cloud-aws'
+            ELSE NULL
+        END as "source_realm",
+        CONCAT_WS(', ',
+            CASE WHEN cr.vocus THEN 'Vocus' END,
+            CASE WHEN cr.symbio THEN 'Symbio' END,
+            CASE WHEN cr.aapt THEN 'AAPT' END,
+            CASE WHEN cr.optus THEN 'Optus' END,
+            CASE WHEN cr.telstra THEN 'Telstra' END
+        ) as "carrier_connections",
+        cr.uses_sema_payments,
+        NULL as "genesys_purecloud_domains",
+        aa.all_session_agents as "customer_realm_session_agents",
+        si.ip_addresses as "sip_interface_ips",
+        cr.traffic_via_ibm_azure as "gen1_ivp_backbone",
+        lpd.policy_details as "local_policy_summary",
+        -- IVP account columns
+        ivp."externalid" as "ivp_externalid",
+        ivp."accountname" as "ivp_accountname",
+        ivp."accountstatus" as "ivp_accountstatus",
+        ivp."path" as "ivp_path",
+        ivp."svcParty" as "ivp_svcParty",
+        ivp."svcSIP" as "ivp_svcSIP",
+        ivp."svcVoiceGateway" as "ivp_svcVoiceGateway",
+        ivp."svccarriages" as "ivp_svccarriages",
+        -- IVP service columns
+        ivps."IVPName",
+        ivps."Region Name",
+        ivps."Routing Domain",
+        ivps."Inbound server/uri",
+        ivps."Outbound server/uri",
+        ivps."ACL"
+    FROM customer_realms cr
+    LEFT JOIN aggregated_agents aa ON cr."account_no" = aa."account_no" AND cr."data_source" = aa."data_source"
+    LEFT JOIN sip_interfaces si ON cr."account_no" = si."account_no" AND cr."data_source" = si."data_source"
+    LEFT JOIN local_policy_details lpd ON cr."account_no" = lpd."account_no" AND cr."data_source" = lpd."data_source"
+    LEFT JOIN ivp_account_data ivp ON cr."account_no" = ivp."account_no"
+    LEFT JOIN ivp_service_data ivps ON ivp."externalid" = ivps."externalid"
 
-SELECT DISTINCT
-    cwg."customer",
-    cwg."account_no",
-    NULL as "data_source",
-    NULL as "source_realm",
-    NULL as "carrier_connections",
-    NULL::boolean as "uses_sema_payments",
-    NULL as "genesys_purecloud_domains",
-    NULL as "customer_realm_session_agents",
-    NULL as "sip_interface_ips",
-    NULL::boolean as "gen1_ivp_backbone",
-    NULL as "local_policy_summary",
-    ivp."externalid" as "ivp_externalid",
-    ivp."accountname" as "ivp_accountname",
-    ivp."accountstatus" as "ivp_accountstatus",
-    ivp."path" as "ivp_path",
-    ivp."svcParty" as "ivp_svcParty",
-    ivp."svcSIP" as "ivp_svcSIP",
-    ivp."svcVoiceGateway" as "ivp_svcVoiceGateway",
-    ivp."svccarriages" as "ivp_svccarriages",
-    ivps."IVPName",
-    ivps."Region Name",
-    ivps."Routing Domain",
-    ivps."Inbound server/uri",
-    ivps."Outbound server/uri",
-    ivps."ACL"
-FROM customers_without_gen1 cwg
-LEFT JOIN ivpaccounts ivp ON cwg."ivp_externalid" = ivp."externalid"
-LEFT JOIN ivp_service_data ivps ON ivp."externalid" = ivps."externalid"
+    UNION ALL
 
-ORDER BY "customer", "data_source";
+    SELECT DISTINCT
+        cwg."customer",
+        cwg."account_no",
+        NULL as "data_source",
+        NULL as "source_realm",
+        NULL as "carrier_connections",
+        NULL::boolean as "uses_sema_payments",
+        NULL as "genesys_purecloud_domains",
+        NULL as "customer_realm_session_agents",
+        NULL as "sip_interface_ips",
+        NULL::boolean as "gen1_ivp_backbone",
+        NULL as "local_policy_summary",
+        ivp."externalid" as "ivp_externalid",
+        ivp."accountname" as "ivp_accountname",
+        ivp."accountstatus" as "ivp_accountstatus",
+        ivp."path" as "ivp_path",
+        ivp."svcParty" as "ivp_svcParty",
+        ivp."svcSIP" as "ivp_svcSIP",
+        ivp."svcVoiceGateway" as "ivp_svcVoiceGateway",
+        ivp."svccarriages" as "ivp_svccarriages",
+        ivps."IVPName",
+        ivps."Region Name",
+        ivps."Routing Domain",
+        ivps."Inbound server/uri",
+        ivps."Outbound server/uri",
+        ivps."ACL"
+    FROM customers_without_gen1 cwg
+    LEFT JOIN ivpaccounts ivp ON cwg."ivp_externalid" = ivp."externalid"
+    LEFT JOIN ivp_service_data ivps ON ivp."externalid" = ivps."externalid"
+) combined_results
+ORDER BY "customer", 
+         CASE 
+           WHEN "data_source" LIKE 'SYD1%' THEN 1 
+           WHEN "data_source" LIKE 'SYD2%' THEN 2 
+           ELSE 3 
+         END,
+         "data_source";
