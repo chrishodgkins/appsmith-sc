@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_8ce062de-2cc3-4f67-b6f4-6608db8c663e",
-  "id": "IVP Prod Browser_sql_getPartners",
+  "gitSyncId": "6833bd1e663f59025c630a90_f5abae28-05b6-4573-a293-1bfe5eb40cb7",
+  "id": "Customer Viewer v3_pullBillingData",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"ivpaccounts\"\nWHERE accounttype ILIKE '%artner'\nORDER by accountname ASC;",
+      "body": "SELECT * FROM public.\"billingdata\";",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "sql_getPartners",
-    "pageId": "IVP Prod Browser",
+    "name": "pullBillingData",
+    "pageId": "Customer Viewer v3",
     "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "userSetOnLoad": false
   }
 }

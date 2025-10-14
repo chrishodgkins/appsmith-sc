@@ -1,24 +1,23 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_b44b74b7-c476-48e4-83a8-7b51641fef09",
+  "gitSyncId": "6833bd1e663f59025c630a90_487d32a0-febc-4c4b-99fc-1195917b8215",
   "unpublishedPage": {
-    "customSlug": "",
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1540,
+          "bottomRow": 2490,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 760,
+          "minHeight": 1160,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 74,
+          "snapRows": 114,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 93,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "IVP Prod Browser",
-    "slug": "ivp-prod-browser"
+    "name": "Customer Viewer v3",
+    "slug": "customer-viewer-v3"
   }
 }

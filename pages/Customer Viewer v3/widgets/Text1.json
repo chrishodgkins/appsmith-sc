@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 85,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -14,44 +14,39 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [
-    {
-      "key": "fontSize"
-    }
-  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.700rem",
-  "fontStyle": "",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "0pu1v6fe7d",
-  "leftColumn": 8,
+  "key": "ll9ya9ulxb",
+  "leftColumn": 6,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 10,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 17,
-  "mobileTopRow": 6,
+  "mobileBottomRow": 82,
+  "mobileLeftColumn": 7,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 78,
   "needsErrorInfo": false,
-  "originalBottomRow": 19,
-  "originalTopRow": 8,
+  "originalBottomRow": 85,
+  "originalTopRow": 81,
   "overflow": "NONE",
-  "parentColumnSpace": 21.59375,
-  "parentId": "47p9ji5wyg",
+  "parentColumnSpace": 21.078125,
+  "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 21,
+  "rightColumn": 19,
   "shouldTruncate": false,
-  "text": "Filter Instructions: \n- Dropdown: Filters Customer List\n- Customer List: Clicking filters Services and Numbers Below.\n- Click Stats data points filters as well.\n- IF no customer is selected, \"Customer Data\" is all customers.\n",
+  "text": "Gen1 Policy View (SYD1)",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 8,
+  "topRow": 81,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "1qxdqjkry1",
-  "widgetName": "Text2"
+  "widgetId": "mqlo6c7umh",
+  "widgetName": "Text1"
 }
