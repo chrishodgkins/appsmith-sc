@@ -1,8 +1,8 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
-  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "bottomRow": 28,
+  "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
@@ -12,30 +12,38 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
     }
   ],
-  "iconAlign": "left",
-  "iconName": "upload",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
-  "key": "8we9ddfgcy",
-  "leftColumn": 49,
+  "isVisible": "{{Select1.selectedOptionValue !== '' && updateExID.text !== ''  }}",
+  "key": "7392yv1pbj",
+  "leftColumn": 24,
   "minWidth": 120,
-  "mobileBottomRow": 4,
-  "mobileLeftColumn": 39,
-  "mobileRightColumn": 55,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 11,
+  "mobileLeftColumn": 12,
+  "mobileRightColumn": 28,
+  "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "onClick": "{{updateExternalID.run().then(() => {\n  pullCustDB.run();\n  gen1DiagramMap.run();\n});\nupdateExtIDNetwk.run().then(() => {\n  getNtwkData.run();\n  gen1DiagramMap.run();\n});}}",
-  "parentColumnSpace": 16.33984375,
+  "onClick": "{{storeValue('stateid', updateExternalID.data).then(() => {\n  navigateTo('CTS Capacity', {\n    \"key\": \"IVP_Call_Stats\"\n  }, 'NEW_WINDOW');\n});}}",
+  "parentColumnSpace": 16.0283203125,
   "parentId": "yaeuqx8gh2",
   "parentRowSpace": 10,
   "placement": "CENTER",
@@ -43,11 +51,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 57,
-  "text": "IVP External ID",
-  "topRow": 4,
+  "rightColumn": 29,
+  "text": "IVP Stats",
+  "topRow": 24,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "rdbmrtvby9",
-  "widgetName": "Button1"
+  "widgetId": "lkmtbrxgy1",
+  "widgetName": "Button2Copy1"
 }

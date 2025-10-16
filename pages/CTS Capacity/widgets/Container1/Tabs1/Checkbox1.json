@@ -3,7 +3,7 @@
   "alignWidget": "RIGHT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 5,
   "defaultCheckedState": false,
   "dynamicBindingPathList": [
     {
@@ -31,8 +31,8 @@
   "mobileRightColumn": 51,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 6,
-  "originalTopRow": 1,
+  "originalBottomRow": 4,
+  "originalTopRow": 0,
   "parentColumnSpace": 18.03125,
   "parentId": "ex9m4xi9sg",
   "parentRowSpace": 10,

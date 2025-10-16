@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 8,
   "boxShadow": "none",
-  "defaultText": "{{ pullCustDB.data.find(row => row.Account === Select1.selectedOptionValue).ivp_externalid  }}",
+  "defaultText": "{{ pullCustDB.data.find(row => row.Account === Select1.selectedOptionValue).ivp_externalid || ''  }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -49,7 +49,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showStepArrows": false,
-  "topRow": 0,
+  "topRow": 4,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "iwtk0d2upj",

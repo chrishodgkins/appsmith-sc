@@ -32,6 +32,7 @@
       "key": "groupButtons.groupButtonshb4puin4h.buttonColor"
     }
   ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "groupButtons.groupButton1.menuItems.menuItemm3plfdu92k.onClick"
@@ -40,25 +41,13 @@
       "key": "groupButtons.groupButton1.menuItems.menuItem1q81eldml7.onClick"
     },
     {
-      "key": "groupButtons.groupButton2.menuItems.menuItem1qvjrr7bcw.onClick"
-    },
-    {
       "key": "groupButtons.groupButton2.menuItems.menuItemyvyfyikwha.onClick"
     },
     {
       "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
     },
     {
-      "key": "groupButtons.groupButton2.menuItems.menuItem9wgg5d993z.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton3.menuItems.menuItem2rmshp8fob.onClick"
-    },
-    {
       "key": "groupButtons.groupButton3.menuItems.menuItemjplctfbozd.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton2.menuItems.menuItemvafxeesci9.onClick"
     },
     {
       "key": "groupButtons.groupButtonmi1t3bvt6z.onClick"
@@ -68,6 +57,18 @@
     },
     {
       "key": "groupButtons.groupButtonshb4puin4h.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemfdm3v61dtk.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemuwbn65hky9.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemur8ojls8dt.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemx95phchjis.onClick"
     }
   ],
   "groupButtons": {
@@ -78,18 +79,18 @@
       "iconAlign": "left",
       "iconName": "star",
       "id": "groupButton1",
-      "index": 3,
+      "index": 4,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Migration",
+      "label": "Admin",
       "menuItems": {
         "menuItem1q81eldml7": {
           "id": "menuItem1q81eldml7",
           "index": 1,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Analyisis",
-          "onClick": "{{navigateTo('Cohort Analysis', {}, 'SAME_WINDOW');}}",
+          "label": "Number List",
+          "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
           "widgetId": "cv7tlyp7uo"
         },
         "menuItemm3plfdu92k": {
@@ -97,9 +98,18 @@
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Migration Cohorts",
-          "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
+          "label": "Customer List",
+          "onClick": "{{navigateTo('Customers', {}, 'SAME_WINDOW');}}",
           "widgetId": "askpq8r38u"
+        },
+        "menuItemx95phchjis": {
+          "id": "menuItemx95phchjis",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Migration Analysis",
+          "onClick": "{{navigateTo('Cohort Analysis', {}, 'SAME_WINDOW');}}",
+          "widgetId": "ydwkn15dqz"
         }
       },
       "placement": "CENTER",
@@ -114,41 +124,23 @@
       "index": 1,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Gen1 Data",
+      "label": "Customers",
       "menuItems": {
-        "menuItem1qvjrr7bcw": {
-          "id": "menuItem1qvjrr7bcw",
-          "index": 0,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "SBC Data",
-          "onClick": "{{navigateTo('SBC Data Browser', {}, 'SAME_WINDOW');}}",
-          "widgetId": "ascy8wuwro"
-        },
-        "menuItem9wgg5d993z": {
-          "id": "menuItem9wgg5d993z",
-          "index": 2,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Gen1 Numbers",
-          "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
-          "widgetId": "jtku0ff6qr"
-        },
-        "menuItemvafxeesci9": {
-          "id": "menuItemvafxeesci9",
-          "index": 3,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Gen1 Call Stats",
-          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"EOM_Gen1_Stats\"\n}, 'SAME_WINDOW');}}",
-          "widgetId": "8i4oylrc29"
-        },
-        "menuItemyvyfyikwha": {
-          "id": "menuItemyvyfyikwha",
+        "menuItemfdm3v61dtk": {
+          "id": "menuItemfdm3v61dtk",
           "index": 1,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Gen1 Customer Viewer",
+          "label": "Migration Cohorts",
+          "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
+          "widgetId": "y7l56qdf7s"
+        },
+        "menuItemyvyfyikwha": {
+          "id": "menuItemyvyfyikwha",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Customer Viewer",
           "onClick": "{{navigateTo('Customer Viewer', {}, 'SAME_WINDOW');}}",
           "widgetId": "3rpa1aroxr"
         }
@@ -165,7 +157,7 @@
       "index": 2,
       "isDisabled": false,
       "isVisible": true,
-      "label": "IVP Data",
+      "label": "Network Data",
       "menuItems": {
         "menuItem1": {
           "backgroundColor": "#FFFFFF",
@@ -174,26 +166,17 @@
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
-          "label": "IVP Customers",
+          "label": "IVP Data",
           "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
           "widgetId": ""
         },
-        "menuItem2rmshp8fob": {
-          "id": "menuItem2rmshp8fob",
+        "menuItemjplctfbozd": {
+          "id": "menuItemjplctfbozd",
           "index": 1,
           "isDisabled": false,
           "isVisible": true,
-          "label": "IVP Call Stats",
-          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"IVP_Call_Stats\"\n}, 'SAME_WINDOW');}}",
-          "widgetId": "plg3a3qk6v"
-        },
-        "menuItemjplctfbozd": {
-          "id": "menuItemjplctfbozd",
-          "index": 2,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "IVP Carriage",
-          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"IVP_Carriage\"\n}, 'SAME_WINDOW');}}",
+          "label": "Gen1 SBC Data",
+          "onClick": "{{navigateTo('SBC Data Browser', {\n  \"key\": \"IVP_Carriage\"\n}, 'SAME_WINDOW');}}",
           "widgetId": "zp0un19456"
         }
       },
@@ -205,21 +188,39 @@
       "buttonType": "MENU",
       "iconName": "folder-open",
       "id": "groupButtonmi1t3bvt6z",
-      "index": 4,
+      "index": 3,
       "isDisabled": false,
       "isSeparator": false,
       "isVisible": true,
       "itemType": "BUTTON",
-      "label": "Other",
+      "label": "Statistics",
       "menuItems": {
         "menuItemeuurvfn2ta": {
           "id": "menuItemeuurvfn2ta",
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Call Stats",
+          "label": "Stats View",
           "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
           "widgetId": "dzvr8tnqug"
+        },
+        "menuItemur8ojls8dt": {
+          "id": "menuItemur8ojls8dt",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "IVP Call Stats",
+          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"IVP_Call_Stats\"\n}, 'SAME_WINDOW');}}",
+          "widgetId": "0c2so85h6q"
+        },
+        "menuItemuwbn65hky9": {
+          "id": "menuItemuwbn65hky9",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "EOM Call Stats",
+          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"EOM_Gen1_Stats\"\n}, 'SAME_WINDOW');}}",
+          "widgetId": "zla5ttle7s"
         }
       },
       "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
@@ -237,7 +238,7 @@
       "isSeparator": false,
       "isVisible": true,
       "itemType": "BUTTON",
-      "label": "Home",
+      "label": "Dashboard",
       "menuItems": {},
       "onClick": "{{navigateTo('Dashboard', {}, 'SAME_WINDOW');}}",
       "placement": "CENTER",
@@ -249,7 +250,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "yz0oo7ltmx",
-  "leftColumn": 4,
+  "leftColumn": 0,
   "minWidth": 450,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 32,

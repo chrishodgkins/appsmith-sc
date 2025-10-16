@@ -47,7 +47,7 @@
       "rightColumn": 525.75,
       "shouldScrollContents": false,
       "tabId": "tab1",
-      "tabName": "Services Browser",
+      "tabName": "Services_Details",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -93,7 +93,7 @@
       "rightColumn": 525.75,
       "shouldScrollContents": false,
       "tabId": "tab2",
-      "tabName": "Customer Numbers",
+      "tabName": "Customer_Numbers",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -144,51 +144,6 @@
       "version": 1,
       "widgetId": "cac496z28o",
       "widgetName": "Canvas4"
-    },
-    {
-      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 980,
-      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-      "canExtend": false,
-      "containerStyle": "none",
-      "detachFromLayout": true,
-      "dynamicBindingPathList": [
-        {
-          "key": "borderRadius"
-        },
-        {
-          "key": "boxShadow"
-        }
-      ],
-      "dynamicHeight": "AUTO_HEIGHT",
-      "dynamicTriggerPathList": [],
-      "flexLayers": [],
-      "isLoading": false,
-      "isVisible": true,
-      "key": "bszu7n0poo",
-      "leftColumn": 0,
-      "maxDynamicHeight": 9000,
-      "minDynamicHeight": 4,
-      "minHeight": 800,
-      "minWidth": 450,
-      "mobileBottomRow": 801,
-      "mobileLeftColumn": 0,
-      "mobileRightColumn": 1402,
-      "mobileTopRow": 1,
-      "needsErrorInfo": false,
-      "parentColumnSpace": 1,
-      "parentId": "thv7qn9y6c",
-      "parentRowSpace": 1,
-      "renderMode": "CANVAS",
-      "responsiveBehavior": "fill",
-      "rightColumn": 1402,
-      "tabId": "tabqg157ptdcw",
-      "tabName": "Todays Call Stats",
-      "topRow": 1,
-      "type": "CANVAS_WIDGET",
-      "version": 1,
-      "widgetId": "yavljr5ymj",
-      "widgetName": "Canvas5"
     }
   ],
   "defaultTab": "Customer_Overview",
@@ -240,7 +195,7 @@
       "index": 1,
       "isDuplicateLabel": false,
       "isVisible": true,
-      "label": "Services Browser",
+      "label": "Services_Details",
       "positioning": "vertical",
       "widgetId": "xrxkd0co9r"
     },
@@ -249,17 +204,9 @@
       "index": 2,
       "isDuplicateLabel": false,
       "isVisible": true,
-      "label": "Customer Numbers",
+      "label": "Customer_Numbers",
       "positioning": "vertical",
       "widgetId": "urp6y5db21"
-    },
-    "tabqg157ptdcw": {
-      "id": "tabqg157ptdcw",
-      "index": 3,
-      "isDuplicateLabel": false,
-      "isVisible": false,
-      "label": "Todays Call Stats",
-      "widgetId": "yavljr5ymj"
     },
     "tabrzvsz07d7r": {
       "id": "tabrzvsz07d7r",

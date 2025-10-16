@@ -49,6 +49,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
+  "defaultSearchText": "{{appsmith.store.stateid2 || \"\"}}",
   "defaultSelectedRowIndex": "0",
   "defaultSelectedRowIndices": "",
   "delimiter": ",",
@@ -82,6 +83,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.computedValue"
+    },
+    {
+      "key": "defaultSearchText"
     }
   ],
   "dynamicPropertyPathList": [

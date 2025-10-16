@@ -61,6 +61,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
+  "defaultSearchText": "{{ appsmith.store.sbcclick || '' }}",
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
     0
@@ -117,6 +118,9 @@
     },
     {
       "key": "primaryColumns.account_no.computedValue"
+    },
+    {
+      "key": "defaultSearchText"
     }
   ],
   "dynamicPropertyPathList": [
