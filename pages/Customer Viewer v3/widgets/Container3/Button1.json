@@ -14,7 +14,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -34,7 +38,7 @@
   "mobileRightColumn": 55,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{updateExternalID.run().then(() => {\n  pullCustDB.run();\n  gen1DiagramMap.run();\n});\nupdateExtIDNetwk.run().then(() => {\n  getNtwkData.run();\n  gen1DiagramMap.run();\n});}}",
+  "onClick": "{{Promise.all([\n  updateExternalID.run(),\n  updateExtIDNetwk.run()\n]).then(() => {\n  return new Promise(resolve => setTimeout(resolve, 1000));\n}).then(() => {\n  return refreshView.run();\n}).then(() => {\n  return new Promise(resolve => setTimeout(resolve, 1000));\n}).then(() => {\n  pullCustDB.run();\n  getNtwkData.run();\n  gen1DiagramMap.run();\n})}}",
   "parentColumnSpace": 16.33984375,
   "parentId": "yaeuqx8gh2",
   "parentRowSpace": 10,

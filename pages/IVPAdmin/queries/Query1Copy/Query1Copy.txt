@@ -1,3 +1,0 @@
-SELECT DISTINCT service_name
-FROM ivpservices
-ORDER BY service_name;

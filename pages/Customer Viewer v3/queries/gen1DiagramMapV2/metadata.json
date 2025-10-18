@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_4716c421-103e-47d0-a6e5-8ccb34961e04",
-  "id": "Customer Viewer v3_sql_getNumbersCopy",
+  "gitSyncId": "6833bd1e663f59025c630a90_30562c32-9857-494c-9a65-4979a64eb19c",
+  "id": "Customer Viewer v3_gen1DiagramMapV2",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"ivpnumbers\"\n",
+      "body": "SELECT * FROM public.customer_mapping_v2\nWHERE account_no IS NOT NULL",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "sql_getNumbersCopy",
+    "name": "gen1DiagramMapV2",
     "pageId": "Customer Viewer v3",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

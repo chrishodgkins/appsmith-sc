@@ -42,7 +42,7 @@
   "mobileRightColumn": 28,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "onClick": "{{storeValue('stateid2', Select1.selectedOptionLabel.slice(0, 3)).then(() => {\n  navigateTo('CTS Capacity', {\n    \"key\": \"EOM_Gen1_Stats\"\n  }, 'NEW_WINDOW');\n});}}",
+  "onClick": "{{storeValue('stateid2', \n  Select1.selectedOptionLabel.includes('/') \n    ? Select1.selectedOptionLabel.split('/')[1].trim().slice(0, 3)\n    : Select1.selectedOptionLabel.slice(0, 3)\n).then(() => {\n  navigateTo('CTS Capacity', {\n    \"key\": \"EOM_Gen1_Stats\"\n  }, 'NEW_WINDOW');\n});}}",
   "parentColumnSpace": 16.0283203125,
   "parentId": "yaeuqx8gh2",
   "parentRowSpace": 10,

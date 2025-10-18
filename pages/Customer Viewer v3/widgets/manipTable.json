@@ -1007,7 +1007,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 56,
+  "rightColumn": 34,
   "searchKey": "",
   "tableData": "{{gen1DiagramMap.data}}",
   "textSize": "0.675rem",

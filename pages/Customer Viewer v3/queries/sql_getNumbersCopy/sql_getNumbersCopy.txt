@@ -1,1 +1,1 @@
-SELECT * FROM public."ivpnumbers";
+SELECT * FROM public."ivpnumbers"

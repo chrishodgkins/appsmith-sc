@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_73230744-9308-4089-924b-15b804035504",
-  "id": "IVPAdmin_Query1Copy",
+  "gitSyncId": "6833bd1e663f59025c630a90_042eb2e0-682b-4655-b04f-0f9d97d5d0d8",
+  "id": "IVPAdmin_lookupAssignedNumbersQuery",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT DISTINCT service_name\nFROM ivpservices\nORDER BY service_name;",
+      "body": "-- Query to fetch phone numbers for assigned number UUIDs\nSELECT \n    \"id\",\n    \"starting_number\",\n    \"block_size\",\n    \"status\",\n    \"service\"\nFROM public.\"ivpnumbers\"\nWHERE \"id\" IN (SELECT unnest({{appsmith.store.uuidList}}::uuid[]))",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,10 +22,14 @@
       "name": "Secco_Gen1_pgdb",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "Query1Copy",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "lookupAssignedNumbersQuery",
     "pageId": "IVPAdmin",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }
