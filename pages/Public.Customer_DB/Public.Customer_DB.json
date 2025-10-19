@@ -1,23 +1,23 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_487d32a0-febc-4c4b-99fc-1195917b8215",
+  "gitSyncId": "6833bd1e663f59025c630a90_20727736-9494-4771-8453-8dee8ef9fcfc",
   "unpublishedPage": {
-    "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 2970,
+          "bottomRow": 860,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1160,
+          "minHeight": 900,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 1224,
+          "rightColumn": 1174,
           "snapColumns": 64,
-          "snapRows": 114,
+          "snapRows": 125,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 93,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "Customer Viewer v3",
-    "slug": "customer-viewer-v3"
+    "name": "Public.Customer_DB",
+    "slug": "public-customer-db"
   }
 }

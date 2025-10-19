@@ -19,10 +19,10 @@
   ],
   "dynamicPropertyPathList": [
     {
-      "key": "onClick"
+      "key": "isVisible"
     },
     {
-      "key": "isVisible"
+      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [

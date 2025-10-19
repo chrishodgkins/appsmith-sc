@@ -78,6 +78,10 @@
     {
       "id": "Customer Viewer v3",
       "isDefault": false
+    },
+    {
+      "id": "Public.Customer_DB",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

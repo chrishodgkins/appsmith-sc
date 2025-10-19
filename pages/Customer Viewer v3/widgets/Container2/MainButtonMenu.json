@@ -102,7 +102,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Customer List",
-          "onClick": "{{navigateTo('Customers', {}, 'SAME_WINDOW');}}",
+          "onClick": "{{navigateTo('Public.Customer_DB', {}, 'SAME_WINDOW');}}",
           "widgetId": "askpq8r38u"
         },
         "menuItemx95phchjis": {

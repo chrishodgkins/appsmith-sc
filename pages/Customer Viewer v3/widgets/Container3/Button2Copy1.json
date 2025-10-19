@@ -19,10 +19,10 @@
   ],
   "dynamicPropertyPathList": [
     {
-      "key": "onClick"
+      "key": "isVisible"
     },
     {
-      "key": "isVisible"
+      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -42,7 +42,7 @@
   "mobileRightColumn": 28,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "onClick": "{{storeValue('stateid', updateExternalID.data).then(() => {\n  navigateTo('CTS Capacity', {\n    \"key\": \"IVP_Call_Stats\"\n  }, 'NEW_WINDOW');\n});}}",
+  "onClick": "{{storeValue('stateid', updateExID.text).then(() => {\n  navigateTo('CTS Capacity', {\n    \"key\": \"IVP_Call_Stats\"\n  }, 'NEW_WINDOW');\n});}}",
   "parentColumnSpace": 16.0283203125,
   "parentId": "yaeuqx8gh2",
   "parentRowSpace": 10,

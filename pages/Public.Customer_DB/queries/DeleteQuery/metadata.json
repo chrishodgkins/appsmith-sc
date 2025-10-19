@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_66158a11-1d41-42e7-a88f-85d762ffe3d9",
-  "id": "Customers_Query1",
+  "gitSyncId": "6833bd1e663f59025c630a90_2fcbf2ec-0f72-4d87-b527-e890907f2adb",
+  "id": "Public.Customer_DB_DeleteQuery",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * \nFROM public.\"Customer_DB\"\nORDER BY \"Name\" ASC;",
+      "body": "DELETE FROM public.\"Customer_DB\"\n  WHERE \"id\" = {{data_table.triggeredRow.id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,10 +22,9 @@
       "name": "Secco_Gen1_pgdb",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "Query1",
-    "pageId": "Customers",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "name": "DeleteQuery",
+    "pageId": "Public.Customer_DB",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

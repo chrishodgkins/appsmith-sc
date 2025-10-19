@@ -1,0 +1,11 @@
+UPDATE public."Customer_DB" SET
+		"Name" = '{{update_form.fieldState.Name.isVisible ? update_form.formData.Name : update_form.sourceData.Name}}',
+		"Account" = '{{update_form.fieldState.Account.isVisible ? update_form.formData.Account : update_form.sourceData.Account}}',
+    "partner" = '{{update_form.fieldState.partner.isVisible ? update_form.formData.partner : update_form.sourceData.partner}}',
+		"confluence_page" = '{{update_form.fieldState.confluence_page.isVisible ? update_form.formData.confluence_page : update_form.sourceData.confluence_page}}',
+		"cohort" = '{{update_form.fieldState.cohort.isVisible ? update_form.formData.cohort : update_form.sourceData.cohort}}',
+		"numbers" = '{{update_form.fieldState.numbers.isVisible ? update_form.formData.numbers : update_form.sourceData.numbers}}',
+		"Audit_Pass" = '{{update_form.fieldState.Audit_Pass.isVisible ? update_form.formData.Audit_Pass : update_form.sourceData.Audit_Pass}}',
+		"hostname" = '{{update_form.fieldState.hostname.isVisible ? update_form.formData.hostname : update_form.sourceData.hostname}}',
+		"ivp_externalid" = '{{update_form.fieldState.ivp_externalid.isVisible ? update_form.formData.ivp_externalid : update_form.sourceData.ivp_externalid}}'
+WHERE "id" = {{data_table.selectedRow.id}};
