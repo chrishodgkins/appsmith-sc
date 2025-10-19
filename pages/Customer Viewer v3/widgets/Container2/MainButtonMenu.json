@@ -69,6 +69,9 @@
     },
     {
       "key": "groupButtons.groupButton1.menuItems.menuItemx95phchjis.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItemq0h2pirneq.onClick"
     }
   ],
   "groupButtons": {
@@ -178,6 +181,15 @@
           "label": "Gen1 SBC Data",
           "onClick": "{{navigateTo('SBC Data Browser', {\n  \"key\": \"IVP_Carriage\"\n}, 'SAME_WINDOW');}}",
           "widgetId": "zp0un19456"
+        },
+        "menuItemq0h2pirneq": {
+          "id": "menuItemq0h2pirneq",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "IVP Services View",
+          "onClick": "{{removeValue('statclick').then(() => {\n  navigateTo('IVPAdmin', {}, 'SAME_WINDOW');\n});}}",
+          "widgetId": "0ehnyeb7g3"
         }
       },
       "placement": "CENTER",
