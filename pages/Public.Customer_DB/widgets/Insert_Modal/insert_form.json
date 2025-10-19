@@ -113,16 +113,10 @@
       "key": "resetButtonStyles.buttonColor"
     },
     {
-      "key": "schema.__root_schema__.children.id.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.id.borderRadius"
     },
     {
       "key": "schema.__root_schema__.children.id.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.Account.defaultValue"
     },
     {
       "key": "schema.__root_schema__.children.Account.borderRadius"
@@ -131,16 +125,10 @@
       "key": "schema.__root_schema__.children.Account.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.Name.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.Name.borderRadius"
     },
     {
       "key": "schema.__root_schema__.children.Name.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.partner.defaultValue"
     },
     {
       "key": "schema.__root_schema__.children.partner.borderRadius"
@@ -149,25 +137,16 @@
       "key": "schema.__root_schema__.children.partner.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.confluence_page.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.confluence_page.borderRadius"
     },
     {
       "key": "schema.__root_schema__.children.confluence_page.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.cohort.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.cohort.borderRadius"
     },
     {
       "key": "schema.__root_schema__.children.cohort.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.numbers.defaultValue"
     },
     {
       "key": "schema.__root_schema__.children.numbers.borderRadius"
@@ -194,13 +173,13 @@
       "key": "schema.__root_schema__.children.hostname.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.ivp_externalid.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.ivp_externalid.borderRadius"
     },
     {
       "key": "schema.__root_schema__.children.ivp_externalid.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.id.defaultValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -256,7 +235,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.Account))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "Account",
@@ -290,8 +269,7 @@
           "label": "Audit Pass",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "Audit_Pass",
-          "position": 7,
-          "sourceData": null
+          "position": 7
         },
         "Name": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -300,7 +278,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.Name))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "Name",
@@ -322,7 +300,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cohort))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "cohort",
@@ -344,7 +322,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.confluence_page))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "confluence_page",
@@ -378,8 +356,7 @@
           "label": "Hostname",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "hostname",
-          "position": 8,
-          "sourceData": null
+          "position": 8
         },
         "id": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -388,7 +365,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "number",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.id))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "{{((sourceData, formData, fieldState) => ( SelectQuery.data[lenStore.text].id +1 ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
           "fieldType": "Number Input",
           "iconAlign": "left",
           "identifier": "id",
@@ -410,7 +387,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ivp_externalid))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "ivp_externalid",
@@ -432,7 +409,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.numbers))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "numbers",
@@ -454,7 +431,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.partner))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "partner",
