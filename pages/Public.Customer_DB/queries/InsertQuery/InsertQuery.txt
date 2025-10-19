@@ -6,8 +6,6 @@ INSERT INTO public."Customer_DB" (
 	"confluence_page",
 	"cohort",
 	"numbers",
-	"Audit_Pass",
-	"hostname",
 	"ivp_externalid")
 VALUES (
 	'{{insert_form.formData.id}}',
@@ -17,6 +15,4 @@ VALUES (
 	'{{insert_form.formData.confluence_page}}',
 	'{{insert_form.formData.cohort}}',
 	'{{insert_form.formData.numbers}}',
-	'{{insert_form.formData.Audit_Pass}}',
-	'{{insert_form.formData.hostname}}',
 	'{{insert_form.formData.ivp_externalid}}');

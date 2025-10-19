@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 16,
+  "bottomRow": 19,
   "boxShadow": "none",
   "buttonVariant": "PRIMARY",
   "childStylesheet": {
@@ -32,7 +32,6 @@
       "key": "groupButtons.groupButtonshb4puin4h.buttonColor"
     }
   ],
-  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "groupButtons.groupButton1.menuItems.menuItemm3plfdu92k.onClick"
@@ -41,13 +40,25 @@
       "key": "groupButtons.groupButton1.menuItems.menuItem1q81eldml7.onClick"
     },
     {
+      "key": "groupButtons.groupButton2.menuItems.menuItem1qvjrr7bcw.onClick"
+    },
+    {
       "key": "groupButtons.groupButton2.menuItems.menuItemyvyfyikwha.onClick"
     },
     {
       "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
     },
     {
+      "key": "groupButtons.groupButton2.menuItems.menuItem9wgg5d993z.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem2rmshp8fob.onClick"
+    },
+    {
       "key": "groupButtons.groupButton3.menuItems.menuItemjplctfbozd.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemvafxeesci9.onClick"
     },
     {
       "key": "groupButtons.groupButtonmi1t3bvt6z.onClick"
@@ -59,19 +70,10 @@
       "key": "groupButtons.groupButtonshb4puin4h.onClick"
     },
     {
-      "key": "groupButtons.groupButton2.menuItems.menuItemfdm3v61dtk.onClick"
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItempcvk8v23nt.onClick"
     },
     {
-      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemuwbn65hky9.onClick"
-    },
-    {
-      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemur8ojls8dt.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton1.menuItems.menuItemx95phchjis.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton3.menuItems.menuItemq0h2pirneq.onClick"
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemd00unsjxyx.onClick"
     }
   ],
   "groupButtons": {
@@ -82,18 +84,18 @@
       "iconAlign": "left",
       "iconName": "star",
       "id": "groupButton1",
-      "index": 4,
+      "index": 3,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Admin",
+      "label": "Migration",
       "menuItems": {
         "menuItem1q81eldml7": {
           "id": "menuItem1q81eldml7",
           "index": 1,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Number List",
-          "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
+          "label": "Analyisis",
+          "onClick": "{{navigateTo('Cohort Analysis', {}, 'SAME_WINDOW');}}",
           "widgetId": "cv7tlyp7uo"
         },
         "menuItemm3plfdu92k": {
@@ -101,18 +103,9 @@
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Customer List",
-          "onClick": "{{navigateTo('Public.Customer_DB', {}, 'SAME_WINDOW');}}",
+          "label": "Migration Cohorts",
+          "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
           "widgetId": "askpq8r38u"
-        },
-        "menuItemx95phchjis": {
-          "id": "menuItemx95phchjis",
-          "index": 2,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Migration Analysis",
-          "onClick": "{{navigateTo('Cohort Analysis', {}, 'SAME_WINDOW');}}",
-          "widgetId": "ydwkn15dqz"
         }
       },
       "placement": "CENTER",
@@ -127,23 +120,41 @@
       "index": 1,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Customers",
+      "label": "Gen1 Data",
       "menuItems": {
-        "menuItemfdm3v61dtk": {
-          "id": "menuItemfdm3v61dtk",
-          "index": 1,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Migration Cohorts",
-          "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
-          "widgetId": "y7l56qdf7s"
-        },
-        "menuItemyvyfyikwha": {
-          "id": "menuItemyvyfyikwha",
+        "menuItem1qvjrr7bcw": {
+          "id": "menuItem1qvjrr7bcw",
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Customer Viewer",
+          "label": "SBC Data",
+          "onClick": "{{navigateTo('SBC Data Browser', {}, 'SAME_WINDOW');}}",
+          "widgetId": "ascy8wuwro"
+        },
+        "menuItem9wgg5d993z": {
+          "id": "menuItem9wgg5d993z",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Gen1 Numbers",
+          "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
+          "widgetId": "jtku0ff6qr"
+        },
+        "menuItemvafxeesci9": {
+          "id": "menuItemvafxeesci9",
+          "index": 3,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Gen1 Call Stats",
+          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"EOM_Gen1_Stats\"\n}, 'SAME_WINDOW');}}",
+          "widgetId": "8i4oylrc29"
+        },
+        "menuItemyvyfyikwha": {
+          "id": "menuItemyvyfyikwha",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Gen1 Customer Viewer",
           "onClick": "{{navigateTo('Customer Viewer', {}, 'SAME_WINDOW');}}",
           "widgetId": "3rpa1aroxr"
         }
@@ -160,7 +171,7 @@
       "index": 2,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Network Data",
+      "label": "IVP Data",
       "menuItems": {
         "menuItem1": {
           "backgroundColor": "#FFFFFF",
@@ -169,27 +180,27 @@
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
-          "label": "IVP Data",
+          "label": "IVP Customers",
           "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
           "widgetId": ""
         },
-        "menuItemjplctfbozd": {
-          "id": "menuItemjplctfbozd",
+        "menuItem2rmshp8fob": {
+          "id": "menuItem2rmshp8fob",
           "index": 1,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Gen1 SBC Data",
-          "onClick": "{{navigateTo('SBC Data Browser', {\n  \"key\": \"IVP_Carriage\"\n}, 'SAME_WINDOW');}}",
-          "widgetId": "zp0un19456"
+          "label": "IVP Call Stats",
+          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"IVP_Call_Stats\"\n}, 'SAME_WINDOW');}}",
+          "widgetId": "plg3a3qk6v"
         },
-        "menuItemq0h2pirneq": {
-          "id": "menuItemq0h2pirneq",
+        "menuItemjplctfbozd": {
+          "id": "menuItemjplctfbozd",
           "index": 2,
           "isDisabled": false,
           "isVisible": true,
-          "label": "IVP Services View",
-          "onClick": "{{removeValue('statclick').then(() => {\n  navigateTo('IVPAdmin', {}, 'SAME_WINDOW');\n});}}",
-          "widgetId": "0ehnyeb7g3"
+          "label": "IVP Carriage",
+          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"IVP_Carriage\"\n}, 'SAME_WINDOW');}}",
+          "widgetId": "zp0un19456"
         }
       },
       "placement": "CENTER",
@@ -200,39 +211,39 @@
       "buttonType": "MENU",
       "iconName": "folder-open",
       "id": "groupButtonmi1t3bvt6z",
-      "index": 3,
+      "index": 4,
       "isDisabled": false,
       "isSeparator": false,
       "isVisible": true,
       "itemType": "BUTTON",
-      "label": "Statistics",
+      "label": "Other",
       "menuItems": {
+        "menuItemd00unsjxyx": {
+          "id": "menuItemd00unsjxyx",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Customer List",
+          "onClick": "{{navigateTo('Public.Customer_DB', {}, 'SAME_WINDOW');}}",
+          "widgetId": "x4o868xgy1"
+        },
         "menuItemeuurvfn2ta": {
           "id": "menuItemeuurvfn2ta",
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Stats View",
+          "label": "Call Stats",
           "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
           "widgetId": "dzvr8tnqug"
         },
-        "menuItemur8ojls8dt": {
-          "id": "menuItemur8ojls8dt",
+        "menuItempcvk8v23nt": {
+          "id": "menuItempcvk8v23nt",
           "index": 2,
           "isDisabled": false,
           "isVisible": true,
-          "label": "IVP Call Stats",
-          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"IVP_Call_Stats\"\n}, 'SAME_WINDOW');}}",
-          "widgetId": "0c2so85h6q"
-        },
-        "menuItemuwbn65hky9": {
-          "id": "menuItemuwbn65hky9",
-          "index": 1,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "EOM Call Stats",
-          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"EOM_Gen1_Stats\"\n}, 'SAME_WINDOW');}}",
-          "widgetId": "zla5ttle7s"
+          "label": "Beta Customer Viewer",
+          "onClick": "{{navigateTo('Customer Viewer v3', {}, 'SAME_WINDOW');}}",
+          "widgetId": "3r39a6byh0"
         }
       },
       "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
@@ -250,7 +261,7 @@
       "isSeparator": false,
       "isVisible": true,
       "itemType": "BUTTON",
-      "label": "Dashboard",
+      "label": "Home",
       "menuItems": {},
       "onClick": "{{navigateTo('Dashboard', {}, 'SAME_WINDOW');}}",
       "placement": "CENTER",
@@ -262,7 +273,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "yz0oo7ltmx",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "minWidth": 450,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 32,
@@ -281,6 +292,6 @@
   "topRow": 0,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "wb0w02dd0p",
+  "widgetId": "5t14vkp0my",
   "widgetName": "MainButtonMenu"
 }

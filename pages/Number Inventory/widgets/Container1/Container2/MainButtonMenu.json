@@ -68,6 +68,12 @@
     },
     {
       "key": "groupButtons.groupButtonshb4puin4h.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItempcvk8v23nt.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemd00unsjxyx.onClick"
     }
   ],
   "groupButtons": {
@@ -212,6 +218,15 @@
       "itemType": "BUTTON",
       "label": "Other",
       "menuItems": {
+        "menuItemd00unsjxyx": {
+          "id": "menuItemd00unsjxyx",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Customer List",
+          "onClick": "{{navigateTo('Public.Customer_DB', {}, 'SAME_WINDOW');}}",
+          "widgetId": "x4o868xgy1"
+        },
         "menuItemeuurvfn2ta": {
           "id": "menuItemeuurvfn2ta",
           "index": 0,
@@ -220,6 +235,15 @@
           "label": "Call Stats",
           "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
           "widgetId": "dzvr8tnqug"
+        },
+        "menuItempcvk8v23nt": {
+          "id": "menuItempcvk8v23nt",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Beta Customer Viewer",
+          "onClick": "{{navigateTo('Customer Viewer v3', {}, 'SAME_WINDOW');}}",
+          "widgetId": "3r39a6byh0"
         }
       },
       "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
@@ -249,7 +273,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "yz0oo7ltmx",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "minWidth": 450,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 32,
@@ -264,10 +288,10 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "topRow": 0,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "vzhu8uszv8",
+  "widgetId": "1g8vov5xzt",
   "widgetName": "MainButtonMenu"
 }

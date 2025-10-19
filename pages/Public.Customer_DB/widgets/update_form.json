@@ -5,7 +5,7 @@
   "borderColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 86,
+  "bottomRow": 116,
   "bottomRowBeforeCollapse": 86,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
@@ -204,6 +204,15 @@
     },
     {
       "key": "schema.__root_schema__.children.ivp_externalid.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.customField1.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.customField1.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.customField1.defaultValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -272,14 +281,14 @@
           "iconAlign": "left",
           "identifier": "Account",
           "isCustomField": false,
-          "isDisabled": false,
+          "isDisabled": true,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
           "label": "Account",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "Account",
-          "position": 0,
+          "position": 1,
           "sourceData": "40000048"
         },
         "Audit_Pass": {
@@ -301,8 +310,7 @@
           "label": "Audit Pass",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "Audit_Pass",
-          "position": 6,
-          "sourceData": null
+          "position": 7
         },
         "Name": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -316,14 +324,14 @@
           "iconAlign": "left",
           "identifier": "Name",
           "isCustomField": false,
-          "isDisabled": false,
+          "isDisabled": true,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
           "label": "Name",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "Name",
-          "position": 1,
+          "position": 2,
           "sourceData": "Achmea Schadeverzekeringen NV (Australia)"
         },
         "cohort": {
@@ -338,14 +346,14 @@
           "iconAlign": "left",
           "identifier": "cohort",
           "isCustomField": false,
-          "isDisabled": false,
+          "isDisabled": true,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
           "label": "Cohort",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "cohort",
-          "position": 4,
+          "position": 5,
           "sourceData": "gen1"
         },
         "confluence_page": {
@@ -367,8 +375,30 @@
           "label": "Confluence Page",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "confluence_page",
-          "position": 3,
+          "position": 4,
           "sourceData": "https://secureco.atlassian.net/wiki/spaces/CUS/pages/783515931/ACHMEA"
+        },
+        "customField1": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.id))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Number Input",
+          "iconAlign": "left",
+          "identifier": "customField1",
+          "isCustomField": true,
+          "isDisabled": true,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "ID",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "customField1",
+          "position": 0,
+          "sourceData": 0
         },
         "hostname": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -389,8 +419,7 @@
           "label": "Hostname",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "hostname",
-          "position": 7,
-          "sourceData": null
+          "position": 8
         },
         "ivp_externalid": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -411,7 +440,7 @@
           "label": "Ivp Externalid",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "ivp_externalid",
-          "position": 8,
+          "position": 9,
           "sourceData": ""
         },
         "numbers": {
@@ -426,14 +455,14 @@
           "iconAlign": "left",
           "identifier": "numbers",
           "isCustomField": false,
-          "isDisabled": false,
+          "isDisabled": true,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
           "label": "Numbers",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "numbers",
-          "position": 5,
+          "position": 6,
           "sourceData": "1300724214|1800577530|1800724214|6125733413|61283644|61290600|6134118900|6136364367|613906192|613911602|617355928|617382556|6174413044|618601650|618637165|6188545871|6189904909"
         },
         "partner": {
@@ -455,7 +484,7 @@
           "label": "Partner",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "partner",
-          "position": 2,
+          "position": 3,
           "sourceData": "SecureCo"
         }
       },
@@ -481,7 +510,7 @@
   },
   "scrollContents": true,
   "showReset": true,
-  "sourceData": "{{_.omit(data_table.selectedRow, \"customColumn1\", \"__originalIndex__\", \"id\")}}",
+  "sourceData": "{{data_table.selectedRow}}",
   "submitButtonLabel": "Update",
   "submitButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
