@@ -4,8 +4,8 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 73,
-  "bottomRowBeforeCollapse": 73,
+  "bottomRow": 68,
+  "bottomRowBeforeCollapse": 68,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -104,7 +104,7 @@
     "Routing_domain": 230,
     "Service_name": 312,
     "customColumn1": 129,
-    "description": 422,
+    "description": 304,
     "state": 80
   },
   "compactMode": "SHORT",
@@ -313,6 +313,9 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
   "dynamicTriggerPathList": [
@@ -343,7 +346,7 @@
   "mobileTopRow": 1,
   "needsErrorInfo": false,
   "onRowSelected": "{{storeValue('statclick', Table1.selectedRow.externalid).then(() => {});\nsingleServiceQuery.run().then(() => {\n  jsHtml.generateServiceTables();\n});}}",
-  "originalBottomRow": 73,
+  "originalBottomRow": 68,
   "originalTopRow": 4,
   "parentId": "0",
   "parentRowSpace": 10,
