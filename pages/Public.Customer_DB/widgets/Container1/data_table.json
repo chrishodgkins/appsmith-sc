@@ -159,7 +159,7 @@
   "leftColumn": 8,
   "onPageChange": "{{SelectQuery.run()}}",
   "onSearchTextChanged": "",
-  "onSort": "{{SelectQuery.run()}}",
+  "onSort": "",
   "originalBottomRow": 114,
   "originalTopRow": 4,
   "parentColumnSpace": 16.3125,

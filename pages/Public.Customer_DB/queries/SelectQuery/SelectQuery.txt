@@ -1,2 +1,2 @@
 SELECT * FROM public."Customer_DB"
-ORDER BY "{{data_table.sortOrder.column || 'id'}}" {{data_table.sortOrder.order || 'ASC'}}
+ORDER BY id ASC
