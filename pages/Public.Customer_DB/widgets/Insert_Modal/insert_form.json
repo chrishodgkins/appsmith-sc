@@ -309,7 +309,7 @@
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
-          "label": "Cohort",
+          "label": "Classification",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "cohort",
           "position": 5,
