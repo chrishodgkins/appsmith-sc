@@ -41,7 +41,7 @@
   "columnUpdatedAt": 1760845806076,
   "columnWidthMap": {
     "Account": 97,
-    "confluence_page": 231,
+    "confluence_page": 631,
     "id": 60,
     "partner": 173
   },
@@ -156,7 +156,7 @@
   "key": "zba5qel0au",
   "label": "Data",
   "labelTextSize": "0.875rem",
-  "leftColumn": 8,
+  "leftColumn": 9,
   "onPageChange": "{{SelectQuery.run()}}",
   "onSearchTextChanged": "",
   "onSort": "",

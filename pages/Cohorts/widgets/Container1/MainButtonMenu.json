@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 16,
   "boxShadow": "none",
   "buttonVariant": "PRIMARY",
   "childStylesheet": {
@@ -12,9 +12,6 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "groupButtons.groupButton1.buttonColor"
     },
     {
       "key": "groupButtons.groupButton2.buttonColor"
@@ -30,35 +27,17 @@
     },
     {
       "key": "groupButtons.groupButtonshb4puin4h.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtoniezyewps5l.buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
-    {
-      "key": "groupButtons.groupButton1.menuItems.menuItemm3plfdu92k.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton1.menuItems.menuItem1q81eldml7.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton2.menuItems.menuItem1qvjrr7bcw.onClick"
-    },
     {
       "key": "groupButtons.groupButton2.menuItems.menuItemyvyfyikwha.onClick"
     },
     {
       "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton2.menuItems.menuItem9wgg5d993z.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton3.menuItems.menuItem2rmshp8fob.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton3.menuItems.menuItemjplctfbozd.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton2.menuItems.menuItemvafxeesci9.onClick"
     },
     {
       "key": "groupButtons.groupButtonmi1t3bvt6z.onClick"
@@ -73,44 +52,22 @@
       "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItempcvk8v23nt.onClick"
     },
     {
-      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemd00unsjxyx.onClick"
+      "key": "groupButtons.groupButton3.menuItems.menuItem3x5hkuzk9y.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemyqktxo0jis.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtoniezyewps5l.menuItems.menuIteml2sm79rw2z.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtoniezyewps5l.menuItems.menuItemdp09f75u28.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtoniezyewps5l.menuItems.menuItemvdnir3nlmg.onClick"
     }
   ],
   "groupButtons": {
-    "groupButton1": {
-      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-      "buttonType": "MENU",
-      "disabledWhenInvalid": false,
-      "iconAlign": "left",
-      "iconName": "star",
-      "id": "groupButton1",
-      "index": 3,
-      "isDisabled": false,
-      "isVisible": true,
-      "label": "Migration",
-      "menuItems": {
-        "menuItem1q81eldml7": {
-          "id": "menuItem1q81eldml7",
-          "index": 1,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Analyisis",
-          "onClick": "{{navigateTo('Cohort Analysis', {}, 'SAME_WINDOW');}}",
-          "widgetId": "cv7tlyp7uo"
-        },
-        "menuItemm3plfdu92k": {
-          "id": "menuItemm3plfdu92k",
-          "index": 0,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Migration Cohorts",
-          "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
-          "widgetId": "askpq8r38u"
-        }
-      },
-      "placement": "CENTER",
-      "widgetId": ""
-    },
     "groupButton2": {
       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
       "buttonType": "MENU",
@@ -120,42 +77,24 @@
       "index": 1,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Gen1 Data",
+      "label": "Customer Data",
       "menuItems": {
-        "menuItem1qvjrr7bcw": {
-          "id": "menuItem1qvjrr7bcw",
-          "index": 0,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "SBC Data",
-          "onClick": "{{navigateTo('SBC Data Browser', {}, 'SAME_WINDOW');}}",
-          "widgetId": "ascy8wuwro"
-        },
-        "menuItem9wgg5d993z": {
-          "id": "menuItem9wgg5d993z",
-          "index": 2,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Gen1 Numbers",
-          "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
-          "widgetId": "jtku0ff6qr"
-        },
-        "menuItemvafxeesci9": {
-          "id": "menuItemvafxeesci9",
-          "index": 3,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Gen1 Call Stats",
-          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"EOM_Gen1_Stats\"\n}, 'SAME_WINDOW');}}",
-          "widgetId": "8i4oylrc29"
-        },
-        "menuItemyvyfyikwha": {
-          "id": "menuItemyvyfyikwha",
+        "menuItemyqktxo0jis": {
+          "id": "menuItemyqktxo0jis",
           "index": 1,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Gen1 Customer Viewer",
-          "onClick": "{{navigateTo('Customer Viewer', {}, 'SAME_WINDOW');}}",
+          "label": "Migration Cohorts",
+          "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
+          "widgetId": "91k552q44j"
+        },
+        "menuItemyvyfyikwha": {
+          "id": "menuItemyvyfyikwha",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Customer Viewer",
+          "onClick": "{{navigateTo('Customer Viewer v3', {}, 'SAME_WINDOW');}}",
           "widgetId": "3rpa1aroxr"
         }
       },
@@ -171,7 +110,7 @@
       "index": 2,
       "isDisabled": false,
       "isVisible": true,
-      "label": "IVP Data",
+      "label": "Network Data",
       "menuItems": {
         "menuItem1": {
           "backgroundColor": "#FFFFFF",
@@ -180,31 +119,66 @@
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
-          "label": "IVP Customers",
+          "label": "IVP Data",
           "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
           "widgetId": ""
         },
-        "menuItem2rmshp8fob": {
-          "id": "menuItem2rmshp8fob",
+        "menuItem3x5hkuzk9y": {
+          "id": "menuItem3x5hkuzk9y",
           "index": 1,
           "isDisabled": false,
           "isVisible": true,
-          "label": "IVP Call Stats",
-          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"IVP_Call_Stats\"\n}, 'SAME_WINDOW');}}",
-          "widgetId": "plg3a3qk6v"
-        },
-        "menuItemjplctfbozd": {
-          "id": "menuItemjplctfbozd",
-          "index": 2,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "IVP Carriage",
-          "onClick": "{{navigateTo('CTS Capacity', {\n  \"key\": \"IVP_Carriage\"\n}, 'SAME_WINDOW');}}",
-          "widgetId": "zp0un19456"
+          "label": "Oracle SBC Data",
+          "onClick": "{{navigateTo('SBC Data Browser', {}, 'SAME_WINDOW');}}",
+          "widgetId": "r4rdxwv4h1"
         }
       },
       "placement": "CENTER",
       "widgetId": ""
+    },
+    "groupButtoniezyewps5l": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "iconName": "paperclip",
+      "id": "groupButtoniezyewps5l",
+      "index": 3,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Admin",
+      "menuItems": {
+        "menuItemdp09f75u28": {
+          "id": "menuItemdp09f75u28",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Number Inventory",
+          "onClick": "{{navigateTo('Number Inventory', {}, 'SAME_WINDOW');}}",
+          "widgetId": "d4quz0d47c"
+        },
+        "menuIteml2sm79rw2z": {
+          "id": "menuIteml2sm79rw2z",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Customer Inventory",
+          "onClick": "{{navigateTo('Public.Customer_DB', {}, 'SAME_WINDOW');}}",
+          "widgetId": "wyvlrkhsq5"
+        },
+        "menuItemvdnir3nlmg": {
+          "id": "menuItemvdnir3nlmg",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Migration Analysis",
+          "onClick": "{{navigateTo('Cohort Analysis', {}, 'SAME_WINDOW');}}",
+          "widgetId": "p7rik6y99z"
+        }
+      },
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "xy46dqbeb1"
     },
     "groupButtonmi1t3bvt6z": {
       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -218,15 +192,6 @@
       "itemType": "BUTTON",
       "label": "Other",
       "menuItems": {
-        "menuItemd00unsjxyx": {
-          "id": "menuItemd00unsjxyx",
-          "index": 1,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Customer List",
-          "onClick": "{{navigateTo('Public.Customer_DB', {}, 'SAME_WINDOW');}}",
-          "widgetId": "x4o868xgy1"
-        },
         "menuItemeuurvfn2ta": {
           "id": "menuItemeuurvfn2ta",
           "index": 0,
@@ -238,10 +203,10 @@
         },
         "menuItempcvk8v23nt": {
           "id": "menuItempcvk8v23nt",
-          "index": 2,
+          "index": 1,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Beta Customer Viewer",
+          "label": "Old Customer Viewer",
           "onClick": "{{navigateTo('Customer Viewer v3', {}, 'SAME_WINDOW');}}",
           "widgetId": "3r39a6byh0"
         }
@@ -288,10 +253,10 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 5,
+  "rightColumn": 6,
   "topRow": 0,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "j8a0xbkb0i",
+  "widgetId": "9at2hn9obu",
   "widgetName": "MainButtonMenu"
 }

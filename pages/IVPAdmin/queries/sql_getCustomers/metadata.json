@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"ivpaccounts\"\nWHERE accounttype = 'Customer';",
+      "body": "SELECT a.* \nFROM public.\"ivpaccounts\" a\nINNER JOIN public.customer_mapping_v2 b \n  ON a.externalid = b.ivp_externalid\nWHERE a.accounttype = 'Customer';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

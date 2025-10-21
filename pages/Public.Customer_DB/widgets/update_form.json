@@ -6,7 +6,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
   "bottomRow": 116,
-  "bottomRowBeforeCollapse": 86,
+  "bottomRowBeforeCollapse": 116,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "ARRAY": {
@@ -247,7 +247,7 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{UpdateQuery.run(() => SelectQuery.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
-  "originalBottomRow": 86,
+  "originalBottomRow": 116,
   "originalTopRow": 0,
   "parentColumnSpace": 16.3125,
   "parentId": "0",
@@ -455,7 +455,7 @@
           "iconAlign": "left",
           "identifier": "numbers",
           "isCustomField": false,
-          "isDisabled": true,
+          "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,

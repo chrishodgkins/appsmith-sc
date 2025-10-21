@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 56,
+  "bottomRow": 54,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 23,
   "mobileTopRow": 42,
   "needsErrorInfo": false,
-  "originalBottomRow": 56,
-  "originalTopRow": 52,
+  "originalBottomRow": 54,
+  "originalTopRow": 50,
   "overflow": "NONE",
   "parentColumnSpace": 18.03125,
   "parentId": "fo8o15bypj",
@@ -43,7 +43,7 @@
   "text": "Gen-1 Data Points",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 52,
+  "topRow": 50,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

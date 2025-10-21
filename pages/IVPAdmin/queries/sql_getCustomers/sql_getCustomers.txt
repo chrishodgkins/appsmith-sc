@@ -1,2 +1,5 @@
-SELECT * FROM public."ivpaccounts"
-WHERE accounttype = 'Customer';
+SELECT a.* 
+FROM public."ivpaccounts" a
+INNER JOIN public.customer_mapping_v2 b 
+  ON a.externalid = b.ivp_externalid
+WHERE a.accounttype = 'Customer';
