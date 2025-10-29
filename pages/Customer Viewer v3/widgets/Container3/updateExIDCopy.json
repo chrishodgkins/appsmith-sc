@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 297,
+  "bottomRow": 4,
   "boxShadow": "none",
-  "defaultText": "{{ gen1DiagamMap.data }}",
+  "defaultText": "{{ pullCustDB.data.find(row => row.Account === Select1.selectedOptionValue).ivp_externalid || ''  }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -17,44 +17,49 @@
       "key": "defaultText"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "labelTextSize"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "inputType": "MULTI_LINE_TEXT",
+  "inputType": "TEXT",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": false,
-  "key": "pfxy1vhlol",
-  "label": "Label",
+  "isVisible": "false",
+  "key": "i8ipqoydpg",
+  "label": "",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
-  "labelTextSize": "0.875rem",
+  "labelTextSize": "0.775rem",
   "labelWidth": 5,
-  "leftColumn": 10,
+  "leftColumn": 57,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 218,
-  "mobileLeftColumn": 10,
-  "mobileRightColumn": 30,
-  "mobileTopRow": 211,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 297,
-  "originalTopRow": 287,
-  "parentColumnSpace": 23.203125,
-  "parentId": "0",
+  "parentColumnSpace": 16.33984375,
+  "parentId": "yaeuqx8gh2",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 62,
-  "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 287,
+  "topRow": 0,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "nn865tr2b2",
-  "widgetName": "Input1"
+  "widgetId": "dzg9c5v0df",
+  "widgetName": "updateExIDCopy"
 }

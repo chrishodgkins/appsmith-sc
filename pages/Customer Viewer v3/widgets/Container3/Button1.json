@@ -17,6 +17,12 @@
   "dynamicPropertyPathList": [
     {
       "key": "onClick"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -27,9 +33,9 @@
   "iconAlign": "left",
   "iconName": "upload",
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "false",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "true",
   "key": "8we9ddfgcy",
   "leftColumn": 41,
   "minWidth": 120,
