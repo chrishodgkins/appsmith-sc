@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 27,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -34,7 +34,7 @@
   "mobileRightColumn": 37,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 8,
+  "originalBottomRow": 27,
   "originalTopRow": 4,
   "overflow": "NONE",
   "parentId": "0ad16pj2go",
@@ -45,7 +45,7 @@
   "text": "{{\nObject.entries(\n  (Get_Services.data.result || []).reduce((acc, s) => {\n    if ((s.state || \"\").toString() !== \"Active\") return acc;\n\n    // normalize profile -> flat array of objects\n    let prof = s.profile ?? s.Profile ?? [];\n    for (let i = 0; i < 2; i++) {\n      if (typeof prof === \"string\") { try { prof = JSON.parse(prof); } catch(e) { break; } }\n    }\n    let flat = Array.isArray(prof)\n      ? (prof.flat ? prof.flat() : prof.reduce((a,b)=>a.concat(b), []))\n      : (prof && typeof prof === \"object\" ? [prof] : []);\n\n    // collect unique names for this service\n    const names = new Set();\n    flat.forEach(p => {\n      const nm = ((p?.name ?? \"\") + \"\").trim();\n      if (nm) names.add(nm);\n    });\n\n    if (names.size === 0) {\n      acc[\"VoiceGateways\"] = (acc[\"VoiceGateways\"] || 0) + 1;\n    } else {\n      names.forEach(nm => acc[nm] = (acc[nm] || 0) + 1);\n    }\n    return acc;\n  }, {})\n).map(([k,v]) => `${k}: ${v}`).join('\\n')\n}}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 4,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

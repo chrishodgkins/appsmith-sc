@@ -142,7 +142,7 @@
   "key": "zba5qel0au",
   "label": "Data",
   "labelTextSize": "0.875rem",
-  "leftColumn": 9,
+  "leftColumn": 11,
   "onPageChange": "{{SelectQuery.run()}}",
   "onSearchTextChanged": "",
   "onSort": "{{SelectQuery.run()}}",

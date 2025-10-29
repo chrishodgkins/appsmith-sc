@@ -32,6 +32,17 @@
       "key": "groupButtons.groupButtoniezyewps5l.buttonColor"
     }
   ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButtonshb4puin4h.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem3x5hkuzk9y.onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "groupButtons.groupButton2.menuItems.menuItemyvyfyikwha.onClick"
@@ -85,7 +96,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Migration Cohorts",
-          "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
+          "onClick": "{{navigateTo('Cohorts',  {}, 'SAME_WINDOW').then(() => {\n  removeValue('statclick');\n  removeValue('sbcclick');\n  removeValue('stateid');\n  removeValue('stateid2');\n});}}",
           "widgetId": "91k552q44j"
         },
         "menuItemyvyfyikwha": {
@@ -94,7 +105,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Customer Viewer",
-          "onClick": "{{navigateTo('Customer Viewer v3', {}, 'SAME_WINDOW');}}",
+          "onClick": "{{navigateTo('Customer Viewer v3',  {}, 'SAME_WINDOW').then(() => {\n  removeValue('statclick');\n  removeValue('sbcclick');\n  removeValue('stateid');\n  removeValue('stateid2');\n});}}",
           "widgetId": "3rpa1aroxr"
         }
       },
@@ -120,7 +131,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "IVP Data",
-          "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
+          "onClick": "{{navigateTo('IVP Prod Browser',  {}, 'SAME_WINDOW').then(() => {\n  removeValue('statclick');\n  removeValue('sbcclick');\n  removeValue('stateid');\n  removeValue('stateid2');\n});}}",
           "widgetId": ""
         },
         "menuItem3x5hkuzk9y": {
@@ -129,7 +140,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Oracle SBC Data",
-          "onClick": "{{navigateTo('SBC Data Browser', {}, 'SAME_WINDOW');}}",
+          "onClick": "{{navigateTo('SBC Data Browser',  {}, 'SAME_WINDOW').then(() => {\n  removeValue('statclick');\n  removeValue('sbcclick');\n  removeValue('stateid');\n  removeValue('stateid2');\n});}}",
           "widgetId": "r4rdxwv4h1"
         }
       },
@@ -228,7 +239,7 @@
       "itemType": "BUTTON",
       "label": "Home",
       "menuItems": {},
-      "onClick": "{{navigateTo('Dashboard', {}, 'SAME_WINDOW');}}",
+      "onClick": "{{navigateTo('Dashboard', {}, 'SAME_WINDOW').then(() => {\n  removeValue('statclick');\n  removeValue('sbcclick');\n  removeValue('stateid');\n  removeValue('stateid2');\n});}}",
       "placement": "CENTER",
       "variant": "filled",
       "widgetId": "0hfbtic9mp"
