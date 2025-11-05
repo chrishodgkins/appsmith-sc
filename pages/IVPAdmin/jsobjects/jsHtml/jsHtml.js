@@ -55,9 +55,12 @@ export default {
 		const html = `
 			<div style="display: flex; gap: 20px; overflow-x: auto; padding: 10px;">
 				${data.map(item => `
-					<div style="flex-shrink: 0;">
-						<h3 style="margin: 0 0 10px 0; font-size: 14px;">${item.externalid || 'Unknown'} - ${item.name || 'Unnamed'}</h3>
-						<table style="border-collapse: collapse; border: 1px solid #ddd; font-size: 12px;">
+                    <div style="flex-shrink: 0;">
+                       	<h3 style="margin: 0 0 10px 0; font-size: 14px;">${item.externalid || 'Unknown'} - ${item.name || 'Unnamed'}</h3>
+                       	<div style="margin-bottom: 15px;">
+                      		<a href="https://portal.ivp.secureco.co/services/${item.uuid}" target="_blank" style="font-size: 12px; color: #0066cc; text-decoration: none;">https://portal.ivp.secureco.co/services/${item.uuid}</a>
+                       	</div>
+                       	<table style="border-collapse: collapse; border: 1px solid #ddd; font-size: 12px;">
 							${Object.entries(item)
 								.filter(([key]) => !excludedColumns.includes(key))
 								.map(([key, value]) => {
