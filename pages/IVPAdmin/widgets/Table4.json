@@ -64,7 +64,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
-  "defaultSearchText": "{{ appsmith.store.statclick || TableReal.selectedRow.externalid|| \"\"}}",
+  "defaultSearchText": "{{ appsmith.store.statclick || \"\"}}",
   "defaultSelectedRowIndex": "0",
   "defaultSelectedRowIndices": [
     0
