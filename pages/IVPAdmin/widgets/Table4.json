@@ -64,7 +64,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
-  "defaultSearchText": "{{ appsmith.store.statclick || \"\"}}",
+  "defaultSearchText": "{{ singleServiceQuery.data[0].externalid || \"\" }}",
   "defaultSelectedRowIndex": "0",
   "defaultSelectedRowIndices": [
     0
