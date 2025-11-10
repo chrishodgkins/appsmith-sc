@@ -91,7 +91,7 @@
     "Username",
     "Unknown"
   ],
-  "columnUpdatedAt": 1762423942845,
+  "columnUpdatedAt": 1762753571756,
   "columnWidthMap": {
     "ACL": 241,
     "Bot_list": 270,
@@ -1598,7 +1598,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "Routing domain",
       "notation": "standard",
       "originalId": "Routing domain",
