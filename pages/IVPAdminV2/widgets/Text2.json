@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 16,
+  "bottomRow": 93,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,47 +11,53 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
-      "key": "fontSize"
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.700rem",
-  "fontStyle": "",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": true,
-  "key": "0pu1v6fe7d",
-  "leftColumn": 8,
+  "isVisible": "{{ appsmith.store.statclick !== 'monkey' }}",
+  "key": "59nj6v4i1a",
+  "leftColumn": 30,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 10,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 17,
-  "mobileTopRow": 6,
+  "mobileBottomRow": 72,
+  "mobileLeftColumn": 23,
+  "mobileRightColumn": 39,
+  "mobileTopRow": 68,
   "needsErrorInfo": false,
-  "originalBottomRow": 19,
-  "originalTopRow": 8,
+  "originalBottomRow": 93,
+  "originalTopRow": 89,
   "overflow": "NONE",
-  "parentColumnSpace": 21.59375,
-  "parentId": "47p9ji5wyg",
+  "parentColumnSpace": 24.03125,
+  "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 21,
+  "rightColumn": 35,
   "shouldTruncate": false,
-  "text": "Filter Instructions: \n- Dropdown: Filters Customer List\n- Customer List: Clicking filters Services and Numbers Below.\n- Click Stats data points filters as well.\n- IF no customer is selected, \"Customer Data\" is all customers.\n",
+  "text": "{{ singleServiceQuery.data[0].externalid }}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 8,
+  "topRow": 89,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "1qxdqjkry1",
+  "widgetId": "pkt2ru5da3",
   "widgetName": "Text2"
 }

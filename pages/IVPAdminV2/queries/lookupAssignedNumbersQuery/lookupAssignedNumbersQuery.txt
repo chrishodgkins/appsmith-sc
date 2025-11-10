@@ -1,0 +1,9 @@
+-- Query to fetch phone numbers for assigned number UUIDs
+SELECT 
+    "id",
+    "starting_number",
+    "block_size",
+    "status",
+    "service"
+FROM public."ivpnumbers"
+WHERE "id" IN (SELECT unnest({{appsmith.store.uuidList}}::uuid[]))

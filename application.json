@@ -86,6 +86,10 @@
     {
       "id": "Page1",
       "isDefault": false
+    },
+    {
+      "id": "IVPAdminV2",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

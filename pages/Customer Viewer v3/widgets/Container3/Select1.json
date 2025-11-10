@@ -22,7 +22,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -44,6 +48,7 @@
   "mobileRightColumn": 25,
   "mobileTopRow": 86,
   "needsErrorInfo": false,
+  "onOptionChange": "{{storeValue('statclick', pullCustDB.data.find(row => row.Account === Select1.selectedOptionValue).ivp_externalid || '').then(() => {\n  getGroups.run();\n});}}",
   "optionLabel": "Name",
   "optionValue": "Account",
   "parentColumnSpace": 21.078125,
