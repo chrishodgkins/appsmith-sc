@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 125,
+  "bottomRow": 163,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -50,7 +50,7 @@
   "columnWidthMap": {
     "Description": 187,
     "lp_from_range": 198,
-    "lp_to_range": 346
+    "lp_to_range": 583
   },
   "compactMode": "SHORT",
   "customIsLoading": false,
@@ -144,6 +144,8 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 88,
   "needsErrorInfo": false,
+  "originalBottomRow": 125,
+  "originalTopRow": 86,
   "parentColumnSpace": 31.6875,
   "parentId": "0",
   "parentRowSpace": 10,
