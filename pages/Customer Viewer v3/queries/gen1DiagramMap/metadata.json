@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.customer_mapping_v2\nWHERE account_no = '40000105'",
+      "body": "SELECT * FROM public.customer_mapping_v2",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

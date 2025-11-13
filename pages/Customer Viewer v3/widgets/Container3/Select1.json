@@ -25,6 +25,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownClose"
     }
   ],
   "isDisabled": false,
@@ -48,6 +51,7 @@
   "mobileRightColumn": 25,
   "mobileTopRow": 86,
   "needsErrorInfo": false,
+  "onDropdownClose": "{{localPolicy.run()}}",
   "onOptionChange": "{{storeValue('statclick', pullCustDB.data.find(row => row.Account === Select1.selectedOptionValue).ivp_externalid || '').then(() => {\n  getGroups.run();\n  localPolicy.run();\n});}}",
   "optionLabel": "Name",
   "optionValue": "Account",

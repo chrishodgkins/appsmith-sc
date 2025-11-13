@@ -1,2 +1,1 @@
 SELECT * FROM public.customer_mapping_v2
-WHERE account_no = '40000105'
