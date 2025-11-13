@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_c341d3d1-41cf-4453-afc7-413438112178",
-  "id": "Customer Viewer v3_gen1DiagramMap",
+  "gitSyncId": "6833bd1e663f59025c630a90_a5de1b52-11e3-47fb-ae08-00101c5134c6",
+  "id": "Customer Viewer v3_localPolicy",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.customer_mapping_v2\nWHERE account_no = '40000105'",
+      "body": "SELECT *\nFROM public.local_policy\nWHERE \"Description\" <> '' AND account_no = '{{ Select1.selectedOptionValue }}' AND data_source ILIKE 'SYD1%'\nORDER BY \"Description\" ASC, \"id\" ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,8 +22,12 @@
       "name": "Secco_Gen1_pgdb",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "gen1DiagramMap",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "localPolicy",
     "pageId": "Customer Viewer v3",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false

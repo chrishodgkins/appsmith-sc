@@ -1,0 +1,4 @@
+SELECT *
+FROM public.local_policy
+WHERE "Description" <> '' AND account_no = '{{ Select1.selectedOptionValue }}' AND data_source ILIKE 'SYD1%'
+ORDER BY "Description" ASC, "id" ASC;
