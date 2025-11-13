@@ -25,7 +25,7 @@
       "queryParameters": [
         {
           "key": "customerId",
-          "value": "{{ appsmith.store.statclick }}"
+          "value": "{{ appsmith.store.statclick || '' }}"
         }
       ],
       "timeoutInMillisecond": 10000

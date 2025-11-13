@@ -27,7 +27,7 @@
   "iconSVG": "/static/media/icon.34169b6acebc8ace125dd1f638974aae.svg",
   "isDeprecated": false,
   "isLoading": false,
-  "isVisible": "{{Select1.selectedOptionValue !== ''}}",
+  "isVisible": "{{appsmith.store.statclickaccount !== ''}}",
   "key": "1u6f2zf91o",
   "leftColumn": 29,
   "originalBottomRow": 81,

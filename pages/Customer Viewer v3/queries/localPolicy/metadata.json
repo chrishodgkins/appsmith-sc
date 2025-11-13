@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT *\nFROM public.local_policy\nWHERE \"Description\" <> '' AND (account_no = '{{ Select1.selectedOptionValue }}' AND account_no != '') AND data_source ILIKE 'SYD1%'\nORDER BY \"Description\" ASC, \"id\" ASC;",
+      "body": "SELECT *\nFROM public.local_policy\nWHERE \"Description\" <> '' AND (account_no = '{{ appsmith.store.statclickaccount }}' AND account_no != '') AND data_source ILIKE 'SYD1%'\nORDER BY \"Description\" ASC, \"id\" ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -32,7 +32,7 @@
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{Select1.selectedOptionValue !== '' && updateExIDCopy.text !== ''  }}",
+  "isVisible": "{{appsmith.store.statclickaccount !== '' && updateExIDCopy.text !== ''  }}",
   "key": "m2w0yg93pb",
   "label": "IVP Service Group",
   "labelAlignment": "left",

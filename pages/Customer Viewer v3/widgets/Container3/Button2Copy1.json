@@ -33,7 +33,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": "{{Select1.selectedOptionValue !== '' && updateExIDCopy.text !== ''  }}",
+  "isVisible": "{{appsmith.store.statclickaccount !== '' && updateExIDCopy.text !== ''  }}",
   "key": "7392yv1pbj",
   "leftColumn": 24,
   "minWidth": 120,
