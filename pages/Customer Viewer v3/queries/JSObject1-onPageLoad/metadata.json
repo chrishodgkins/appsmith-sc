@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_6e1a5537-851e-4552-aab5-28fc946475dd",
-  "id": "Customer Viewer v3_JSObject1.myFun1",
+  "gitSyncId": "6833bd1e663f59025c630a90_03bbdbe9-debc-4664-8055-04cf8f8bd2c0",
+  "id": "Customer Viewer v3_JSObject1.onPageLoad",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -10,7 +10,6 @@
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
-    "clientSideExecution": true,
     "collectionId": "Customer Viewer v3_JSObject1",
     "confirmBeforeExecute": false,
     "datasource": {
@@ -23,10 +22,10 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "JSObject1.myFun1",
-    "name": "myFun1",
+    "fullyQualifiedName": "JSObject1.onPageLoad",
+    "name": "onPageLoad",
     "pageId": "Customer Viewer v3",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }
