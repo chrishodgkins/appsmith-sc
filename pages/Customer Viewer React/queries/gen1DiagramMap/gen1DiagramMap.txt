@@ -1,0 +1,1 @@
+SELECT * FROM public.customer_mapping_v2

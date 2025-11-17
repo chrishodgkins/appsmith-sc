@@ -1,0 +1,10 @@
+{
+  "accessor": [
+    "client"
+  ],
+  "defs": "{\"!name\":\"LIB/client\",\"client\":{\"createRoot\":{\"!type\":\"fn()\",\"prototype\":{}},\"hydrateRoot\":{\"!type\":\"fn()\",\"prototype\":{}}}}",
+  "name": "client",
+  "uidString": "client_https://esm.sh/react-dom@18/client",
+  "url": "https://esm.sh/react-dom@18/client",
+  "version": ""
+}

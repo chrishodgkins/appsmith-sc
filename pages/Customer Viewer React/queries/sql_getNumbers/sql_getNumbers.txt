@@ -1,0 +1,1 @@
+SELECT external_id,starting_number,block_size,status,service FROM public."ivpnumbers";

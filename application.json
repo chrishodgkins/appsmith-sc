@@ -48,10 +48,6 @@
       "isDefault": false
     },
     {
-      "id": "old - Customers",
-      "isDefault": false
-    },
-    {
       "id": "Number Inventory",
       "isDefault": false
     },
@@ -61,10 +57,6 @@
     },
     {
       "id": "CTS Capacity",
-      "isDefault": false
-    },
-    {
-      "id": "Customer Viewer - Old",
       "isDefault": false
     },
     {
@@ -89,6 +81,10 @@
     },
     {
       "id": "IVPAdminV2",
+      "isDefault": false
+    },
+    {
+      "id": "Customer Viewer React",
       "isDefault": false
     }
   ],
