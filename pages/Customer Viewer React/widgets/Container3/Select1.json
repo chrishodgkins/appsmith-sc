@@ -64,7 +64,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 24,
+  "rightColumn": 15,
   "serverSideFiltering": false,
   "sourceData": "{{pullCustDB.data}}",
   "topRow": 0,

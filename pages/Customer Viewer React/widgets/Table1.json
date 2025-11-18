@@ -46,7 +46,7 @@
     "date_added",
     "account_no"
   ],
-  "columnUpdatedAt": 1762992024937,
+  "columnUpdatedAt": 1763506479580,
   "columnWidthMap": {
     "Description": 187,
     "lp_from_range": 198,
@@ -172,7 +172,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "Description",
       "notation": "standard",
       "originalId": "Description",

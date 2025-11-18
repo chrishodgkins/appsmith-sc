@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 37,
+  "bottomRow": 40,
   "boxShadow": "none",
   "defaultText": "{{ getGroups.data.groups[0].name }}",
   "dynamicBindingPathList": [
@@ -20,27 +20,30 @@
       "key": "defaultText"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "isVisible"
+    },
+    {
+      "key": "labelTextSize"
     }
   ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "inputType": "TEXT",
+  "inputType": "MULTI_LINE_TEXT",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": "{{appsmith.store.statclickaccount !== '' && updateExIDCopy.text !== ''  }}",
   "key": "m2w0yg93pb",
-  "label": "IVP Service Group",
+  "label": "IVP SG",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
-  "labelTextSize": "0.875rem",
+  "labelTextSize": "0.775rem",
   "labelWidth": 5,
-  "leftColumn": 18,
+  "leftColumn": 19,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -49,13 +52,16 @@
   "mobileRightColumn": 37,
   "mobileTopRow": 30,
   "needsErrorInfo": false,
+  "originalBottomRow": 40,
+  "originalTopRow": 30,
   "parentColumnSpace": 26.62890625,
   "parentId": "yaeuqx8gh2",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 23,
+  "rightColumn": 24,
+  "shouldAllowAutofill": false,
   "showStepArrows": false,
   "topRow": 30,
   "type": "INPUT_WIDGET_V2",
