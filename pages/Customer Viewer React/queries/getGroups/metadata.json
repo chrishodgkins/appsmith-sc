@@ -28,7 +28,7 @@
           "value": "{{ appsmith.store.statclick || '' }}"
         }
       ],
-      "timeoutInMillisecond": 10000
+      "timeoutInMillisecond": 100000
     },
     "confirmBeforeExecute": false,
     "datasource": {

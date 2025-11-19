@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 40,
   "boxShadow": "none",
-  "defaultText": "{{ getGroups.data.groups[0].name }}",
+  "defaultText": "{{getGroups.data.groups.map(g => g.name).join(', ')}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -43,7 +43,7 @@
   "labelStyle": "",
   "labelTextSize": "0.775rem",
   "labelWidth": 5,
-  "leftColumn": 19,
+  "leftColumn": 16,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -60,7 +60,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 24,
+  "rightColumn": 21,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
   "topRow": 30,
