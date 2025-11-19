@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_8267cf2c-4728-48dd-90f0-dcdcb0f09825",
+  "gitSyncId": "6833bd1e663f59025c630a90_4716c421-103e-47d0-a6e5-8ccb34961e04",
   "id": "Customer Viewer_sql_getNumbersCopy",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"ivpnumbers\";",
+      "body": "SELECT * FROM public.\"ivpnumbers\"\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 7,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "SECONDARY",
@@ -14,7 +14,17 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -23,18 +33,18 @@
   "iconAlign": "left",
   "iconName": "upload",
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "false",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "true",
   "key": "8we9ddfgcy",
-  "leftColumn": 49,
+  "leftColumn": 41,
   "minWidth": 120,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 39,
   "mobileRightColumn": 55,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{updateExternalID.run().then(() => {\n  pullCustDB.run();\n  gen1DiagramMap.run();\n});\nupdateExtIDNetwk.run().then(() => {\n  getNtwkData.run();\n  gen1DiagramMap.run();\n});}}",
+  "onClick": "{{Promise.all([\n  updateExternalID.run(),\n  updateExtIDNetwk.run()\n]).then(() => {\n  return new Promise(resolve => setTimeout(resolve, 1000));\n}).then(() => {\n  return refreshView.run();\n}).then(() => {\n  return new Promise(resolve => setTimeout(resolve, 1000));\n}).then(() => {\n  pullCustDB.run();\n  getNtwkData.run();\n  gen1DiagramMap.run();\n})}}",
   "parentColumnSpace": 16.33984375,
   "parentId": "yaeuqx8gh2",
   "parentRowSpace": 10,
@@ -43,9 +53,9 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 57,
+  "rightColumn": 49,
   "text": "IVP External ID",
-  "topRow": 0,
+  "topRow": 3,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "rdbmrtvby9",

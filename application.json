@@ -60,7 +60,7 @@
       "isDefault": false
     },
     {
-      "id": "Customer Viewer",
+      "id": "Customer Viewer - Retire",
       "isDefault": false
     },
     {
@@ -68,7 +68,7 @@
       "isDefault": false
     },
     {
-      "id": "Customer Viewer v3",
+      "id": "Customer Viewer",
       "isDefault": false
     },
     {
@@ -84,7 +84,7 @@
       "isDefault": false
     },
     {
-      "id": "Customer Viewer React",
+      "id": "Customer Viewer v3",
       "isDefault": false
     }
   ],

@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 7,
   "boxShadow": "none",
-  "defaultText": "{{ pullCustDB.data.find(row => row.Account === Select1.selectedOptionValue).ivp_externalid  }}",
+  "defaultText": "{{ pullCustDB.data.find(row => row.Account === appsmith.store.statclickaccount).ivp_externalid || ''  }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -18,21 +18,32 @@
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "labelTextSize"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "TEXT",
-  "isDisabled": false,
+  "isDisabled": "false",
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
+  "isVisible": "true",
   "key": "i8ipqoydpg",
   "label": "",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
-  "labelTextSize": "0.875rem",
+  "labelTextSize": "0.775rem",
   "labelWidth": 5,
-  "leftColumn": 57,
+  "leftColumn": 49,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -47,9 +58,9 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 54,
   "showStepArrows": false,
-  "topRow": 0,
+  "topRow": 3,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "iwtk0d2upj",

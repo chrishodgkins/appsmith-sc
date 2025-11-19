@@ -1,20 +1,11 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_fc8af237-3eae-4ce0-b4f9-430679d13e20",
+  "gitSyncId": "6833bd1e663f59025c630a90_e56dc3f4-dd15-4547-a507-42fa2e910af0",
   "id": "Customer Viewer_JSObject1",
   "unpublishedCollection": {
     "name": "JSObject1",
     "pageId": "Customer Viewer",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": [
-      {
-        "name": "myVar1",
-        "value": "[]"
-      },
-      {
-        "name": "myVar2",
-        "value": "{}"
-      }
-    ]
+    "variables": []
   }
 }

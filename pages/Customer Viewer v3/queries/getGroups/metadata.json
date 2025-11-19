@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_ab7206f4-c6cb-4d93-b17e-7f7f716f789e",
+  "gitSyncId": "6833bd1e663f59025c630a90_7599db3e-bad7-42fd-87a8-0501be6bdddb",
   "id": "Customer Viewer v3_getGroups",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
@@ -25,10 +25,10 @@
       "queryParameters": [
         {
           "key": "customerId",
-          "value": "{{ appsmith.store.statclick || '' }}"
+          "value": "{{ appsmith.store.statclick || 'INVALID_DO_NOT_RUN' }}"
         }
       ],
-      "timeoutInMillisecond": 10000
+      "timeoutInMillisecond": 100000
     },
     "confirmBeforeExecute": false,
     "datasource": {

@@ -1,0 +1,31 @@
+{
+  "gitSyncId": "6833bd1e663f59025c630a90_730ebab9-4b03-4046-b2a3-07dcd280b41c",
+  "id": "Customer Viewer - Retire_gen1DiagramMapCopy1",
+  "pluginId": "postgres-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "WITH customer_realm_extract AS (\n    -- Extract ALL cust-* realms directly from local_policy, excluding secureco\n    SELECT DISTINCT\n        lp.account_no,\n        unnest(regexp_matches(lp.src_realm, 'cust-[a-zA-Z0-9_-]+', 'g')) as individual_realm\n    FROM local_policy lp\n    WHERE lp.data_source LIKE 'SYD1%'\n        AND lp.src_realm IS NOT NULL\n        AND lp.src_realm NOT LIKE '%secureco%'\n),\ncustomer_realm_data AS (\n    -- Get other customer data from gen1_ntwk_data\n    SELECT DISTINCT\n        c.customer,\n        c.account_no,\n        c.lp_src_realm,\n        c.lp_nexthop_list,\n        c.flag_sema_onprem,\n        c.flag_sema_cloud,\n        c.lp_nextrealm_list,\n        c.vocus, c.symbio, c.aapt, c.optus, c.telstra\n    FROM gen1_ntwk_data c\n),\ncustomer_realms AS (\n    SELECT DISTINCT\n        crd.customer,\n        crd.account_no,\n        -- Aggregate ALL cust-* realms found\n        STRING_AGG(DISTINCT cre.individual_realm, ',' ORDER BY cre.individual_realm) as customer_realm,\n        -- Check if customer uses cloud-aws\n        BOOL_OR(crd.lp_src_realm LIKE '%cloud-aws%' OR crd.lp_nexthop_list LIKE '%cloud-aws%') as has_cloud_aws,\n        BOOL_OR(crd.flag_sema_onprem = 'true' OR crd.flag_sema_cloud = 'true') as uses_sema_payments,\n        MAX(crd.lp_nextrealm_list) as dest_realms,\n        BOOL_OR(\n            crd.lp_src_realm LIKE '%cloud-ibmsyd%' OR crd.lp_src_realm LIKE '%cloudAzure%'\n                OR crd.lp_nextrealm_list LIKE '%cloud-ibmsyd%' OR crd.lp_nextrealm_list LIKE '%cloudAzure%'\n        ) as traffic_via_ibm_azure,\n        BOOL_OR(crd.vocus = 'true') as vocus,\n        BOOL_OR(crd.symbio = 'true') as symbio,\n        BOOL_OR(crd.aapt = 'true') as aapt,\n        BOOL_OR(crd.optus = 'true') as optus,\n        BOOL_OR(crd.telstra = 'true') as telstra\n    FROM customer_realm_data crd\n    LEFT JOIN customer_realm_extract cre ON crd.account_no = cre.account_no\n    GROUP BY crd.customer, crd.account_no\n),\n-- Extract ALL PureCloud domains from local policy hoplist for each customer\npurecloud_domains AS (\n    SELECT DISTINCT\n        lp.account_no,\n        (regexp_matches(lp.hoplist, '(sc-[a-z0-9]+\\.byoc\\.mypurecloud\\.com\\.au)', 'g'))[1] as purecloud_domain\n    FROM local_policy lp\n    WHERE lp.hoplist LIKE '%.mypurecloud.com.au%'\n        AND lp.data_source LIKE 'SYD1%'\n),\n-- Get customer terminating realm session agents for ALL realms\ncustomer_session_agents AS (\n    SELECT DISTINCT\n        cre.account_no,\n        sa.hostname as session_agent_hostname\n    FROM customer_realm_extract cre\n    INNER JOIN session_agent sa\n        ON cre.individual_realm = sa.realm_id\n),\n-- Combine all session agents\nall_session_agents AS (\n    SELECT account_no, session_agent_hostname as agent\n    FROM customer_session_agents\n    UNION ALL\n    SELECT account_no, purecloud_domain as agent\n    FROM purecloud_domains\n),\naggregated_agents AS (\n    SELECT\n        account_no,\n        STRING_AGG(DISTINCT agent, ',') as all_session_agents\n    FROM all_session_agents\n    GROUP BY account_no\n),\nsip_interfaces AS (\n    SELECT DISTINCT\n        cre.account_no,\n        STRING_AGG(DISTINCT si.sipport_address, ', ') as ip_addresses\n    FROM customer_realm_extract cre\n    INNER JOIN sip_interface si ON cre.individual_realm = si.realm_id\n    GROUP BY cre.account_no\n)\nSELECT DISTINCT\n    cr.customer,\n    cr.account_no,\n    -- Build source_realm list with ALL cust-* realms plus cloud-aws if applicable\n    CASE\n        WHEN cr.customer_realm IS NOT NULL AND cr.has_cloud_aws THEN cr.customer_realm || ',cloud-aws'\n        WHEN cr.customer_realm IS NOT NULL THEN cr.customer_realm\n        WHEN cr.has_cloud_aws THEN 'cloud-aws'\n        ELSE NULL\n    END as source_realm,\n    CONCAT_WS(', ',\n        CASE WHEN cr.vocus THEN 'Vocus' END,\n        CASE WHEN cr.symbio THEN 'Symbio' END,\n        CASE WHEN cr.aapt THEN 'AAPT' END,\n        CASE WHEN cr.optus THEN 'Optus' END,\n        CASE WHEN cr.telstra THEN 'Telstra' END\n    ) as carrier_connections,\n    cr.uses_sema_payments,\n    NULL as genesys_purecloud_domains,\n    aa.all_session_agents as customer_realm_session_agents,\n    si.ip_addresses as sip_interface_ips,\n    cr.traffic_via_ibm_azure as gen1_ivp_backbone\nFROM customer_realms cr\nLEFT JOIN aggregated_agents aa ON cr.account_no = aa.account_no\nLEFT JOIN sip_interfaces si ON cr.account_no = si.account_no\nORDER BY cr.customer;",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": true
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "id": "Secco_Gen1_pgdb",
+      "isAutoGenerated": false,
+      "name": "Secco_Gen1_pgdb",
+      "pluginId": "postgres-plugin"
+    },
+    "dynamicBindingPathList": [],
+    "name": "gen1DiagramMapCopy1",
+    "pageId": "Customer Viewer - Retire",
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
+  }
+}

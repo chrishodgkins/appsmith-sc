@@ -52,7 +52,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 24,
+  "rightColumn": 16,
   "topRow": 7,
   "topRowBeforeCollapse": 4,
   "type": "RICH_TEXT_EDITOR_WIDGET",

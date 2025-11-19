@@ -20,9 +20,19 @@
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownClose"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -32,7 +42,7 @@
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "BOLD",
-  "labelText": "Gen1 Customers Only",
+  "labelText": "SecureCo Partners & Customers",
   "labelTextSize": "1rem",
   "labelWidth": 5,
   "leftColumn": 0,
@@ -44,6 +54,8 @@
   "mobileRightColumn": 25,
   "mobileTopRow": 86,
   "needsErrorInfo": false,
+  "onDropdownClose": "{{localPolicy.run()}}",
+  "onOptionChange": "{{\n// 1. Store the selected account value\nstoreValue('statclickaccount', Select1.selectedOptionValue)\n  .then(() => {\n    // 2. Lookup and store the external ID using the stored account value\n    const matchedRow = pullCustDB.data.find(row => row.Account === appsmith.store.statclickaccount);\n    return storeValue('statclick', matchedRow?.ivp_externalid || '');\n  })\n  .then(() => {\n    // 3. Run dependent queries after both store values are set\n    getGroups.run();\n    localPolicy.run();\n  });\n}}",
   "optionLabel": "Name",
   "optionValue": "Account",
   "parentColumnSpace": 21.078125,

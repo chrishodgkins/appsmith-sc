@@ -1,0 +1,61 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 12,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{policyView.tableData.length !== 0}}",
+  "key": "7392yv1pbj",
+  "leftColumn": 24,
+  "minWidth": 120,
+  "mobileBottomRow": 11,
+  "mobileLeftColumn": 12,
+  "mobileRightColumn": 28,
+  "mobileTopRow": 7,
+  "needsErrorInfo": false,
+  "onClick": "{{storeValue('sbcclick', Select1.selectedOptionValue).then(() => {\n  navigateTo('SBC Data Browser', {\n    \"key\": \"Local_Policy\"\n  }, 'SAME_WINDOW');\n});}}",
+  "parentColumnSpace": 16.0283203125,
+  "parentId": "yaeuqx8gh2",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 29,
+  "text": "Gen1 Config",
+  "topRow": 8,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "2oh0svzsx8",
+  "widgetName": "Button2Copy"
+}
