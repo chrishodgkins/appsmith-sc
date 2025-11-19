@@ -15,6 +15,9 @@
     },
     {
       "key": "defaultText"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -35,7 +38,7 @@
   "isDisabled": "false",
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "true",
+  "isVisible": "{{appsmith.store.statclickaccount !== ''}}",
   "key": "i8ipqoydpg",
   "label": "",
   "labelAlignment": "left",

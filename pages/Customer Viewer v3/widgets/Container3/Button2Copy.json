@@ -33,7 +33,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": "{{policyView.tableData.length !== 0}}",
+  "isVisible": "{{Table1.tableData.length !== 0}}",
   "key": "7392yv1pbj",
   "leftColumn": 16,
   "minWidth": 120,

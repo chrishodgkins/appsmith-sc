@@ -12,6 +12,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -35,7 +38,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": "false",
   "isLoading": false,
-  "isVisible": "true",
+  "isVisible": "{{appsmith.store.statclickaccount !== ''}}",
   "key": "8we9ddfgcy",
   "leftColumn": 45,
   "minWidth": 120,
