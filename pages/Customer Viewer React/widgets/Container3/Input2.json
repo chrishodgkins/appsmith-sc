@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 40,
   "boxShadow": "none",
-  "defaultText": "{{getGroups.data.groups.map(g => g.name).join(', ')}}",
+  "defaultText": "{{getGroups.isLoading ? 'Loading...' : (getGroups.data?.groups || []).map(g => g.name).join(', ')}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -52,8 +52,8 @@
   "mobileRightColumn": 37,
   "mobileTopRow": 30,
   "needsErrorInfo": false,
-  "originalBottomRow": 40,
-  "originalTopRow": 30,
+  "originalBottomRow": 41,
+  "originalTopRow": 25,
   "parentColumnSpace": 26.62890625,
   "parentId": "yaeuqx8gh2",
   "parentRowSpace": 10,
