@@ -55,7 +55,7 @@
   "mobileTopRow": 86,
   "needsErrorInfo": false,
   "onDropdownClose": "{{localPolicy.run()}}",
-  "onOptionChange": "{{\n// 1. Store the selected account value\nstoreValue('statclickaccount', Select1.selectedOptionValue)\n  .then(() => {\n    // 2. Clear previous query data to prevent stale UI\n    getGroups.clear();\n  })\n  .then(() => {\n    // 3. Lookup and store the external ID\n    const matchedRow = pullCustDB.data.find(row => row.Account === appsmith.store.statclickaccount);\n    return storeValue('statclick', matchedRow?.ivp_externalid || '');\n  })\n  .then(() => {\n    // 4. Run dependent queries after cleanup and store\n    getGroups.run();\n    localPolicy.run();\n  });\n}}",
+  "onOptionChange": "{{\n// 1. Store the selected account value\nstoreValue('statclickaccount', Select1.selectedOptionValue)\n  .then(() => {\n    // 2. Clear previous query data to prevent stale UI\n    getGroups.clear();\n  })\n  .then(() => {\n    // 3. Lookup and store the external ID\n    const matchedRow = pullCustDB.data.find(row => row.Account === appsmith.store.statclickaccount);\n    return storeValue('statclick', matchedRow?.ivp_externalid || '');\n  })\n  .then(() => {\n    // 4. Run dependent queries after cleanup and store\n    getGroups.run();\n    localPolicy.run();\n\t\tlp_visibility.run();\n  });\n}}",
   "optionLabel": "Name",
   "optionValue": "Account",
   "parentColumnSpace": 21.078125,

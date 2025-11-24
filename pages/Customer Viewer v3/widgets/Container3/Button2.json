@@ -40,6 +40,8 @@
   "mobileTopRow": 7,
   "needsErrorInfo": false,
   "onClick": "{{storeValue('statclick', updateExID.text).then(() => {\n  navigateTo('IVPAdmin', {}, 'SAME_WINDOW');\n});}}",
+  "originalBottomRow": 24,
+  "originalTopRow": 20,
   "parentColumnSpace": 16.0283203125,
   "parentId": "yaeuqx8gh2",
   "parentRowSpace": 10,
