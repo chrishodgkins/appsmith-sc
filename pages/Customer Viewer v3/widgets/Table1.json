@@ -58,7 +58,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
-  "defaultSearchText": "{{appsmith.store.statclickaccount || 'invisible'}}",
+  "defaultSearchText": "{{appsmith.store.statclickaccount}}",
   "defaultSelectedRowIndex": "0",
   "defaultSelectedRowIndices": [
     0
