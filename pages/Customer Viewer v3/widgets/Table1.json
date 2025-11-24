@@ -368,7 +368,7 @@
     },
     "dest_realms": {
       "alias": "dest_realms",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -402,7 +402,7 @@
     },
     "hoplist": {
       "alias": "hoplist",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -504,7 +504,7 @@
     },
     "lp_from_range": {
       "alias": "lp_from_range",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
