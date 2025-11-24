@@ -33,7 +33,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": "{{Table1.isVisible}}",
+  "isVisible": "{{ lp_visibility.data.length >0}}",
   "key": "7392yv1pbj",
   "leftColumn": 16,
   "minWidth": 120,
