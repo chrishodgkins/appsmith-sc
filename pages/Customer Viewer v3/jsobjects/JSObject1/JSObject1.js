@@ -1,9 +1,10 @@
 export default {
-  // Function 1: Clear store variables on page initialization
+  // Function 1: Clear store variables and fetch query data on page initialization
   onPageLoad: () => {
     return Promise.all([
       storeValue('statclickaccount', ''),
-      storeValue('statclick', '')
+      storeValue('statclick', ''),
+      lp_visibility.run()  // Execute the query
     ]);
   }
 }
