@@ -60,10 +60,6 @@
       "isDefault": false
     },
     {
-      "id": "Customer Viewer - Retire",
-      "isDefault": false
-    },
-    {
       "id": "IVPAdmin",
       "isDefault": false
     },
@@ -76,15 +72,15 @@
       "isDefault": false
     },
     {
-      "id": "Page1",
-      "isDefault": false
-    },
-    {
       "id": "IVPAdminV2",
       "isDefault": false
     },
     {
       "id": "Customer Viewer v3",
+      "isDefault": false
+    },
+    {
+      "id": "Customer Viewer v4",
       "isDefault": false
     }
   ],
