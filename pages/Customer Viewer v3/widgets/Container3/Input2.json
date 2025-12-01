@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 40,
+  "bottomRow": 72,
   "boxShadow": "none",
   "defaultText": "{{getGroups.isLoading ? 'Loading...' : (getGroups.data?.groups || []).map(g => g.name).join(', ')}}",
   "dynamicBindingPathList": [
