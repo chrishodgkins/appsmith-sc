@@ -91,7 +91,7 @@
     "Username",
     "Unknown"
   ],
-  "columnUpdatedAt": 1763419680639,
+  "columnUpdatedAt": 1764737437111,
   "columnWidthMap": {
     "ACL": 241,
     "Assigned_numbers": 350,
@@ -1089,7 +1089,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "Enable On-net calls",
       "notation": "standard",
       "originalId": "Enable On-net calls",
