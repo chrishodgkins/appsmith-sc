@@ -32,7 +32,7 @@
   "mobileRightColumn": 28,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('https://servicedesk.intelligentvoice.io/agent/secureco/non-sso/tickets/search?searchDept=currentDept&searchWord=' + Select1.selectedOptionLabel, {}, 'SAME_WINDOW');}}",
+  "onClick": "{{navigateTo('https://servicedesk.intelligentvoice.io/agent/secureco/non-sso/tickets/search?searchDept=currentDept&searchWord=' + Select1.selectedOptionLabel, {}, 'NEW_WINDOW');}}",
   "originalBottomRow": 28,
   "originalTopRow": 24,
   "parentColumnSpace": 16.0283203125,

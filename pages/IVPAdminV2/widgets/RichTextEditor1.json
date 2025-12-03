@@ -1,10 +1,9 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 274,
-  "bottomRowBeforeCollapse": 189,
+  "bottomRow": 130,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultText": "{{appsmith.store.generatedHTML }}",
+  "defaultText": "{{ \n\ngetServiceData.generateTable()\n\n}}",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -13,18 +12,10 @@
       "key": "boxShadow"
     },
     {
-      "key": "isVisible"
-    },
-    {
       "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [
-    {
-      "key": "isVisible"
-    }
-  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "inputType": "html",
@@ -32,34 +23,32 @@
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isToolbarHidden": true,
-  "isVisible": "{{ appsmith.store.statclick !== 'monkey' }}",
-  "key": "87r04f6khi",
+  "isVisible": true,
+  "key": "k1jxmqwnzu",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Services",
+  "labelText": "",
   "labelWidth": 5,
   "leftColumn": 7,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 120,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 24,
-  "mobileTopRow": 100,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 7,
+  "mobileRightColumn": 31,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 274,
-  "originalTopRow": 129,
-  "parentColumnSpace": 23.203125,
+  "originalBottomRow": 131,
+  "originalTopRow": 6,
+  "parentColumnSpace": 18.03125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "topRow": 129,
-  "topRowBeforeCollapse": 44,
+  "topRow": 5,
   "type": "RICH_TEXT_EDITOR_WIDGET",
   "version": 1,
-  "widgetId": "x38uux8g27",
+  "widgetId": "yv6e8t3l81",
   "widgetName": "RichTextEditor1"
 }

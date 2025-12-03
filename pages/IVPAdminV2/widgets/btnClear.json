@@ -1,10 +1,10 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 5,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonVariant": "SECONDARY",
+  "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
@@ -14,27 +14,30 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
     }
   ],
-  "iconAlign": "left",
-  "iconName": "fast-backward",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "uqrio1dfqx",
-  "leftColumn": 8,
+  "key": "k3kpwrfyh6",
+  "leftColumn": 27,
   "minWidth": 120,
-  "mobileBottomRow": 4,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 10,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 36,
+  "mobileRightColumn": 52,
+  "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Customer Viewer v3', {}, 'SAME_WINDOW').then(() => {\n  storeValue('statclick', '');\n});}}",
-  "parentColumnSpace": 23.203125,
+  "onClick": "{{getServiceData.resetSearch()}}",
+  "parentColumnSpace": 18.375,
   "parentId": "0",
   "parentRowSpace": 10,
   "placement": "CENTER",
@@ -42,11 +45,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 18,
-  "text": "Back to Customer Viewer",
-  "topRow": 0,
+  "rightColumn": 33,
+  "text": "Clear",
+  "topRow": 1,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "kfjxaaetst",
-  "widgetName": "Button1"
+  "widgetId": "0a9lt5fjs4",
+  "widgetName": "btnClear"
 }
