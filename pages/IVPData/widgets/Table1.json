@@ -84,6 +84,7 @@
   ],
   "columnUpdatedAt": 1764828015341,
   "columnWidthMap": {
+    "ACL": 244,
     "phone_numbers": 203,
     "phone_numbers_string": 236
   },
@@ -274,7 +275,7 @@
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": true,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "e5t53xsx8e",
