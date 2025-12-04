@@ -32,17 +32,6 @@
       "key": "groupButtons.groupButtoniezyewps5l.buttonColor"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "groupButtons.groupButtonshb4puin4h.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
-    },
-    {
-      "key": "groupButtons.groupButton3.menuItems.menuItem3x5hkuzk9y.onClick"
-    }
-  ],
   "dynamicTriggerPathList": [
     {
       "key": "groupButtons.groupButton2.menuItems.menuItemyvyfyikwha.onClick"
@@ -76,6 +65,9 @@
     },
     {
       "key": "groupButtons.groupButtoniezyewps5l.menuItems.menuItemvdnir3nlmg.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemr40f1g10an.onClick"
     }
   ],
   "groupButtons": {
@@ -90,13 +82,22 @@
       "isVisible": true,
       "label": "Customer Data",
       "menuItems": {
-        "menuItemyqktxo0jis": {
-          "id": "menuItemyqktxo0jis",
+        "menuItemr40f1g10an": {
+          "id": "menuItemr40f1g10an",
           "index": 1,
           "isDisabled": false,
           "isVisible": true,
+          "label": "IVP Customers",
+          "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
+          "widgetId": "e9w16g7o29"
+        },
+        "menuItemyqktxo0jis": {
+          "id": "menuItemyqktxo0jis",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
           "label": "Migration Cohorts",
-          "onClick": "{{navigateTo('Cohorts',  {}, 'SAME_WINDOW').then(() => {\n  removeValue('statclick');\n  removeValue('sbcclick');\n  removeValue('stateid');\n  removeValue('stateid2');\n});}}",
+          "onClick": "{{navigateTo('Cohorts', {}, 'SAME_WINDOW');}}",
           "widgetId": "91k552q44j"
         },
         "menuItemyvyfyikwha": {
@@ -104,8 +105,8 @@
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Customer Viewer",
-          "onClick": "{{navigateTo('Customer Viewer v3',  {}, 'SAME_WINDOW').then(() => {\n  removeValue('statclick');\n  removeValue('sbcclick');\n  removeValue('stateid');\n  removeValue('stateid2');\n});}}",
+          "label": "Customer Network Viewer",
+          "onClick": "{{navigateTo('Customer Viewer v3', {}, 'SAME_WINDOW');}}",
           "widgetId": "3rpa1aroxr"
         }
       },
@@ -131,7 +132,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "IVP Data",
-          "onClick": "{{navigateTo('IVP Prod Browser',  {}, 'SAME_WINDOW').then(() => {\n  removeValue('statclick');\n  removeValue('sbcclick');\n  removeValue('stateid');\n  removeValue('stateid2');\n});}}",
+          "onClick": "{{navigateTo('IVPData', {}, 'SAME_WINDOW');}}",
           "widgetId": ""
         },
         "menuItem3x5hkuzk9y": {
@@ -140,7 +141,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Oracle SBC Data",
-          "onClick": "{{navigateTo('SBC Data Browser',  {}, 'SAME_WINDOW').then(() => {\n  removeValue('statclick');\n  removeValue('sbcclick');\n  removeValue('stateid');\n  removeValue('stateid2');\n});}}",
+          "onClick": "{{navigateTo('SBC Data Browser', {}, 'SAME_WINDOW');}}",
           "widgetId": "r4rdxwv4h1"
         }
       },
@@ -239,7 +240,7 @@
       "itemType": "BUTTON",
       "label": "Home",
       "menuItems": {},
-      "onClick": "{{navigateTo('Dashboard', {}, 'SAME_WINDOW').then(() => {\n  removeValue('statclick');\n  removeValue('sbcclick');\n  removeValue('stateid');\n  removeValue('stateid2');\n});}}",
+      "onClick": "{{navigateTo('Dashboard', {}, 'SAME_WINDOW');}}",
       "placement": "CENTER",
       "variant": "filled",
       "widgetId": "0hfbtic9mp"
@@ -268,6 +269,6 @@
   "topRow": 0,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "5t14vkp0my",
+  "widgetId": "0asu7cukmj",
   "widgetName": "MainButtonMenu"
 }

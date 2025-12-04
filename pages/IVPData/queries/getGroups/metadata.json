@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6833bd1e663f59025c630a90_5e37d3d1-dbac-4cf0-a631-68ab2b499687",
-  "id": "IVPAdminV2_getGroups",
+  "id": "IVPData_getGroups",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -46,7 +46,7 @@
       }
     ],
     "name": "getGroups",
-    "pageId": "IVPAdminV2",
+    "pageId": "IVPData",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true
   }

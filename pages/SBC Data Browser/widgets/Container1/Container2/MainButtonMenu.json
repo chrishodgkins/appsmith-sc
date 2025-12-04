@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 16,
   "boxShadow": "none",
   "buttonVariant": "PRIMARY",
   "childStylesheet": {
@@ -65,6 +65,9 @@
     },
     {
       "key": "groupButtons.groupButtoniezyewps5l.menuItems.menuItemvdnir3nlmg.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemr40f1g10an.onClick"
     }
   ],
   "groupButtons": {
@@ -79,9 +82,18 @@
       "isVisible": true,
       "label": "Customer Data",
       "menuItems": {
+        "menuItemr40f1g10an": {
+          "id": "menuItemr40f1g10an",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "IVP Customers",
+          "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
+          "widgetId": "e9w16g7o29"
+        },
         "menuItemyqktxo0jis": {
           "id": "menuItemyqktxo0jis",
-          "index": 1,
+          "index": 2,
           "isDisabled": false,
           "isVisible": true,
           "label": "Migration Cohorts",
@@ -93,7 +105,7 @@
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Customer Viewer",
+          "label": "Customer Network Viewer",
           "onClick": "{{navigateTo('Customer Viewer v3', {}, 'SAME_WINDOW');}}",
           "widgetId": "3rpa1aroxr"
         }
@@ -120,7 +132,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "IVP Data",
-          "onClick": "{{navigateTo('IVP Prod Browser', {}, 'SAME_WINDOW');}}",
+          "onClick": "{{navigateTo('IVPData', {}, 'SAME_WINDOW');}}",
           "widgetId": ""
         },
         "menuItem3x5hkuzk9y": {
@@ -257,6 +269,6 @@
   "topRow": 0,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "3byl58k2ng",
+  "widgetId": "pl24745an7",
   "widgetName": "MainButtonMenu"
 }

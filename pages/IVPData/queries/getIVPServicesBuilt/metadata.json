@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6833bd1e663f59025c630a90_34fc9537-d9ab-4bb7-b885-97ebbee452c5",
-  "id": "IVPAdminV2_getIVPServicesBuilt",
+  "id": "IVPData_getIVPServicesBuilt",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -43,7 +43,7 @@
     },
     "dynamicBindingPathList": [],
     "name": "getIVPServicesBuilt",
-    "pageId": "IVPAdminV2",
+    "pageId": "IVPData",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
