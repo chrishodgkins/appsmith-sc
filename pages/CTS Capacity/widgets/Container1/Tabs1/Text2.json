@@ -11,9 +11,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -43,7 +40,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 54,
   "shouldTruncate": false,
-  "text": "Most Recent Non-Zero Call Counter at approximately {{ new Date(Date.now() - 1 * 60 * 1000).toLocaleString() }}",
+  "text": "Most Recent Non-Zero Call Counter in past 30 minutes.",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 0,
