@@ -85,7 +85,7 @@
   "columnUpdatedAt": 1765171734792,
   "columnWidthMap": {
     "ACL": 244,
-    "Assigned_numbers": 224,
+    "Assigned_numbers": 266,
     "phone_numbers": 203,
     "phone_numbers_string": 236
   },
@@ -375,7 +375,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Assigned_numbers",
+      "label": "Ph#_Prefix - Range - Status- Type",
       "notation": "standard",
       "originalId": "Assigned_numbers",
       "sticky": "",
