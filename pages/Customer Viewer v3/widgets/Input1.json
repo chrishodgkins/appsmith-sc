@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 297,
+  "bottomRow": 287,
   "boxShadow": "none",
   "defaultText": "{{ gen1DiagamMap.data }}",
   "dynamicBindingPathList": [

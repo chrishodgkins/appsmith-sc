@@ -1,3 +1,0 @@
-UPDATE public."gen1_ntwk_data" SET
-    "ivp_externalid" = '{{updateExID.text}}'
-  WHERE {{ getNtwkData.data.find(row => row.account_no === Select1.selectedOptionValue).entry_id  }} = entry_id; -- Specify a valid condition here. Removing the condition may update every row in the table!

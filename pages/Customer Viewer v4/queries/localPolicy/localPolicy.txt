@@ -1,4 +1,0 @@
-SELECT *
-FROM public.local_policy
-WHERE "Description" <> '' AND data_source ILIKE 'SYD1%'
-ORDER BY "Description" ASC, "id" ASC;

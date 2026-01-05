@@ -1,23 +1,23 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_a8900acc-61b0-4e5f-bf80-1f99488e1460",
+  "gitSyncId": "6833bd1e663f59025c630a90_f00375a7-9244-4ed0-9a52-1f759eb31eb1",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 2970,
+          "bottomRow": 990,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 1160,
+          "minHeight": 1130,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 114,
+          "snapRows": 111,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 93,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "Customer Viewer v4",
-    "slug": "customer-viewer-v4"
+    "name": "SecML Builder",
+    "slug": "secml-builder"
   }
 }
