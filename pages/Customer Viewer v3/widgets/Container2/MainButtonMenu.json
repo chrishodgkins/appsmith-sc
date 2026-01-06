@@ -68,6 +68,9 @@
     },
     {
       "key": "groupButtons.groupButton2.menuItems.menuItemr40f1g10an.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItemxl5mhrhfey.onClick"
     }
   ],
   "groupButtons": {
@@ -215,12 +218,21 @@
         },
         "menuItempcvk8v23nt": {
           "id": "menuItempcvk8v23nt",
-          "index": 1,
+          "index": 2,
           "isDisabled": false,
           "isVisible": true,
           "label": "Old Customer Viewer",
           "onClick": "{{navigateTo('Customer Viewer v3', {}, 'SAME_WINDOW');}}",
           "widgetId": "3r39a6byh0"
+        },
+        "menuItemxl5mhrhfey": {
+          "id": "menuItemxl5mhrhfey",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "SecML Builder",
+          "onClick": "{{navigateTo('SecML Builder', {}, 'SAME_WINDOW');}}",
+          "widgetId": "oqzeqlri8z"
         }
       },
       "onClick": "{{navigateTo('CTS Capacity', {}, 'SAME_WINDOW');}}",
@@ -269,6 +281,6 @@
   "topRow": 0,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "xoytqpx48c",
+  "widgetId": "odvbmpmjo1",
   "widgetName": "MainButtonMenu"
 }

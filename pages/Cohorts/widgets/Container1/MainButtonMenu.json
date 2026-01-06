@@ -68,6 +68,9 @@
     },
     {
       "key": "groupButtons.groupButton2.menuItems.menuItemr40f1g10an.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonmi1t3bvt6z.menuItems.menuItem2fo3ox5rsm.onClick"
     }
   ],
   "groupButtons": {
@@ -204,6 +207,15 @@
       "itemType": "BUTTON",
       "label": "Other",
       "menuItems": {
+        "menuItem2fo3ox5rsm": {
+          "id": "menuItem2fo3ox5rsm",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "SecML Builder",
+          "onClick": "{{navigateTo('SecML Builder', {}, 'SAME_WINDOW');}}",
+          "widgetId": "b2sot2c07g"
+        },
         "menuItemeuurvfn2ta": {
           "id": "menuItemeuurvfn2ta",
           "index": 0,

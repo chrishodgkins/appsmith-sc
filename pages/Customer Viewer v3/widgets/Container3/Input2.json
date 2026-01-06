@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 43,
+  "bottomRow": 44,
   "boxShadow": "none",
   "defaultText": "{{getGroups.isLoading ? 'Loading...' : (getGroups.data?.groups || []).map(g => g.name).join(', ')}}",
   "dynamicBindingPathList": [
@@ -63,7 +63,7 @@
   "rightColumn": 21,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 33,
+  "topRow": 34,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "a9wunzi8tm",
