@@ -82,6 +82,10 @@
     {
       "id": "SecML Builder",
       "isDefault": false
+    },
+    {
+      "id": "IVPData Copy",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
