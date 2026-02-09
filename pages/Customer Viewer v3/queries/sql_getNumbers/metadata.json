@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT external_id,starting_number,block_size,status,service FROM public.\"ivpnumbers\";",
+      "body": "SELECT external_id,starting_number,block_size,status,service FROM public.\"ivpnumbers\"\nWHERE status != 'Quarantined'AND status != 'Unassigned'\nORDER BY starting_number;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

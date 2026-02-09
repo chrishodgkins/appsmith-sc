@@ -1,1 +1,3 @@
-SELECT external_id,starting_number,block_size,status,service FROM public."ivpnumbers";
+SELECT external_id,starting_number,block_size,status,service FROM public."ivpnumbers"
+WHERE status != 'Quarantined'AND status != 'Unassigned'
+ORDER BY starting_number;
