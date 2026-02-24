@@ -1,3 +1,4 @@
 {{
+appsmith.store.migratetarget,
 Table1.selectedRows.map(a => a.uuid)
 }}
