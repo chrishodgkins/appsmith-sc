@@ -1821,7 +1821,7 @@
   "searchKey": "",
   "tableData": "{{ numLookup.enrichServicesWithNumbers() }}",
   "textSize": "0.675rem",
-  "topRow": 11,
+  "topRow": 6,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
