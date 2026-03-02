@@ -34,6 +34,7 @@
   "columnOrder": [
     "externalid",
     "name",
+    "pathname",
     "state",
     "description",
     "Region_Name",
@@ -82,7 +83,7 @@
     "assigned_count",
     "uuid"
   ],
-  "columnUpdatedAt": 1769983699279,
+  "columnUpdatedAt": 1772424296346,
   "columnWidthMap": {
     "ACL": 244,
     "Assigned_numbers": 266,
@@ -256,6 +257,9 @@
     },
     {
       "key": "primaryColumns.assigned_count.computedValue"
+    },
+    {
+      "key": "primaryColumns.pathname.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -1682,6 +1686,40 @@
       "notation": "standard",
       "originalId": "name",
       "sticky": "left",
+      "textSize": "0.675rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "pathname": {
+      "alias": "pathname",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"pathname\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "pathname",
+      "index": 46,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "pathname",
+      "notation": "standard",
+      "originalId": "pathname",
+      "sticky": "left",
+      "textColor": "",
       "textSize": "0.675rem",
       "thousandSeparator": true,
       "validation": {},
