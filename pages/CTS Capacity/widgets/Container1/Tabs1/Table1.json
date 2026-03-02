@@ -41,21 +41,19 @@
     "services",
     "serviceSpecification",
     "serviceCharacteristic",
-    "serviceOrderItem",
     "id",
     "href",
     "_schemaLocation",
     "_type",
     "_baseType",
     "serviceVersion",
-    "supportingResources",
     "__v",
     "auditTags",
     "feature",
     "note",
     "place"
   ],
-  "columnUpdatedAt": 1756171919786,
+  "columnUpdatedAt": 1772418367054,
   "columnWidthMap": {
     "description": 157,
     "name": 138,
@@ -113,9 +111,6 @@
       "key": "primaryColumns.serviceCharacteristic.computedValue"
     },
     {
-      "key": "primaryColumns.serviceOrderItem.computedValue"
-    },
-    {
       "key": "primaryColumns.id.computedValue"
     },
     {
@@ -132,9 +127,6 @@
     },
     {
       "key": "primaryColumns.serviceVersion.computedValue"
-    },
-    {
-      "key": "primaryColumns.supportingResources.computedValue"
     },
     {
       "key": "primaryColumns.__v.computedValue"
@@ -731,40 +723,6 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "serviceOrderItem": {
-      "alias": "serviceOrderItem",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"serviceOrderItem\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "serviceOrderItem",
-      "index": 8,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "serviceOrderItem",
-      "notation": "standard",
-      "originalId": "serviceOrderItem",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "serviceSpecification": {
       "alias": "serviceSpecification",
       "allowCellWrapping": true,
@@ -893,40 +851,6 @@
       "label": "state",
       "notation": "standard",
       "originalId": "state",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "supportingResources": {
-      "alias": "supportingResources",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"supportingResources\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "supportingResources",
-      "index": 15,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "supportingResources",
-      "notation": "standard",
-      "originalId": "supportingResources",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
