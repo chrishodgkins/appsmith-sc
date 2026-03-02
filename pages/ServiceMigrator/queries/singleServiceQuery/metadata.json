@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6833bd1e663f59025c630a90_9a201964-d529-4ab7-bc0b-06e6edf3672b",
-  "id": "IVPData Copy_singleServiceQuery",
+  "id": "ServiceMigrator_singleServiceQuery",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -46,7 +46,7 @@
       }
     ],
     "name": "singleServiceQuery",
-    "pageId": "IVPData Copy",
+    "pageId": "ServiceMigrator",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

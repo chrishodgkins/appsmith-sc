@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6833bd1e663f59025c630a90_7b6faabe-07e9-43bc-8858-6e8203a57fef",
-  "id": "IVPData Copy_lookupAssignedNumbersQuery",
+  "id": "ServiceMigrator_lookupAssignedNumbersQuery",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -24,7 +24,7 @@
     },
     "dynamicBindingPathList": [],
     "name": "lookupAssignedNumbersQuery",
-    "pageId": "IVPData Copy",
+    "pageId": "ServiceMigrator",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }

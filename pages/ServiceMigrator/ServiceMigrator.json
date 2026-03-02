@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "IVPData Copy",
-    "slug": "ivpdata-copy"
+    "name": "ServiceMigrator",
+    "slug": "servicemigrator"
   }
 }

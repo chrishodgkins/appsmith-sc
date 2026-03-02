@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6833bd1e663f59025c630a90_18059dec-5bd3-41a8-853f-827d1a16ac90",
-  "id": "IVPData Copy_getGroups",
+  "id": "ServiceMigrator_getGroups",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -46,7 +46,7 @@
       }
     ],
     "name": "getGroups",
-    "pageId": "IVPData Copy",
+    "pageId": "ServiceMigrator",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true
   }
