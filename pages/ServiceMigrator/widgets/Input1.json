@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 6,
   "boxShadow": "none",
-  "defaultText": "{{ Table1.selectedRows.map(a => a.uuid) }}",
+  "defaultText": "{{ Table1.selectedRows.map(a => a.externalid + \" \" +a.name) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -26,11 +26,11 @@
   "isRequired": false,
   "isVisible": true,
   "key": "xwbf8taeqe",
-  "label": "Selected UUIDs",
+  "label": "1. Select Services in Table",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "",
-  "labelTextSize": "0.875rem",
+  "labelStyle": "BOLD",
+  "labelTextSize": "1rem",
   "labelWidth": 5,
   "leftColumn": 0,
   "maxDynamicHeight": 9000,

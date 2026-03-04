@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 261,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultText": "{{\n(function() {\n  /* ── 1. Data source ── */\n  const data = migratepush.data; // change to your actual query name\n\n  let html = '';\n  let inSection = false;\n\n  /* ── 2. Iterate rows and build HTML ── */\n  data.forEach(function(row) {\n    const keys = Object.keys(row);\n\n    /* 2a. Section start */\n    if (keys.includes('Start:')) {\n      inSection = true;\n      html += '<div style=\"border:1px solid #ccc; border-radius:8px; padding:12px; margin-bottom:12px; background:#f9f9f9;\">';\n      html += '<h3 style=\"margin:0 0 8px 0; color:#2c3e50; border-bottom:2px solid #3498db; padding-bottom:4px;\">' + row['Start:'] + '</h3>';\n      return;\n    }\n\n    /* 2b. Section end */\n    if (keys.includes('End:')) {\n      html += '<p style=\"margin:4px 0 0 0; font-size:0.85em; color:#888;\">' + row['End:'] + '</p>';\n      html += '</div>';\n      inSection = false;\n      return;\n    }\n\n    /* 2c. Data rows inside a section */\n    if (inSection) {\n      html += '<table style=\"width:100%; margin-bottom:6px; font-size:0.9em;\">';\n      keys.forEach(function(key) {\n        let val = row[key];\n\n        /* 2c-i. Try to parse nested JSON strings */\n        if (typeof val === 'string' && val.startsWith('{')) {\n          try {\n            const parsed = JSON.parse(val);\n            val = Object.keys(parsed).map(function(k) {\n              return '<b>' + k + ':</b> ' + parsed[k];\n            }).join(', ');\n          } catch(e) {\n            /* leave val as-is */\n          }\n        }\n\n        html += '<tr>';\n        html += '<td style=\"padding:2px 8px 2px 0; font-weight:bold; color:#555; white-space:nowrap; vertical-align:top; width:40%;\">' + key + '</td>';\n        html += '<td style=\"padding:2px 0; color:#222;\">' + val + '</td>';\n        html += '</tr>';\n      });\n      html += '</table>';\n    }\n  });\n\n  return html;\n})()\n}}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "inputType": "html",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isToolbarHidden": true,
+  "isVisible": true,
+  "key": "64nr1x9tdt",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Label",
+  "labelWidth": 5,
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 27,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 26.999999999999996,
+  "mobileTopRow": 7,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 25.09140625,
+  "parentId": "ktpywmb42t",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "topRow": 7,
+  "type": "RICH_TEXT_EDITOR_WIDGET",
+  "version": 1,
+  "widgetId": "nrimkmbu2r",
+  "widgetName": "RichTextEditor1"
+}
