@@ -43,7 +43,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 64,
-  "text": "Show Migration Report",
+  "text": "Show Last Results",
   "topRow": 4,
   "type": "BUTTON_WIDGET",
   "version": 1,
