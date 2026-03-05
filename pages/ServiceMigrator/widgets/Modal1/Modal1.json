@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 2641,
+  "bottomRow": 263,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -76,7 +76,7 @@
   "mobileRightColumn": 52,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
-  "onClose": "",
+  "onClose": "{{refreshdata.run().then(() => {\n  showAlert('Wait ten seconds and Refresh the Table to see current values', 'info');\n});}}",
   "parentColumnSpace": 27.390625,
   "parentId": "0",
   "parentRowSpace": 10,
