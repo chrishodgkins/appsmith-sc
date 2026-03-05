@@ -12,6 +12,14 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -20,7 +28,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": true,
+  "isDisabled": "{{Switch1.isSwitchedOn == false}}",
   "isLoading": false,
   "isVisible": true,
   "key": "1930geb1pa",

@@ -12,6 +12,14 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -20,11 +28,11 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": true,
+  "isDisabled": "{{Switch1.isSwitchedOn == false}}",
   "isLoading": false,
   "isVisible": true,
   "key": "1930geb1pa",
-  "leftColumn": 40,
+  "leftColumn": 42,
   "minWidth": 120,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 29,
@@ -42,7 +50,7 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 43,
+  "rightColumn": 45,
   "text": "AU1",
   "topRow": 4,
   "type": "BUTTON_WIDGET",
