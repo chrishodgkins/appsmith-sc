@@ -59,7 +59,7 @@
     ],
     "name": "migratepush",
     "pageId": "ServiceMigrator",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }

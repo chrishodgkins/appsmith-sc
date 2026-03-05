@@ -90,6 +90,7 @@
     "Microsoft_Teams_domain_validation_key": 94,
     "description": 261,
     "externalid": 108,
+    "name": 235,
     "pathname": 302,
     "phone_numbers": 203,
     "phone_numbers_string": 776,
@@ -101,9 +102,7 @@
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
-  "defaultSelectedRowIndices": [
-    0
-  ],
+  "defaultSelectedRowIndices": "[1000]",
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
@@ -301,7 +300,7 @@
   "multiRowSelection": true,
   "needsErrorInfo": false,
   "originalBottomRow": 150,
-  "originalTopRow": 13,
+  "originalTopRow": 10,
   "parentColumnSpace": 17.75,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -1864,7 +1863,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{numLookup.enrichServicesWithNumbers().filter(row => \n  !/ICON|SecureCo PTY Ltd Prod Test\\/|Partner Account Prod Test/i.test(row.pathname) &&\n  !/SecureCo|Prod Test/i.test(row.description)\n)}}",
+  "tableData": "{{numLookup.enrichServicesWithNumbers()}}",
   "textSize": "0.650rem",
   "topRow": 9,
   "totalRecordsCount": 0,
