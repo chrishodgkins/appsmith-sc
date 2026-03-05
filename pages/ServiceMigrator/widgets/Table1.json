@@ -39,9 +39,9 @@
     "state",
     "description",
     "Region_Name",
+    "Routing_domain",
     "Outbound_server_uri",
     "Inbound_server_uri",
-    "Routing_domain",
     "Default_Outbound_CLI",
     "ACL",
     "SIP_Signalling_Transport_Method",
@@ -83,11 +83,12 @@
     "phone_numbers",
     "assigned_count"
   ],
-  "columnUpdatedAt": 1772581261113,
+  "columnUpdatedAt": 1772753399436,
   "columnWidthMap": {
     "ACL": 244,
     "Assigned_numbers": 266,
     "Microsoft_Teams_domain_validation_key": 94,
+    "Routing_domain": 244,
     "description": 261,
     "externalid": 108,
     "name": 173,
@@ -274,6 +275,12 @@
     },
     {
       "key": "textSize"
+    },
+    {
+      "key": "primaryColumns.Region_Name.textSize"
+    },
+    {
+      "key": "primaryColumns.Routing_domain.textSize"
     }
   ],
   "dynamicTriggerPathList": [
@@ -1219,7 +1226,8 @@
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "horizontalAlignment": "LEFT",
+      "fontStyle": "BOLD",
+      "horizontalAlignment": "CENTER",
       "id": "Region_Name",
       "index": 5,
       "isCellEditable": false,
@@ -1234,7 +1242,8 @@
       "notation": "standard",
       "originalId": "Region_Name",
       "sticky": "",
-      "textSize": "0.650rem",
+      "textColor": "#b91c1c",
+      "textSize": "0.775rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "TOP",
@@ -1296,7 +1305,8 @@
       "notation": "standard",
       "originalId": "Routing_domain",
       "sticky": "",
-      "textSize": "0.650rem",
+      "textColor": "#b91c1c",
+      "textSize": "0.775rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "TOP",
