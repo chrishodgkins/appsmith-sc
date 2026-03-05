@@ -19,11 +19,11 @@
         },
         {
           "key": "uuids",
-          "value": "{{ Table1.selectedRows.map(a => a.uuid) }}"
+          "value": "{{ Table1.selectedRows.filter(row => row?.uuid).map(a => a.uuid) }}"
         },
         {
           "key": "externalid",
-          "value": "{{ Table1.selectedRows.map(a => a.externalid) }}"
+          "value": "{{ Table1.selectedRows.filter(row => row?.externalid).map(a => a.externalid) }}"
         }
       ],
       "encodeParamsToggle": true,
