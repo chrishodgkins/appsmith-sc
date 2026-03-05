@@ -39,7 +39,7 @@
   "mobileRightColumn": 45,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{storeValue('migratetarget', '1001').then(() => {\n  migratepush.run();\n  showModal(Modal1.name);\n});}}",
+  "onClick": "{{storeValue('migratetarget', '1001').then(() => {\n  migratepush.run();\n  showModal(Modal1.name);\n});\nresetWidget(\"Switch1\", true);\nresetWidget(\"Table1\", true);}}",
   "originalBottomRow": 9,
   "originalTopRow": 5,
   "parentColumnSpace": 27.390625,
