@@ -1,10 +1,10 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 4,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonVariant": "PRIMARY",
+  "buttonVariant": "TERTIARY",
   "dynamicBindingPathList": [
     {
       "key": "buttonColor"
@@ -13,40 +13,32 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
     }
   ],
-  "iconName": "shopping-cart",
+  "iconName": "cross",
+  "iconSize": 24,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "mdlsepuitz",
-  "leftColumn": 9,
+  "key": "41o2s87y9o",
+  "leftColumn": 58,
   "minWidth": 50,
-  "mobileBottomRow": 6,
-  "mobileLeftColumn": 44,
-  "mobileRightColumn": 48,
-  "mobileTopRow": 2,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 58,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{removeValue('migratetarget');\nmigratepush.clear()}}",
-  "originalBottomRow": 9,
-  "originalTopRow": 5,
-  "parentColumnSpace": 27.390625,
-  "parentId": "0",
-  "parentRowSpace": 10,
+  "onClick": "{{closeModal(Modal2.name);}}",
+  "parentId": "u5zpx4koyo",
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 11,
-  "topRow": 5,
+  "rightColumn": 64,
+  "topRow": 0,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "2f1l9zaxjv",
-  "widgetName": "IconButton1"
+  "widgetId": "o6gnls9j9y",
+  "widgetName": "IconButton4"
 }

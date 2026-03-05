@@ -2,13 +2,22 @@
   "accentColor": "#ef4444",
   "alignWidget": "RIGHT",
   "animateLoading": true,
-  "bottomRow": 4,
+  "bottomRow": 5,
   "boxShadow": "none",
   "defaultSwitchState": false,
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [],
-  "isDisabled": false,
+  "isDisabled": "{{ \nnameInput.isValid == false\n}}",
   "isLoading": false,
   "isVisible": true,
   "key": "z5gnp38jvt",
@@ -25,7 +34,7 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
+  "originalBottomRow": 5,
   "originalTopRow": 0,
   "parentColumnSpace": 30.125,
   "parentId": "0",

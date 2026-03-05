@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 149,
+  "bottomRow": 158,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -90,12 +90,12 @@
     "Microsoft_Teams_domain_validation_key": 94,
     "description": 261,
     "externalid": 108,
-    "name": 235,
-    "pathname": 302,
+    "name": 173,
+    "pathname": 209,
     "phone_numbers": 203,
     "phone_numbers_string": 776,
     "state": 72,
-    "uuid": 189
+    "uuid": 124
   },
   "compactMode": "SHORT",
   "customIsLoading": false,
@@ -276,7 +276,11 @@
       "key": "textSize"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -299,8 +303,9 @@
   "mobileTopRow": 6,
   "multiRowSelection": true,
   "needsErrorInfo": false,
-  "originalBottomRow": 150,
-  "originalTopRow": 10,
+  "onRowSelected": "{{resetWidget(\"Switch1\", true);}}",
+  "originalBottomRow": 158,
+  "originalTopRow": 13,
   "parentColumnSpace": 17.75,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -1863,9 +1868,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{numLookup.enrichServicesWithNumbers()}}",
+  "tableData": "{{numLookup.enrichServicesWithNumbers().filter(row => \n  !/ICON|SecureCo PTY Ltd Prod Test\\/|Partner Account Prod Test/i.test(row.pathname) &&\n  !/SecureCo|VGW|Prod Test/i.test(row.description)\n)}}",
   "textSize": "0.650rem",
-  "topRow": 9,
+  "topRow": 13,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

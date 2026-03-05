@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6833bd1e663f59025c630a90_82f4db21-3e63-4aa1-8fb0-8612f2ce1b80",
-  "id": "ServiceMigrator_migratepush",
+  "gitSyncId": "6833bd1e663f59025c630a90_41eb7284-682e-404a-9bb3-3a6c89cb7afa",
+  "id": "ServiceMigrator_refreshdata",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
           "value": "{{ Table1.selectedRows.map(a => a.uuid) }}"
         },
         {
-          "key": "nameinput",
-          "value": "{{nameInput.text}}"
+          "key": "externalid",
+          "value": "{{ Table1.selectedRows.map(a => a.externalid) }}"
         }
       ],
       "encodeParamsToggle": true,
@@ -34,7 +34,7 @@
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": ":5678/webhook/migrate/migrate",
+      "path": ":5678/webhook/migrate/refresh",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -64,9 +64,9 @@
         "key": "bodyFormData[2].value"
       }
     ],
-    "name": "migratepush",
+    "name": "refreshdata",
     "pageId": "ServiceMigrator",
     "runBehaviour": "MANUAL",
-    "userSetOnLoad": true
+    "userSetOnLoad": false
   }
 }
