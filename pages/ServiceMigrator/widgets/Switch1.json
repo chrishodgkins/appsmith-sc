@@ -2,7 +2,7 @@
   "accentColor": "#ef4444",
   "alignWidget": "RIGHT",
   "animateLoading": true,
-  "bottomRow": 8,
+  "bottomRow": 9,
   "boxShadow": "none",
   "defaultSwitchState": false,
   "dynamicBindingPathList": [
@@ -34,7 +34,7 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 9,
+  "originalBottomRow": 8,
   "originalTopRow": 4,
   "parentColumnSpace": 30.125,
   "parentId": "0",
